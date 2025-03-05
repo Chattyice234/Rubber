@@ -15,7 +15,11 @@
 
     body {
     font-family: 'Varela Round', sans-serif;
+    background-image: url("https://i.pinimg.com/originals/34/1e/80/341e800b1f29d3e34ea2eba5a6af205c.gif");
     background-color: #1a2023;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: center; */
     margin: 0;
     text-align: center;
     }
@@ -37,6 +41,32 @@
 
         span:hover {
         text-shadow: 0 0 10px rgba(52, 152, 219, 0.8), 0 0 20px rgba(52, 152, 219, 0.6), 0 0 30px rgba(52, 152, 219, 0.4);
+        }
+
+        .animated-text {
+            font-size: 3rem;
+            color: #fff;
+            opacity: 0;
+            animation: textShadowAnimation 2s forwards;
+        }
+
+        @keyframes textShadowAnimation {
+            0% {
+                opacity: 0;
+                text-shadow: none;
+            }
+            50% {
+                opacity: 1;
+                text-shadow: 0 0 10px rgba(52, 152, 219, 0.8), 
+                             0 0 20px rgba(52, 152, 219, 0.6), 
+                             0 0 30px rgba(52, 152, 219, 0.4);
+                color: #4b0082;
+            }
+            100% {
+                opacity: 1;
+                text-shadow: none;
+                color: #4b0082;
+            }
         }
         
         h1 {
@@ -67,11 +97,6 @@
         }
             
         h6 {
-        bottom: 0%; 
-        left: 0%;
-        width: 100%;
-        height: 0px;
-        position: absolute;
         font-size: 20px;
         font-family: Cabin, Tahoma, sans-serif;
         color: #fff;
@@ -103,7 +128,7 @@
                 border: 0 outset #444;
                 border-radius: 6px;
                 cursor: pointer;
-                transition: background-color 0.3s, transform 0.2s;
+                transition: 0.3s all ease;
             }
         
             .button-m {
@@ -118,7 +143,7 @@
                 border: 0 outset #444;
                 border-radius: 6px;
                 cursor: pointer;
-                transition: background-color 0.3s, transform 0.2s;
+                transition: 0.3s all ease;
             }
         
             .button-ab {
@@ -134,7 +159,7 @@
                 border: none;
                 border-radius: 10px;
                 color: #fff;
-                background: #1a2023; 
+                background: none;
                 cursor: pointer;
                 transition: background-color 0.3s, color 0.3s, transform 0.2s;
             }
@@ -152,7 +177,7 @@
             border: none;
             border-radius: 10px;
             color: #fff;
-            background: #1a2023; 
+            background: none;
             cursor: pointer;
             transition: background-color 0.3s, color 0.3s, transform 0.2s;
         }
@@ -170,11 +195,28 @@
                 border: none;
                 border-radius: 10px;
                 color: #fff;
-                background: #1a2023; 
+                background: none;
                 cursor: pointer;
                 transition: background-color 0.3s, color 0.3s, transform 0.2s;
             }
     
+        .button-git {
+                top: 0%; 
+                text-decoration: underline;
+                right: 0%;
+                width: 150px;
+                height: 70px;
+                position: absolute;
+                font-size: 18px;
+                font-weight: 552;
+                font-family: Raleway, Tahoma, sans-serif;
+                border: none;
+                border-radius: 10px;
+                color: #fff;
+                background: none;
+                cursor: pointer;
+                transition: background-color 0.3s, color 0.3s, transform 0.2s;
+            }
     
         .button:hover {
             background-color: #663399;
@@ -193,7 +235,7 @@
         }
     
         .button-ab:hover {
-            background-color: #4b0082;
+            background-color: #6f2da8;
             color: #1a2023;
         }
     
@@ -202,7 +244,7 @@
         }
     
         .button-tc:hover {
-            background-color: #4b0082;
+            background-color: #00b48d;
             color: #1a2023;
         }
     
@@ -211,11 +253,20 @@
         }
 
         .button-sug:hover {
-            background-color: #4b0082;
+            background-color: #8d4585;
             color: #1a2023;
         }
     
         .button-sug:active {
+            background-color: #743089;
+        }
+
+        .button-git:hover {
+            background-color: #4b0082;
+            color: #1a2023;
+        }
+    
+        .button-git:active {
             background-color: #743089;
         }
     
@@ -230,36 +281,52 @@
         }
     
          #randomPhrase {
-         margin-bottom: 43px;
-         font-weight: bold;
-         font-size: 18px;
-         font-family: Cabin, Tahoma, sans-serif;
-         color: white;
+            color: #fff;
+            margin-bottom: 43px;
+            font-family: Cabin;
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
         }
 
   </style> 
      
-     <h2><span>Update Log:</span> Created Rubber and added new theme, added new buttons</h2>
+     <h2><span>Update Log:</span> Created Back button, moved proxies into exploits, moved chatroom into apps</h2>
+     <h6>Version 0.0.5</h6>
      <button id="aboutBlank" class="button-ab">about:blank Cloak</button>
      <button id="tabCloak" class="button-tc">Tab Cloak</button>
      <button id="suggest" class="button-sug">Suggestions</button>
-     <h6>Version 0.0.1</h6>
+     <button class="button-git" onclick="location.href='https://github.com/Chattyice234/Rubber'">GitHub</button>
      <div id="container-m">
-     <h1>Welcome to <span>Rubber</span></h1>
-     <div id="randomPhrase">Welcome back!</div>
+     <h1><span class="animated-text">Rubber</span> Games</h1>
+     <div id="randomPhrase"></div>
      <button id="games" class="button-m">Games</button>
      <button id="apps" class="button-m">Apps</button>
-     <button id="LaunchExploits" class="button-m">Exploits</button>
-     <button id="LaunchProxy" class="button-m">Proxies</button>
-     <button id="chat" class="button-m">Chatroom</button>
+     <button id="LaunchExploits" class="button-m">Exploits/Proxies</button>
       
   <script>
+ function createBackButton() {
+        var backButton = document.createElement("button");
+        backButton.textContent = "Back";
+        backButton.className = "button";
+        backButton.style.position = "absolute";
+        backButton.style.top = "10px";
+        backButton.style.left = "10px";
+        backButton.onclick = function() {
+            location.reload();
+        };
+        document.body.appendChild(backButton);
+    }
+
+
     document.getElementById("games").onclick = function() {
       document.body.innerHTML = "<h4>Loading...<h4>";
       setTimeout(function() {
     document.body.innerHTML = "<h3 style='font-size: 80px; font-family: Cabin, Tahoma, sans-serif; color: white; margin: 0; margin-bottom: 5px;'>Games</h3> <input id='searchBar' onkeyup='search_button()' type='text' name='search' placeholder='Search Games'>";
+        createBackButton();
         var games = [
             { name: "Skribbl.io", url: "https://skribbl.io" },
+            { name: "Barney's Website", url: "https://html.cafe/x715d6947" },
             { name: "Android App Launcher", url: "https://nowgg.lol/apps/frogiee1/69420/custom-thingy-loader.html" },
             { name: "EaglyMC (Minecraft)", url: "https://eaglymc.com/" },
             { name: "Minecraft (1.5)", url: "https://eaglercraft.glitch.me/" },
@@ -433,10 +500,9 @@
             { name: "Slither.io", url: "http://slither.com/io" },
             { name: "Easyfun.gg", url: "https://easyfun.gg" },
             { name: "Ballistic", url: "https://d272xss3wq00xu.cloudfront.net/ballistic/index.html" },
-            { name: "Minecraft Java Edition", url: "https://mcraft.fun" },
+            { name: "Prismarine Client (Fake Minecraft)", url: "https://mcraft.fun" },
             { name: "Mood Tracker", url: "https://html.cafe/xb2c91b5a" },
             { name: "Guess The Number Game", url: "https://html.cafe/x63aefeaa" },
-            { name: "HTML Editor", url: "https://spacenerd24.github.io/Online-HTML-Viewer/" },
             { name: "Selenite Method 2", url: "https://selenite-copy.pages.dev" },
             { name: "Always Impostor", url: "https://html5.gamedistribution.com/9abe6af0fbb440b98a3e24bf7fb0636a/?gd_sdk_referrer_url=https://kevin.games/always-impostor" },
             { name: "2D kinda space shooting game", url: "https://html.cafe/x704e8436" },
@@ -501,6 +567,20 @@
             { name: "PulseCodes & BigFishGaming's Unblocked Games", url: "https://gamehub-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/bigfishgaming/bigfishgaming@refs/heads/main/GameHub.xml&container=ig" },
             { name: "MacOS Emulator", url: "https://www.pulsecodes.cc/mac-os" },
             { name: "Ubuntu Emulator", url: "https://www.pulsecodes.cc/ubuntu-simulator" },
+            { name: "Papa's Bakeria", url: "https://obsidianig.com/games/papasbakeria/" },
+            { name: "Papa's Burgeria", url: "https://obsidianig.com/games/papasburgeria/" },
+            { name: "Papa's Cheeseria", url: "https://obsidianig.com/games/papascheeseria/" },
+            { name: "Papa's Cupcakeria", url: "https://obsidianig.com/games/papascupcakeria/" },
+            { name: "Papa's Donuteria", url: "https://obsidianig.com/games/papasdonuteria/" },
+            { name: "Papa's Freezeria", url: "https://obsidianig.com/games/papasfreezeria/" },
+            { name: "Papa's Hot Doggeria", url: "https://obsidianig.com/games/papashotdoggeria/" },
+            { name: "Papa's Pancakeria", url: "https://obsidianig.com/games/papaspancakeria/" },
+            { name: "Papa's Pastaria", url: "https://obsidianig.com/games/papaspastaria/" },
+            { name: "Papa's Pizzaria", url: "https://obsidianig.com/games/papaspizzaria/" },
+            { name: "Papa's Scooperia", url: "https://obsidianig.com/games/papasscooperia/" },
+            { name: "Papa's Sushiria", url: "https://obsidianig.com/games/papassushiria/" },
+            { name: "Papa's Wingeria", url: "https://obsidianig.com/games/papaswingeria/" },
+            { name: "There Is No Game", url: "https://obsidianig.com/games/thereisnogame/" },
       
          ];
         var container = document.createElement("div");
@@ -513,13 +593,7 @@
             button.onclick = function() {
                 if (game.url) {
                     document.body.innerHTML = '<object id="gameFrame" type="text/html" data="' + game.url + '" style="width: 100%; height: 100vh;"></object>';
-                    window.addEventListener("beforeunload", (event) => {
-            if (true) {
-                event.preventDefault();
-                event.returnValue = "";
-                return "";
-            }
-        });  
+                    createBackButton();
                 }
             };
             container.appendChild(button);
@@ -527,12 +601,27 @@
     }, 700);
 };
 
+function search_button() {
+    let input = document.getElementById('searchBar').value.toLowerCase();
+    let x = document.getElementsByClassName('button');
+    for (let i = 0; i < x.length; i++) {
+        if (!x[i].innerHTML.toLowerCase().includes(input) && !x[i].classList.contains('back-button')) {
+            x[i].style.display = "none";
+        } else {
+            x[i].style.display = "inline";
+        }
+    }
+}
+
 document.getElementById("apps").onclick = function() {
     document.body.innerHTML = "<h4>Loading...<h4>";
     setTimeout(function() {
     document.body.innerHTML = "<h3 style='font-size: 80px; font-family: Cabin, Tahoma, sans-serif; color: white; margin: 0; margin-bottom: 5px;'>Games</h3> <input id='searchBar' onkeyup='search_button()' type='text' name='search' placeholder='Search Games'>";
+        createBackButton();
         var apps = [
+            { name: "Online Chatroom", url: "https://chattyice234.github.io/online-chatroom" },
             { name: "SprintingSnail69's Soundboard", url: "https://coolsounds.netlify.app" },
+            { name: "HTML Editor", url: "https://spacenerd24.github.io/Online-HTML-Viewer/" },
             { name: "HTML.cafe Editor & Gallery", url: "https://html.cafe/" },   
             { name: "ht.ml (HTML editor)", url: "https://html.cafe/x3e7b1ae9" }, 
             { name: "Search Blocked Github repositories (Credits to Dinguschan-owo on Github)", url: "https://github-repository-search-two.vercel.app/" },
@@ -586,12 +675,8 @@ document.getElementById("apps").onclick = function() {
             button.onclick = function() {
                 if (app.url) {
                     document.body.innerHTML = '<object id="appsFrame" type="text/html" data="' + app.url + '" style="width: 100%; height: 100vh;"></object>';
+                    createBackButton();
                     window.addEventListener("beforeunload", (event) => {
-            if (true) {
-                event.preventDefault();
-                event.returnValue = "";
-                return "";
-            }
         });  
                 } 
             };
@@ -604,7 +689,9 @@ document.getElementById("LaunchExploits").onclick = function() {
     document.body.innerHTML = "<h4>Loading...<h4>";
     setTimeout(function() {
         document.body.innerHTML = "";
-        document.body.innerHTML = "<h3 style='font-size: 80px; font-family: Cabin, Tahoma, sans-serif; color: white; margin: 0; margin-bottom: 5px;'>Exploits</h3> <input id='searchBar' onkeyup='search_button()' type='text' name='search' placeholder='Search Exploits'>";
+        createBackButton();
+        document.body.innerHTML = "<h3 style='font-size: 80px; font-family: Cabin, Tahoma, sans-serif; color: white; margin: 0; margin-bottom: 5px;'>Exploits/Proxies</h3> <input id='searchBar' onkeyup='search_button()' type='text' name='search' placeholder='Search Exploits and Proxies'>";
+        createBackButton();
         var proxy = [
             { name: "List of Exploits", url: "https://cocalc.com/github/3kh0/ext-remover/blob/main/README.md" },
             { name: "ExtHang3r Old", url: "https://html.cafe/x707b2db0" },
@@ -613,40 +700,6 @@ document.getElementById("LaunchExploits").onclick = function() {
             { name: "Disable School Blockers (ExtHang3r)", url: "https://chattyice234.github.io/ExtHang3r-Fork/" },
             { name: "Search History Byp@ss", url: "https://html.cafe/x88b1c570" },
             { name: "ExtPrint3r (NEW)", url: "https://extprint3r.github.io/" },
-        ];
-
-        var container = document.createElement("div");
-        container.setAttribute("id", "proxyContainer");
-        document.body.appendChild(container);
-
-        proxy.forEach(function(proxy) {
-            var button = document.createElement("button");
-            button.textContent = proxy.name;
-            button.className = "button";
-            button.onclick = function() {
-                if (proxy.url) {
-                    document.body.innerHTML = '';
-                    var messageText = document.createElement("p");
-                    messageText.textContent = proxy.message;
-                    messageText.style.color = "#fff";
-                    messageText.style.marginTop = "20px";
-                    document.body.appendChild(messageText);
-                    document.body.innerHTML = '<object id="proxyFrame" type="text/html" data="' + proxy.url + '" style="width: 100%; height: 100vh;"></object>';
-                } else if (proxy.action) {
-                    proxy.action();
-                }
-            };
-            container.appendChild(button);
-        });
-    }, 1000);
-};
-
-document.getElementById("LaunchProxy").onclick = function() {
-    document.body.innerHTML = "<h4>Loading...<h4>";
-    setTimeout(function() {
-        document.body.innerHTML = "";
-        document.body.innerHTML = "<h3 style='font-size: 80px; font-family: Cabin, Tahoma, sans-serif; color: white; margin: 0; margin-bottom: 5px;'>Games</h3> <input id='searchBar' onkeyup='search_button()' type='text' name='search' placeholder='Search Games'>";
-        var proxy = [
             { name: "ByeBlocker Proxy Browser", url: "https://html.cafe/xfe3a414c" },
             { name: "Helios Proxy Browser (Credits to dinguschan-owo on Github)", url: "https://helios-browser.vercel.app" },
             { name: "Dingus Proxy Browser (Credits to dinguschan-owo on Github)", url: "https://dinguschan-owo.github.io/dingusproxy/" },
@@ -662,13 +715,16 @@ document.getElementById("LaunchProxy").onclick = function() {
         var container = document.createElement("div");
         container.setAttribute("id", "proxyContainer");
         document.body.appendChild(container);
+        createBackButton();
 
         proxy.forEach(function(proxy) {
             var button = document.createElement("button");
             button.textContent = proxy.name;
             button.className = "button";
+            createBackButton();
             button.onclick = function() {
                 if (proxy.url) {
+                    createBackButton();
                     document.body.innerHTML = '';
                     var messageText = document.createElement("p");
                     messageText.textContent = proxy.message;
@@ -676,8 +732,10 @@ document.getElementById("LaunchProxy").onclick = function() {
                     messageText.style.marginTop = "20px";
                     document.body.appendChild(messageText);
                     document.body.innerHTML = '<object id="proxyFrame" type="text/html" data="' + proxy.url + '" style="width: 100%; height: 100vh;"></object>';
+                    createBackButton();
                 } else if (proxy.action) {
                     proxy.action();
+                    createBackButton();
                 }
             };
             container.appendChild(button);
@@ -890,15 +948,16 @@ document.getElementById("tabCloak").onclick = function() {
         "getliner.com doesnt work D:",
         "Imagine opening a cabinet and an AI generated spider jumpscare comes out",
         "but Ms. Birch i never said i wanted to present my project nex- SHUT UP",
-        "Like the last website, but copying Links123 and trying to kill my depression and not myself!",
+        "Like the last website, but Links123!",
         "what the hell is Hollow Purple website",
-        "If your chromebook has a caps lock key instead of a launcher key, this is a prophecy that you will learn HOW TO TOGGLE CAPITALS ON AND off.",
-        "if you're a mobile player, my condolences (idk if any of these games are mobile friendly, most apps probably are though)",
+        "bottom text",
+        "back button is broken",
+        "Fun fact: you're on a webpage right now",
+        "Don't charge fully to 100%. Charge to 80%, it lasts longer",
+        "If you found this site before australian man, you're newgen",
+        "splash text",
         "Like and subscribe",
-        "If you want to suggest something, maybe I added a form now. If you see this message before there is a suggestion form, consider yourself old",
         "Skibidihax?",
-        "sprintingsnail69 made a fire soundboard, it's in the apps",
-        "the hell does pluh mean?",
         "No i'm not adding freaky stuff to this site stay mad",
         "No i'm not adding freaky stuff to this site stay mad",
         "No i'm not adding freaky stuff to this site stay mad",
@@ -930,12 +989,14 @@ document.getElementById("tabCloak").onclick = function() {
 	}
 } 
 
-document.getElementById("chat").onclick = function() {
-  document.body.innerHTML = '<object id="chatFrame" type="text/html" data="https://chattyice234.github.io/online-chatroom" style="width: 100%; height: 100vh;"></object>';
-};
+// document.getElementById("chat").onclick = function() {
+//   document.body.innerHTML = '<object id="chatFrame" type="text/html" data="https://chattyice234.github.io/online-chatroom" style="width: 100%; height: 100vh;"></object>';
+//     createBackButton();
+// };
 
 document.getElementById("suggest").onclick = function() {
   document.body.innerHTML = '<object id="suggestFrame" type="text/html" data="https://docs.google.com/forms/d/e/1FAIpQLSfOlgOWtpAkz7EHdr73D_Xw4fb2wTbYZeBK7Ok3-UG4oZKH0g/viewform?embedded=true" style="width: 100%; height: 100vh;"></object>';
+    createBackButton();
 };
 
 
