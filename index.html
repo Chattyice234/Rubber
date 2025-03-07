@@ -164,7 +164,7 @@
                 transition: background-color 0.3s, color 0.3s, transform 0.2s;
             }
     
-         .button-tc {
+         #button-s {
             bottom: 0%; 
             text-decoration: underline;
             right: 0%;
@@ -182,8 +182,24 @@
             transition: background-color 0.3s, color 0.3s, transform 0.2s;
         }
 
+        .button-si {
+            margin-left: 5px;
+            margin-right: 5px;
+            font-size: 18px;
+            font-weight: 552;
+            font-family: Cabin, Tahoma, sans-serif;
+            background-color: #4b0082;
+            color: #fff;
+            border: 0 outset #444;
+            border-radius: 6px;
+            cursor: pointer;
+            height: 100%;
+            width: 45%;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
         .button-sug {
-                top: 0%; 
+                bottom: 0%; 
                 text-decoration: underline;
                 left: 0%;
                 width: 150px;
@@ -243,12 +259,21 @@
             background-color: #743089;
         }
     
-        .button-tc:hover {
+        #button-s:hover {
             background-color: #00b48d;
             color: #1a2023;
         }
     
-        .button-tc:active {
+        #button-s:active {
+            background-color: #743089;
+        }
+
+        .button-si:hover {
+            background-color: #00b48d;
+            color: #1a2023;
+        }
+    
+        .button-si:active {
             background-color: #743089;
         }
 
@@ -279,8 +304,23 @@
             justify-content: center;
             text-align: center;
         }
+
+        #container-s {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #111111;
+            height: 50%;
+            width: 50%;
+            border-radius: 10px;
+        }
+
+        .hide{
+            display: none;
+        }
     
-         #randomPhrase {
+        #randomPhrase {
             color: #fff;
             margin-bottom: 43px;
             font-family: Cabin;
@@ -288,13 +328,9 @@
             font-weight: bold;
             font-size: 18px;
         }
-
-  </style> 
-     
-     <h2><span>Update Log:</span> Created Back button, moved proxies into exploits, moved chatroom into apps</h2>
-     <h6>Version 0.0.5</h6>
-     <button id="aboutBlank" class="button-ab">about:blank Cloak</button>
-     <button id="tabCloak" class="button-tc">Tab Cloak</button>
+  </style>
+     <h2><span>Update Log:</span> Fixed Settings</h2>
+     <h6>Version 0.10</h6>
      <button id="suggest" class="button-sug">Suggestions</button>
      <button class="button-git" onclick="location.href='https://github.com/Chattyice234/Rubber'">GitHub</button>
      <div id="container-m">
@@ -303,9 +339,18 @@
      <button id="games" class="button-m">Games</button>
      <button id="apps" class="button-m">Apps</button>
      <button id="LaunchExploits" class="button-m">Exploits/Proxies</button>
-      
-  <script>
- function createBackButton() {
+     </div>
+     <div id="cloakingSettings">
+     <button id="button-s" onclick="closeLeftMenu();">Settings</button>
+     <div id="menu" class="hide">
+     <div id="container-s">
+      <button id="aboutBlank" class="button-si">about:blank</button>
+     <button id="tabCloak" class="button-si">Tab Cloak</button>
+     </div>
+     </div>
+     
+      <script>
+        function createBackButton() {
         var backButton = document.createElement("button");
         backButton.textContent = "Back";
         backButton.className = "button";
@@ -326,6 +371,7 @@
         createBackButton();
         var games = [
             { name: "Skribbl.io", url: "https://skribbl.io" },
+            { name: "SigmaFart Website", url: "https://html.cafe/x4922b615" },
             { name: "Barney's Website", url: "https://html.cafe/x715d6947" },
             { name: "Android App Launcher", url: "https://nowgg.lol/apps/frogiee1/69420/custom-thingy-loader.html" },
             { name: "EaglyMC (Minecraft)", url: "https://eaglymc.com/" },
@@ -743,29 +789,27 @@ document.getElementById("LaunchExploits").onclick = function() {
     }, 1000);
 };
     
-document.getElementById("aboutBlank").onclick = function() {
-var win = window.open('');
-win.document.open();
-win.document.write(document.documentElement.outerHTML);
-win.document.title = "about:blank";
-win.document.close();
-window.parent.window.location.replace('https://classroom.google.com/')
-};
+
+    document.getElementById("aboutBlank").onclick = function() {
+    var win = window.open('');
+    win.document.open();
+    win.document.write(document.documentElement.outerHTML);
+    win.document.title = "about:blank";
+    win.document.close();
+    window.parent.window.location.replace('https://classroom.google.com/')
+    };
     
-document.getElementById("tabCloak").onclick = function() {
-      document.title = "Home";
-      document.querySelector('link[rel="icon"]').href = "https://ssl.gstatic.com/classroom/favicon.png";
+    document.getElementById("tabCloak").onclick = function() {
+    document.title = "Home";
+    document.querySelector('link[rel="icon"]').href = "https://ssl.gstatic.com/classroom/favicon.png";
 };
   
-  document.addEventListener("DOMContentLoaded", function() {
+   document.addEventListener("DOMContentLoaded", function() {
     var phrases = [
         "Welcome to Rubber, the next ChattyWebsite with the dumbest name ever!",
         "ChatGPT? Where's ChattyGPT?",
-        "Thanks RicardoMario123 for moti",
-        "Do not share this with OGSD users",
+        "Thanks RicardoMario123 for motivation",
         "Pressure",
-        "If your district blocks a site (district block, not blocking extensions) then the site's embeds will not work here. RIP html.cafe, skribbl.io for OGSD",
-        "ohhhh, so you say schools cant block scratch because it's a coding site by MIT? Think again",
         "helo",
         "whats up man",
         "iready suck",
@@ -776,7 +820,6 @@ document.getElementById("tabCloak").onclick = function() {
         "meeeeee",
         "Back and even better than ever before!",
         "hluf",
-        "kyse is stealing my aura with sigmafart >:( https://html.cafe/x4922b615",
         "Everyone's a rizzed up crank",
         "If you get this message, you are fat",
         "If you get this message, you're black",
@@ -801,6 +844,8 @@ document.getElementById("tabCloak").onclick = function() {
         "what",                                                                     
         "Sponsored by me lol",
         "sponsored by youtube",
+        "Forever credits to Links123",
+        "Credits to RicardoMarioSonic123 for Links123",
         "We got in trouble for this lol",
         "Show me your meat or im gonna crash outtttttttt",
         "if u dont want this to get blocked use about:blank cloak",
@@ -810,19 +855,15 @@ document.getElementById("tabCloak").onclick = function() {
         "It's a party. A Search Party",
         "when you scratch your hair, it snows. snows dandruffs and lice eggs",
         "Rubber. More like Flubber",
-        "my mom said if i keep going on my computer she will bang my head into my keyboardsoujfh nyieukdhsgj9uovifujd08goiurej fduogiurejf9d8ogu",
         "hlrugvuj8idfhu gjdfchudhfjifds",
         "Look guys its a ifvje fdughv jeoisprdxokf",
         "My name is skibidi toilet",
         "NoGuardian!",
         "bricked up bricks, bricked up bricks",
-        "yeah sorry if the splashes mess up the positioning im removing the longest ones",
         "michael i will not make the background a wiener",
-        "put https://www.youtube.com/watch?v=TrrpWm_04pc in the background",
         "Fatso",
         "updates frequently!",
         "Drive me to the skibidi club!",
-        "Links123: *exists* Me: oh thats a nice site lemme steal it for my newest ripoff",
         "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
         "school uses blocker *ineffective*",
         "Ur computer has virus",
@@ -902,10 +943,8 @@ document.getElementById("tabCloak").onclick = function() {
         "local Teacher = false",
         "i accidently muted the teacher",
         "yoyo",
-        "my most recent google searches: 'wtf is an enamel' 'what the hell is a pomegranate' 'expendable at door 30' 'rubber' (for the favicon) ",
         "eaglercraft 1.21.70 real no scam download --->",
         ":D",
-        "why are these 4th graders lowkey ass at the recorder",
         "im just spamming splashes",
         "fun fact: you are on a chromebook (maybe)",
         "wah hah hah",
@@ -973,6 +1012,7 @@ document.getElementById("tabCloak").onclick = function() {
       var phraseElement = document.getElementById("randomPhrase");
       phraseElement.textContent = randomPhrase;
     });
+
     
     function search_button() {
 	let input = document.getElementById('searchBar').value
@@ -989,6 +1029,22 @@ document.getElementById("tabCloak").onclick = function() {
 	}
 } 
 
+function openLeftMenu() {
+          document.getElementById("menu").style.display = "none";
+          document.getElementById("button-s").innerHTML = "Settings";
+          document.getElementById("button-s").onclick = function() {
+            closeLeftMenu();
+          };
+        }
+
+        function closeLeftMenu() {
+          document.getElementById("menu").style.display = "block";
+          document.getElementById("button-s").innerHTML = "Settings"
+          document.getElementById("button-s").onclick = function() {
+            openLeftMenu();
+          };
+        }
+
 // document.getElementById("chat").onclick = function() {
 //   document.body.innerHTML = '<object id="chatFrame" type="text/html" data="https://chattyice234.github.io/online-chatroom" style="width: 100%; height: 100vh;"></object>';
 //     createBackButton();
@@ -998,7 +1054,5 @@ document.getElementById("suggest").onclick = function() {
   document.body.innerHTML = '<object id="suggestFrame" type="text/html" data="https://docs.google.com/forms/d/e/1FAIpQLSfOlgOWtpAkz7EHdr73D_Xw4fb2wTbYZeBK7Ok3-UG4oZKH0g/viewform?embedded=true" style="width: 100%; height: 100vh;"></object>';
     createBackButton();
 };
-
-
-  </script>
+      </script>
 </html>
