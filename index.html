@@ -15,11 +15,7 @@
 
     body {
     font-family: 'Varela Round', sans-serif;
-    background-image: url("https://i.pinimg.com/originals/34/1e/80/341e800b1f29d3e34ea2eba5a6af205c.gif");
     background-color: #1a2023;
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* background-position: center; */
     margin: 0;
     text-align: center;
     }
@@ -217,9 +213,9 @@
             }
     
         .button-git {
-                top: 0%; 
+                bottom: 0%; 
                 text-decoration: underline;
-                right: 0%;
+                left: 0%;
                 width: 150px;
                 height: 70px;
                 position: absolute;
@@ -329,19 +325,18 @@
             font-size: 18px;
         }
   </style>
-     <h2><span>Update Log:</span> Fixed Settings</h2>
+     <!-- <h2><span>Update Log:</span></h2> -->
      <h6>Version 0.10</h6>
-     <button id="suggest" class="button-sug">Suggestions</button>
      <button class="button-git" onclick="location.href='https://github.com/Chattyice234/Rubber'">GitHub</button>
      <div id="container-m">
-     <h1><span class="animated-text">Rubber</span> Games</h1>
+     <h1><span>Rubber</span> Games</h1>
      <div id="randomPhrase"></div>
      <button id="games" class="button-m">Games</button>
      <button id="apps" class="button-m">Apps</button>
-     <button id="LaunchExploits" class="button-m">Exploits/Proxies</button>
+     <button id="exploits" class="button-m">Exploits/Proxies</button>
      </div>
      <div id="cloakingSettings">
-     <button id="button-s" onclick="closeLeftMenu();">Settings</button>
+     <button id="button-s" onclick="closeLeftMenu();">Cloak Settings</button>
      <div id="menu" class="hide">
      <div id="container-s">
       <button id="aboutBlank" class="button-si">about:blank</button>
@@ -373,7 +368,6 @@
             { name: "Skribbl.io", url: "https://skribbl.io" },
             { name: "SigmaFart Website", url: "https://html.cafe/x4922b615" },
             { name: "Barney's Website", url: "https://html.cafe/x715d6947" },
-            { name: "Android App Launcher", url: "https://nowgg.lol/apps/frogiee1/69420/custom-thingy-loader.html" },
             { name: "EaglyMC (Minecraft)", url: "https://eaglymc.com/" },
             { name: "Minecraft (1.5)", url: "https://eaglercraft.glitch.me/" },
             { name: "Minecraft (1.8)", url: "https://eaglercraft-archive.github.io/Koneclient-1.8-web/" },
@@ -390,16 +384,18 @@
             { name: "Roblox (Easyfun.gg)", url: "https://www.easyfun.gg/games/roblox.html" },
             { name: "Roblox (Now.gg) cq4z", url: "https://dashboard-cq4z.onrender.com/?ng_ifp_partner=skool" },
             { name: "Roblox (Now.gg 2) Tortilla", url: "https://dfs3rzq44v6as.cloudfront.net/?frame=fullscreen/#/lessons/550673cd-2d7e-437e-ab86-baa249b52dd0" },
-            { name: "Roblox (Now.gg 3) Nowgg.lol", url: "https://nowgg.lol/" },
             { name: "Roblox (Now.gg 4, best) Vercel", url: "https://pathetic-roblox-main.vercel.app/" },
             { name: "Roblox (Now.gg 5) About:blank", url: "https://html.cafe/x8bcb5934" },
             { name: "Roblox (Now.gg 6) s2g3", url: "https://s2g3.onrender.com" },
             { name: "Tortilla Games", url: "https://dfs3rzq44v6as.cloudfront.net"},
             { name: "Ultraviolet", url: "https://dfs3rzq44v6as.cloudfront.net/#/prxy" },
+            { name: "PolyTrack", url: "https://d3rtzzzsiu7gdr.cloudfront.net/files/polytrack/index.html" },
+            { name: "GunSpin", url: "https://d3rtzzzsiu7gdr.cloudfront.net/files/gunspinupdate/index.html" },
             { name: "Five Nights At Winston's", url: "https://g.deev.is/fnaw" },
             { name: "1 (Reversed 2048)", url: "https://d272xss3wq00xu.cloudfront.net/2048/index.html" },
             { name: "Bottle Flip 3D", url: "https://d272xss3wq00xu.cloudfront.net/bottle-flip-3d/index.html" },
             { name: "Neal.fun", url: "https://neal.fun" },
+            { name: "COD Zombies Portable", url: "https://d3rtzzzsiu7gdr.cloudfront.net/files/nzp-gay/index.html" },
             { name: "Subway Surfers", url: "https://dddavit.github.io/subway/" },
             { name: "Slope", url: "https://mathadventure1.github.io/slope/slope/index.html" },
             { name: "Slope 2", url: "https://d3rtzzzsiu7gdr.cloudfront.net/gameplayer/index.html?Slope%202" },
@@ -662,7 +658,7 @@ function search_button() {
 document.getElementById("apps").onclick = function() {
     document.body.innerHTML = "<h4>Loading...<h4>";
     setTimeout(function() {
-    document.body.innerHTML = "<h3 style='font-size: 80px; font-family: Cabin, Tahoma, sans-serif; color: white; margin: 0; margin-bottom: 5px;'>Games</h3> <input id='searchBar' onkeyup='search_button()' type='text' name='search' placeholder='Search Games'>";
+    document.body.innerHTML = "<h3 style='font-size: 80px; font-family: Cabin, Tahoma, sans-serif; color: white; margin: 0; margin-bottom: 5px;'>Apps</h3> <input id='searchBar' onkeyup='search_button()' type='text' name='search' placeholder='Search Apps'>";
         createBackButton();
         var apps = [
             { name: "Online Chatroom", url: "https://chattyice234.github.io/online-chatroom" },
@@ -731,7 +727,7 @@ document.getElementById("apps").onclick = function() {
     }, 700);
 };
 
-document.getElementById("LaunchExploits").onclick = function() {
+document.getElementById("exploits").onclick = function() {
     document.body.innerHTML = "<h4>Loading...<h4>";
     setTimeout(function() {
         document.body.innerHTML = "";
@@ -920,6 +916,9 @@ document.getElementById("LaunchExploits").onclick = function() {
         "o/;[lm9kipmknhu,lmkjnhiuyos ,zxpocfldwsda()Sojdois]dsfsdf",
         "ugh... it's you. I'm joking! Welcome back!",
         "oh, for the love of god... Heyyy!!! Welcome!",
+        "game loading can take up to 20 seconds, please wait",
+        "removed suggestion form bc i realized how many stupid suggestions you would send",
+        "first rubber suggestion asking me to add working roblox, try every server bruh",
         "i hope i dont get codehs blocked",
         "What an interesting surprise!",
         // "W dinguschan",
@@ -1050,9 +1049,9 @@ function openLeftMenu() {
 //     createBackButton();
 // };
 
-document.getElementById("suggest").onclick = function() {
-  document.body.innerHTML = '<object id="suggestFrame" type="text/html" data="https://docs.google.com/forms/d/e/1FAIpQLSfOlgOWtpAkz7EHdr73D_Xw4fb2wTbYZeBK7Ok3-UG4oZKH0g/viewform?embedded=true" style="width: 100%; height: 100vh;"></object>';
-    createBackButton();
-};
+// document.getElementById("suggest").onclick = function() {
+//   document.body.innerHTML = '<object id="suggestFrame" type="text/html" data="https://docs.google.com/forms/d/e/1FAIpQLSfOlgOWtpAkz7EHdr73D_Xw4fb2wTbYZeBK7Ok3-UG4oZKH0g/viewform?embedded=true" style="width: 100%; height: 100vh;"></object>';
+//     createBackButton();
+// };
       </script>
 </html>
