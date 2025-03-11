@@ -7,7 +7,8 @@
   <meta name="description" content="Collection of fun browser games and useful apps for school, work, or just for fun, Rubber will help you demolish your boredom and play great games!">
   <meta name="keywords" content="Unbocked Games and Apps">
   <title>Rubber</title>
-  <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Rubber_bands.jpg/800px-Rubber_bands.jpg">
+  <link rel="icon" type="image/png" href="https://i.imgur.com/Pv9FqEX.png">
+  <link rel="stylesheet" href="styles.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
@@ -28,14 +29,24 @@
         width: 0px;
         overflow: hidden;
         }
-        
+
         span {
+        color: white;
+        font-family: Cabin;
+        transition: 0.3s all ease;
+        }
+        
+        span2 {
         color: #4b0082;
         font-family: Cabin;
         transition: 0.3s all ease;
         }
 
         span:hover {
+        text-shadow: 0 0 10px rgba(52, 152, 219, 0.8), 0 0 20px rgba(52, 152, 219, 0.6), 0 0 30px rgba(52, 152, 219, 0.4);
+        }
+
+         span2:hover {
         text-shadow: 0 0 10px rgba(52, 152, 219, 0.8), 0 0 20px rgba(52, 152, 219, 0.6), 0 0 30px rgba(52, 152, 219, 0.4);
         }
 
@@ -324,12 +335,94 @@
             font-weight: bold;
             font-size: 18px;
         }
+
+        .official-caa {
+            color: #fff;
+            margin-right: -7.3px;
+            margin-left: 0px;
+            margin-bottom: 0px;
+            font-size: 17px;
+            background-color: #3c4043;
+            height: 29px;
+            width: 122px;
+            text-align: center;
+            border-radius: 500px;
+            cursor: text;
+            z-index: 2147483644;
+        }
+
+        .officialaa {
+            color: #80ffbf;
+            margin-right: 1px;
+            margin-left: 0px;
+            margin-top: 8px;
+            cursor: text;
+            font-size: 14px;
+            z-index: 2147483644;
+        }
+
+        .dropdown-contentaa .status-messageaa {
+            color: #f1f1f1;
+            padding: 14px 14px;
+            background-color: #484d51;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            font-size: 15px;
+        }
+        .sitechecker-container {
+            background: #3c4043;
+            padding: 12px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: left;
+            color: #fff;
+            border: 3px solid #4b0082;
+            font-family: Arial, sans-serif;
+            
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            max-width: 300px;
+            width: 270px;
+            z-index: 9999;
+        }
+
+        .sitechecker-container p {
+            color: #fff;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin: 0;
+        }
+
+        .sitechecker-container .sitechecker-icon {
+            font-size: 36px;
+            margin-left: 4px;
+            margin-right: 6px;
+        }
+
+        .sitechecker-container .sitechecker-secure {
+        color: #701ccf;
+        }
+
+        .sitechecker-container .sitechecker-warning {
+        color: #ff4d4d;
+        
+        }
+
+        .sitechecker-container .sitechecker-link {
+        text-decoration: underline;
+        color: #007BFF;
+        }
   </style>
-     <!-- <h2><span>Update Log:</span></h2> -->
-     <h6>Version 0.11</h6>
+  <body>
+     <h2><span2>Update Log:</span2> Added official site checker, credits to dinguschan-owo on github</h2>
+     <h6>Version 0.15</h6>
      <button class="button-git" onclick="location.href='https://github.com/Chattyice234/Rubber'">GitHub</button>
      <div id="container-m">
-     <h1><span>Rubber</span> Games</h1>
+     <h1><span2>Rubber</span2> Games</h1>
      <div id="randomPhrase"></div>
      <button id="games" class="button-m">Games</button>
      <button id="apps" class="button-m">Apps</button>
@@ -343,8 +436,98 @@
      <button id="tabCloak" class="button-si">Tab Cloak</button>
      </div>
      </div>
-     
+     </body>
       <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    console.log("DEBUG: Script is running...");
+
+    const officialUrls = [
+        "https://chattyice234.github.io",
+        "https://rubber-13599452.codehs.me/index.html",
+    ];
+
+    function normalizeUrl(url) {
+        return url.split("#")[0].split("?")[0]; // Remove hash and query params
+    }
+
+    function createSitechecker() {
+        // Check if Sitechecker already exists
+        let sitecheckerContainer = document.querySelector(".sitechecker-container");
+        if (!sitecheckerContainer) {
+            sitecheckerContainer = document.createElement("div");
+            sitecheckerContainer.classList.add("sitechecker-container");
+            sitecheckerContainer.style.opacity = "1"; // Ensure it's visible initially
+
+            sitecheckerContainer.innerHTML = `
+                <p id="sitechecker-message">
+                    <i id="sitechecker-icon" class="sitechecker-icon"></i>
+                    <span id="sitechecker-text" style="visibility: visible !important;"></span>
+                </p>
+            `;
+
+            document.body.appendChild(sitecheckerContainer);
+            console.log("DEBUG: Sitechecker added to the body.");
+        } else {
+            console.log("DEBUG: Sitechecker already exists. No duplicate added.");
+        }
+
+        updateSitecheckerMessage();
+        fadeOutSitechecker();
+    }
+
+    function updateSitecheckerMessage() {
+        setTimeout(() => {
+            const messageElement = document.getElementById("sitechecker-text");
+            const iconElement = document.getElementById("sitechecker-icon");
+
+            if (!messageElement || !iconElement) {
+                console.error("ERROR: Verification elements not found in the DOM.");
+                return;
+            }
+
+            // Get the current URL
+            const pageUrl = normalizeUrl(window.location.href);
+            console.log("DEBUG: Current Page URL:", pageUrl);
+
+            // Set the verification message
+            if (officialUrls.includes(pageUrl)) {
+                console.log("DEBUG: Official Helios URL detected.");
+                iconElement.classList.add("fa", "fa-circle-check", "sitechecker-secure");
+                messageElement.innerHTML = `This link <b>(${pageUrl})</b> is a secure, official Rubber link.`;
+            } else {
+                console.log("DEBUG: UNOFFICIAL URL detected!");
+                iconElement.classList.add("fa", "fa-triangle-exclamation", "sitechecker-warning");
+                messageElement.innerHTML = `This link <b>(${pageUrl})</b> is not an official Rubber link. Use at your own risk, or find a list of official Rubber links <a href="https://github.com/Chattyice234/Rubber/blob/main/README.md" target="_blank" class="sitechecker-link">here</a>.`;
+            }
+
+            console.log("DEBUG: Text updated inside Sitechecker box.");
+        }, 200); 
+    }
+
+    function fadeOutSitechecker() {
+        setTimeout(() => {
+            let sitecheckerContainer = document.querySelector(".sitechecker-container");
+            if (sitecheckerContainer) {
+                sitecheckerContainer.style.transition = "opacity 1s ease-out";
+                sitecheckerContainer.style.opacity = "0";
+                console.log("DEBUG: Sitechecker is fading out.");
+            }
+        }, 5000); 
+    } 
+
+    // Create Sitechecker once on initial page load
+    createSitechecker();
+
+    // Ensure Sitechecker remains visible when switching tabs
+    document.addEventListener("click", function(event) {
+        if (event.target.closest(".tabaa")) {
+            setTimeout(() => {
+                createSitechecker(); 
+            }, 100);
+        }
+    });
+});
+
         function createBackButton() {
         var backButton = document.createElement("button");
         backButton.textContent = "Back";
@@ -395,7 +578,7 @@
             { name: "1 (Reversed 2048)", url: "https://d272xss3wq00xu.cloudfront.net/2048/index.html" },
             { name: "Bottle Flip 3D", url: "https://d272xss3wq00xu.cloudfront.net/bottle-flip-3d/index.html" },
             { name: "Neal.fun", url: "https://neal.fun" },
-            { name: "COD Zombies Portable", url: "https://d3rtzzzsiu7gdr.cloudfront.net/files/nzp-gay/index.html" },
+            { name: "COD Zombies Portable", url: "https://nzp.gay" },
             { name: "Subway Surfers", url: "https://dddavit.github.io/subway/" },
             { name: "Slope", url: "https://mathadventure1.github.io/slope/slope/index.html" },
             { name: "Slope 2", url: "https://d3rtzzzsiu7gdr.cloudfront.net/gameplayer/index.html?Slope%202" },
@@ -882,6 +1065,7 @@ document.getElementById("exploits").onclick = function() {
         "111111111111111111111",
         "it's super sigma, greg",
         "chromebooks suck",
+        "Try Slingshot Website by NTCATGAMER! https://html-15-13682230.codehs.me/",
         "forgot my pencil",
         "nahh im not blocking the games during the day",
         "oh the weather outside is rizzy (i love stealing from tortilla)",
@@ -970,6 +1154,8 @@ document.getElementById("exploits").onclick = function() {
         "guys this is something funny",
         "goguardian you need to leave",
         "i crafted a stone pick trust",
+        "My name is Edwin. I made the Mimic. It was difficult to put the pieces together But unfortunately, something went so wrong, and now I cant do anything but sing this stupid song!",
+        "My name is Edwin, I made the Mimic.",
         "gamble /j",
         "Lets go gambling! ch-ch aw dang it ch-ch aw dang it ch-ch aw dang it",
         "90% of gamblers quit right before they win big! Keep gambling guys! /j",
@@ -995,6 +1181,8 @@ document.getElementById("exploits").onclick = function() {
         "If you found this site before australian man, you're newgen",
         "splash text",
         "Like and subscribe",
+	"Credits for Rubber are on the github repo's readme",
+	"Credits for Rubber are on the github repo's readme",
         "Skibidihax?",
         "No i'm not adding freaky stuff to this site stay mad",
         "No i'm not adding freaky stuff to this site stay mad",
