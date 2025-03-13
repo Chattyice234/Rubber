@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <!-- Credits to @RicardoMarioSonic123 on GitHub for the Links123 code I used to create this website. Your site is amazing! -->
+<!-- Additional credits are on: https://github.com/Chattyice234/Rubber/blob/main/README.md -->
 <html>
 <head>
   <meta charset="UTF-8">
@@ -8,17 +9,18 @@
   <meta name="keywords" content="Unbocked Games and Apps">
   <title>Rubber</title>
   <link rel="icon" type="image/png" href="https://i.imgur.com/Pv9FqEX.png">
-  <link rel="stylesheet" href="styles.css">
+  <!-- <link rel="stylesheet" href="styles.css"> -->
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Varela+Round&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Oxanium:wght@200..800&display=swap');
 
     body {
-    font-family: 'Varela Round', sans-serif;
-    background-color: #1a2023;
-    margin: 0;
-    text-align: center;
+        font-family: 'Varela Round', sans-serif;
+        background-color: #1a2023;
+        margin: 0;
+        text-align: center;
     }
 
     body:hover {
@@ -152,6 +154,21 @@
                 cursor: pointer;
                 transition: 0.3s all ease;
             }
+
+            .button-m2 {
+                margin-left: 5px;
+                margin-right: 5px;
+                padding: 9px 25px;
+                font-size: 18px;
+                font-weight: 552;
+                font-family: Raleway, Tahoma, sans-serif;
+                background-color: #4b0082;
+                color: #fff;
+                border: 0 outset #444;
+                border-radius: 6px;
+                cursor: pointer;
+                transition: 0.3s all ease;
+            }
         
             .button-ab {
                 bottom: 0%; 
@@ -206,9 +223,9 @@
         }
 
         .button-sug {
-                bottom: 0%; 
+                top: 0%; 
                 text-decoration: underline;
-                left: 0%;
+                right: 0%;
                 width: 150px;
                 height: 70px;
                 position: absolute;
@@ -243,27 +260,43 @@
     
         .button:hover {
             background-color: #663399;
+            transform: rotate(-5deg);
         }
     
         .button:active {
             background-color: #743089;
+            transform: rotate(5deg);
         }
     
        .button-m:hover {
             background-color: #663399;
+            transform: rotate(5deg);
         }
     
         .button-m:active {
             background-color: #743089;
+            transform: rotate(-5deg);
+        }
+
+        .button-m2:hover {
+            background-color: #663399;
+            transform: rotate(-5deg);
+        }
+    
+        .button-m2:active {
+            background-color: #743089;
+            transform: rotate(5deg);
         }
     
         .button-ab:hover {
             background-color: #6f2da8;
             color: #1a2023;
+            transform: rotate(5deg);
         }
     
         .button-ab:active {
             background-color: #743089;
+            transform: rotate(-5deg);
         }
     
         #button-s:hover {
@@ -286,7 +319,7 @@
 
         .button-sug:hover {
             background-color: #8d4585;
-            color: #1a2023;
+            color: #1a2023; 
         }
     
         .button-sug:active {
@@ -418,16 +451,17 @@
         }
   </style>
   <body>
-     <h2><span2>Update Log:</span2> Added official site checker, credits to dinguschan-owo on github</h2>
-     <h6>Version 0.15</h6>
+    <h2><span2>Update Log:</span2> Added back suggestions, please follow guidelines</h2>
+     <h6>Version 0.17</h6>
      <button class="button-git" onclick="location.href='https://github.com/Chattyice234/Rubber'">GitHub</button>
      <div id="container-m">
      <h1><span2>Rubber</span2> Games</h1>
      <div id="randomPhrase"></div>
      <button id="games" class="button-m">Games</button>
-     <button id="apps" class="button-m">Apps</button>
-     <button id="exploits" class="button-m">Exploits/Proxies</button>
+     <button id="apps" class="button-m2">Apps</button>
+     <!-- <button id="exploits" class="button-m">Exploits/Proxies</button> -->
      </div>
+    <button class="button-sug" id="suggest">Suggestions</button>
      <div id="cloakingSettings">
      <button id="button-s" onclick="closeLeftMenu();">Cloak Settings</button>
      <div id="menu" class="hide">
@@ -910,63 +944,63 @@ document.getElementById("apps").onclick = function() {
     }, 700);
 };
 
-document.getElementById("exploits").onclick = function() {
-    document.body.innerHTML = "<h4>Loading...<h4>";
-    setTimeout(function() {
-        document.body.innerHTML = "";
-        createBackButton();
-        document.body.innerHTML = "<h3 style='font-size: 80px; font-family: Cabin, Tahoma, sans-serif; color: white; margin: 0; margin-bottom: 5px;'>Exploits/Proxies</h3> <input id='searchBar' onkeyup='search_button()' type='text' name='search' placeholder='Search Exploits and Proxies'>";
-        createBackButton();
-        var proxy = [
-            { name: "List of Exploits", url: "https://cocalc.com/github/3kh0/ext-remover/blob/main/README.md" },
-            { name: "ExtHang3r Old", url: "https://html.cafe/x707b2db0" },
-            { name: "History Flooder", url: "https://spritzerland.github.io/chbook/" },
-            { name: "Kahoot Flooder", url: "https://kahoot.rocks/" },
-            { name: "Disable School Blockers (ExtHang3r)", url: "https://chattyice234.github.io/ExtHang3r-Fork/" },
-            { name: "Search History Byp@ss", url: "https://html.cafe/x88b1c570" },
-            { name: "ExtPrint3r (NEW)", url: "https://extprint3r.github.io/" },
-            { name: "ByeBlocker Proxy Browser", url: "https://html.cafe/xfe3a414c" },
-            { name: "Helios Proxy Browser (Credits to dinguschan-owo on Github)", url: "https://helios-browser.vercel.app" },
-            { name: "Dingus Proxy Browser (Credits to dinguschan-owo on Github)", url: "https://dinguschan-owo.github.io/dingusproxy/" },
-            { name: "Ultraviolet", url: "https://dfs3rzq44v6as.cloudfront.net/#/prxy" },
-            { name: "BlockAway", url: "https://cdn.blockaway.net/" },
-            { name: "JMW Proxy", url: "https://infinitetutoring.com.au/history/textbook?historicalfigure=browser&type=local" },
-            { name: "Interstellar", url: "https://bookingportal.mounthoodlodge.info" },
-            { name: "Interstellar 2", url: "https://https://jobs.saer-emploi.com/" },
-            { name: "Interstellar 3", url: "https://menu.earlyriserscoffeeshop.com/" },
-            { name: "Interstellar 4", url: "https://services.nexus-computing.com/" },
-        ];
+// document.getElementById("exploits").onclick = function() {
+//     document.body.innerHTML = "<h4>Loading...<h4>";
+//     setTimeout(function() {
+//         document.body.innerHTML = "";
+//         createBackButton();
+//         document.body.innerHTML = "<h3 style='font-size: 80px; font-family: Cabin, Tahoma, sans-serif; color: white; margin: 0; margin-bottom: 5px;'>Exploits/Proxies</h3> <input id='searchBar' onkeyup='search_button()' type='text' name='search' placeholder='Search Exploits and Proxies'>";
+//         createBackButton();
+//         var proxy = [
+//             { name: "List of Exploits", url: "https://cocalc.com/github/3kh0/ext-remover/blob/main/README.md" },
+//             { name: "ExtHang3r Old", url: "https://html.cafe/x707b2db0" },
+//             { name: "History Flooder", url: "https://spritzerland.github.io/chbook/" },
+//             { name: "Kahoot Flooder", url: "https://kahoot.rocks/" },
+//             { name: "Disable School Blockers (ExtHang3r)", url: "https://chattyice234.github.io/ExtHang3r-Fork/" },
+//             { name: "Search History Byp@ss", url: "https://html.cafe/x88b1c570" },
+//             { name: "ExtPrint3r (NEW)", url: "https://extprint3r.github.io/" },
+//             { name: "ByeBlocker Proxy Browser", url: "https://html.cafe/xfe3a414c" },
+//             { name: "Helios Proxy Browser (Credits to dinguschan-owo on Github)", url: "https://helios-browser.vercel.app" },
+//             { name: "Dingus Proxy Browser (Credits to dinguschan-owo on Github)", url: "https://dinguschan-owo.github.io/dingusproxy/" },
+//             { name: "Ultraviolet", url: "https://dfs3rzq44v6as.cloudfront.net/#/prxy" },
+//             { name: "BlockAway", url: "https://cdn.blockaway.net/" },
+//             { name: "JMW Proxy", url: "https://infinitetutoring.com.au/history/textbook?historicalfigure=browser&type=local" },
+//             { name: "Interstellar", url: "https://bookingportal.mounthoodlodge.info" },
+//             { name: "Interstellar 2", url: "https://https://jobs.saer-emploi.com/" },
+//             { name: "Interstellar 3", url: "https://menu.earlyriserscoffeeshop.com/" },
+//             { name: "Interstellar 4", url: "https://services.nexus-computing.com/" },
+//         ];
 
-        var container = document.createElement("div");
-        container.setAttribute("id", "proxyContainer");
-        document.body.appendChild(container);
-        createBackButton();
+//         var container = document.createElement("div");
+//         container.setAttribute("id", "proxyContainer");
+//         document.body.appendChild(container);
+//         createBackButton();
 
-        proxy.forEach(function(proxy) {
-            var button = document.createElement("button");
-            button.textContent = proxy.name;
-            button.className = "button";
-            createBackButton();
-            button.onclick = function() {
-                if (proxy.url) {
-                    createBackButton();
-                    document.body.innerHTML = '';
-                    var messageText = document.createElement("p");
-                    messageText.textContent = proxy.message;
-                    messageText.style.color = "#fff";
-                    messageText.style.marginTop = "20px";
-                    document.body.appendChild(messageText);
-                    document.body.innerHTML = '<object id="proxyFrame" type="text/html" data="' + proxy.url + '" style="width: 100%; height: 100vh;"></object>';
-                    createBackButton();
-                } else if (proxy.action) {
-                    proxy.action();
-                    createBackButton();
-                }
-            };
-            container.appendChild(button);
-        });
-    }, 1000);
-};
+//         proxy.forEach(function(proxy) {
+//             var button = document.createElement("button");
+//             button.textContent = proxy.name;
+//             button.className = "button";
+//             createBackButton();
+//             button.onclick = function() {
+//                 if (proxy.url) {
+//                     createBackButton();
+//                     document.body.innerHTML = '';
+//                     var messageText = document.createElement("p");
+//                     messageText.textContent = proxy.message;
+//                     messageText.style.color = "#fff";
+//                     messageText.style.marginTop = "20px";
+//                     document.body.appendChild(messageText);
+//                     document.body.innerHTML = '<object id="proxyFrame" type="text/html" data="' + proxy.url + '" style="width: 100%; height: 100vh;"></object>';
+//                     createBackButton();
+//                 } else if (proxy.action) {
+//                     proxy.action();
+//                     createBackButton();
+//                 }
+//             };
+//             container.appendChild(button);
+//         });
+//     }, 1000);
+// };
     
 
     document.getElementById("aboutBlank").onclick = function() {
@@ -1169,6 +1203,8 @@ document.getElementById("exploits").onclick = function() {
         "GLACIER OS",
         "fun fact: the mcdonalds logo's colors are meant to make you hungry. the hex code of the red color is FF000d. pretty cool",
         "roblox.uno",
+        "Credits for Rubber are on the github repo's readme",
+        "Credits for Rubber are on the github repo's readme",
         "getliner.com doesnt work D:",
         "Imagine opening a cabinet and an AI generated spider jumpscare comes out",
         "but Ms. Birch i never said i wanted to present my project nex- SHUT UP",
@@ -1181,8 +1217,6 @@ document.getElementById("exploits").onclick = function() {
         "If you found this site before australian man, you're newgen",
         "splash text",
         "Like and subscribe",
-	"Credits for Rubber are on the github repo's readme",
-	"Credits for Rubber are on the github repo's readme",
         "Skibidihax?",
         "No i'm not adding freaky stuff to this site stay mad",
         "No i'm not adding freaky stuff to this site stay mad",
@@ -1237,9 +1271,9 @@ function openLeftMenu() {
 //     createBackButton();
 // };
 
-// document.getElementById("suggest").onclick = function() {
-//   document.body.innerHTML = '<object id="suggestFrame" type="text/html" data="https://docs.google.com/forms/d/e/1FAIpQLSfOlgOWtpAkz7EHdr73D_Xw4fb2wTbYZeBK7Ok3-UG4oZKH0g/viewform?embedded=true" style="width: 100%; height: 100vh;"></object>';
-//     createBackButton();
-// };
+document.getElementById("suggest").onclick = function() {
+  document.body.innerHTML = '<object id="suggestFrame" type="text/html" data="https://docs.google.com/forms/d/e/1FAIpQLSfOlgOWtpAkz7EHdr73D_Xw4fb2wTbYZeBK7Ok3-UG4oZKH0g/viewform?embedded=true" style="width: 100%; height: 100vh;"></object>';
+    createBackButton();
+};
       </script>
 </html>
