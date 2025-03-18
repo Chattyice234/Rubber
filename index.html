@@ -11,466 +11,528 @@
   <link rel="icon" type="image/png" href="https://i.imgur.com/Pv9FqEX.png">
   <!-- <link rel="stylesheet" href="styles.css"> -->
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Oxanium:wght@200..800&display=swap');
+	  @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Oxanium:wght@200..800&display=swap');
 
-    body {
-        font-family: 'Varela Round', sans-serif;
-        background-color: #1a2023;
-        margin: 0;
-        text-align: center;
-    }
+body {
+    font-family: 'Varela Round', sans-serif;
+    background-color: #1a2023;
+    margin: 0;
+    text-align: center;
+}
 
-    body:hover {
-        cursor: default;
-    }
+body:hover {
+    cursor: default;
+}
     
-        ::-webkit-scrollbar {
-        width: 0px;
-        overflow: hidden;
-        }
+::-webkit-scrollbar {
+    width: 0px;
+    overflow: hidden;
+}
 
-        span {
-        color: white;
-        font-family: Cabin;
-        transition: 0.3s all ease;
-        }
+span {
+    color: white;
+    font-family: Cabin;
+    transition: 0.3s all ease;
+}
         
-        span2 {
+span2 {
+    color: #4b0082;
+    font-family: Cabin;
+    transition: 0.3s all ease;
+}
+
+span:hover {
+    text-shadow: 0 0 10px rgba(52, 152, 219, 0.8), 0 0 20px rgba(52, 152, 219, 0.6), 0 0 30px rgba(52, 152, 219, 0.4);
+}
+
+span2:hover {
+    text-shadow: 0 0 10px rgba(52, 152, 219, 0.8), 0 0 20px rgba(52, 152, 219, 0.6), 0 0 30px rgba(52, 152, 219, 0.4);
+}
+
+.animated-text {
+    font-size: 3rem;
+    color: #fff;
+    opacity: 0;
+    animation: textShadowAnimation 2s forwards;
+}
+
+@keyframes textShadowAnimation {
+    0% {
+        opacity: 0;
+        text-shadow: none;
+    }
+    50% {
+        opacity: 1;
+        text-shadow: 0 0 10px rgba(52, 152, 219, 0.8), 
+                     0 0 20px rgba(52, 152, 219, 0.6), 
+                     0 0 30px rgba(52, 152, 219, 0.4);
         color: #4b0082;
-        font-family: Cabin;
-        transition: 0.3s all ease;
-        }
-
-        span:hover {
-        text-shadow: 0 0 10px rgba(52, 152, 219, 0.8), 0 0 20px rgba(52, 152, 219, 0.6), 0 0 30px rgba(52, 152, 219, 0.4);
-        }
-
-         span2:hover {
-        text-shadow: 0 0 10px rgba(52, 152, 219, 0.8), 0 0 20px rgba(52, 152, 219, 0.6), 0 0 30px rgba(52, 152, 219, 0.4);
-        }
-
-        .animated-text {
-            font-size: 3rem;
-            color: #fff;
-            opacity: 0;
-            animation: textShadowAnimation 2s forwards;
-        }
-
-        @keyframes textShadowAnimation {
-            0% {
-                opacity: 0;
-                text-shadow: none;
-            }
-            50% {
-                opacity: 1;
-                text-shadow: 0 0 10px rgba(52, 152, 219, 0.8), 
-                             0 0 20px rgba(52, 152, 219, 0.6), 
-                             0 0 30px rgba(52, 152, 219, 0.4);
-                color: #4b0082;
-            }
-            100% {
-                opacity: 1;
-                text-shadow: none;
-                color: #4b0082;
-            }
-        }
+    }
+    100% {
+        opacity: 1;
+        text-shadow: none;
+        color: #4b0082;
+    }
+}
         
-        h1 {
-        font-size: 50px;
-        font-family: Cabin, Tahoma, sans-serif;
-        color: white;
-        }
+h1 {
+    font-size: 50px;
+    font-family: Cabin, Tahoma, sans-serif;
+    color: white;
+}
         
-        h2 {
-        top: 0%; 
-        width: 100%;
-        position: absolute;
-        font-size: 20px;
-        font-family: Cabin, Tahoma, sans-serif;
-        color: #fff;
-        }
+h2 {
+    top: 0%; 
+    width: 100%;
+    position: absolute;
+    font-size: 20px;
+    font-family: Cabin, Tahoma, sans-serif;
+    color: #fff;
+}
         
-        h4 {
-        margin: 0;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        font-size: 50px;
-        font-family: Cabin, Tahoma, sans-serif;
-        color: white;
-        }
+h4 {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 50px;
+    font-family: Cabin, Tahoma, sans-serif;
+    color: white;
+}
             
-        h6 {
-        font-size: 20px;
-        font-family: Cabin, Tahoma, sans-serif;
-        color: #fff;
-        }
+h6 {
+    font-size: 20px;
+    font-family: Cabin, Tahoma, sans-serif;
+    color: #fff;
+}
+
+h7 {
+    font-size: 15px;
+    font-family: Cabin, Tahoma, sans-serif;
+    color: #fff;
+    bottom: 0;
+}
         
-        #searchBar{
-        font-family: Cabin, Tahoma, sans-serif;
-        font-size: 15px;
-        padding: 15px;
-        width: 50%;
-        border-radius: 6px;
-        border: 0;
-        font-weight: 552;
-        text-align: center;
-        background-color: #111111;
-        color: #fff
-        }    
+#searchBar{
+    font-family: Cabin, Tahoma, sans-serif;
+    font-size: 15px;
+    padding: 15px;
+    width: 50%;
+    border-radius: 6px;
+    border: 3px solid #4b0082;
+    font-weight: 552;
+    text-align: center;
+    background-color: #111111;
+    color: #fff;
+    transition: 0.5s all ease;
+}    
         
-        .button {
-                margin-top: 20px;
-                margin-left: 7px;
-                margin-right: 7px;
-                padding: 9px 25px;
-                font-size: 18px;
-                font-weight: 552;
-                font-family: Raleway, Tahoma, sans-serif;
-                background-color: #4B0082;
-                color: #fff;
-                border: 0 outset #444;
-                border-radius: 6px;
-                cursor: pointer;
-                transition: 0.3s all ease;
-            }
+.button {
+    margin-top: 20px;
+    margin-left: 7px;
+    margin-right: 7px;
+    padding: 9px 25px;
+    font-size: 18px;
+    font-weight: 552;
+    font-family: Raleway, Tahoma, sans-serif;
+    background-color: #4B0082;
+    color: #fff;
+    border: 0 outset #444;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s all ease;
+}
         
-            .button-m {
-                margin-left: 5px;
-                margin-right: 5px;
-                padding: 9px 25px;
-                font-size: 18px;
-                font-weight: 552;
-                font-family: Raleway, Tahoma, sans-serif;
-                background-color: #4b0082;
-                color: #fff;
-                border: 0 outset #444;
-                border-radius: 6px;
-                cursor: pointer;
-                transition: 0.3s all ease;
-            }
+.button-m {
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 9px 25px;
+    font-size: 18px;
+    font-weight: 552;
+    font-family: Raleway, Tahoma, sans-serif;
+    background-color: #4b0082;
+    color: #fff;
+    border: 0 outset #444;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s all ease;
+}
 
-            .button-m2 {
-                margin-left: 5px;
-                margin-right: 5px;
-                padding: 9px 25px;
-                font-size: 18px;
-                font-weight: 552;
-                font-family: Raleway, Tahoma, sans-serif;
-                background-color: #4b0082;
-                color: #fff;
-                border: 0 outset #444;
-                border-radius: 6px;
-                cursor: pointer;
-                transition: 0.3s all ease;
-            }
+.button-m2 {
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 9px 25px;
+    font-size: 18px;
+    font-weight: 552;
+    font-family: Raleway, Tahoma, sans-serif;
+    background-color: #4b0082;
+    color: #fff;
+    border: 0 outset #444;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s all ease;
+}
         
-            .button-ab {
-                bottom: 0%; 
-                text-decoration: underline;
-                left: 0%;
-                width: 150px;
-                height: 70px;
-                position: absolute;
-                font-size: 18px;
-                font-weight: 552;
-                font-family: Raleway, Tahoma, sans-serif;
-                border: none;
-                border-radius: 10px;
-                color: #fff;
-                background: none;
-                cursor: pointer;
-                transition: background-color 0.3s, color 0.3s, transform 0.2s;
-            }
+.button-ab {
+    bottom: 0%; 
+    text-decoration: underline;
+    left: 0%;
+    width: 150px;
+    height: 70px;
+    position: absolute;
+    font-size: 18px;
+    font-weight: 552;
+    font-family: Raleway, Tahoma, sans-serif;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    background: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
     
-         #button-s {
-            bottom: 0%; 
-            text-decoration: underline;
-            right: 0%;
-            width: 130px;
-            height: 70px;
-            position: absolute;
-            font-size: 18px;
-            font-weight: 552;
-            font-family: Raleway, Tahoma, sans-serif;
-            border: none;
-            border-radius: 10px;
-            color: #fff;
-            background: none;
-            cursor: pointer;
-            transition: background-color 0.3s, color 0.3s, transform 0.2s;
-        }
+#button-s {
+    bottom: 0%; 
+    text-decoration: underline;
+    right: 0%;
+    width: 130px;
+    height: 70px;
+    position: absolute;
+    font-size: 18px;
+    font-weight: 552;
+    font-family: Raleway, Tahoma, sans-serif;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    background: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
 
-        .button-si {
-            margin-left: 5px;
-            margin-right: 5px;
-            font-size: 18px;
-            font-weight: 552;
-            font-family: Cabin, Tahoma, sans-serif;
-            background-color: #4b0082;
-            color: #fff;
-            border: 0 outset #444;
-            border-radius: 6px;
-            cursor: pointer;
-            height: 100%;
-            width: 45%;
-            transition: background-color 0.3s, transform 0.2s;
-        }
+.button-si {
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 18px;
+    font-weight: 552;
+    font-family: Cabin, Tahoma, sans-serif;
+    background-color: #4b0082;
+    color: #fff;
+    border: 0 outset #444;
+    border-radius: 6px;
+    cursor: pointer;
+    height: 50px;
+    width: 45%;
+    transition: background-color 0.3s, transform 0.2s;
+}
 
-        .button-sug {
-                top: 0%; 
-                text-decoration: underline;
-                right: 0%;
-                width: 150px;
-                height: 70px;
-                position: absolute;
-                font-size: 18px;
-                font-weight: 552;
-                font-family: Raleway, Tahoma, sans-serif;
-                border: none;
-                border-radius: 10px;
-                color: #fff;
-                background: none;
-                cursor: pointer;
-                transition: background-color 0.3s, color 0.3s, transform 0.2s;
-            }
+.button-sug {
+    top: 0%; 
+    text-decoration: underline;
+    right: 0%;
+    width: 150px;
+    height: 70px;
+    position: absolute;
+    font-size: 18px;
+    font-weight: 552;
+    font-family: Raleway, Tahoma, sans-serif;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    background: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
     
-        .button-git {
-                bottom: 0%; 
-                text-decoration: underline;
-                left: 0%;
-                width: 150px;
-                height: 70px;
-                position: absolute;
-                font-size: 18px;
-                font-weight: 552;
-                font-family: Raleway, Tahoma, sans-serif;
-                border: none;
-                border-radius: 10px;
-                color: #fff;
-                background: none;
-                cursor: pointer;
-                transition: background-color 0.3s, color 0.3s, transform 0.2s;
-            }
+.button-git {
+    bottom: 0%; 
+    text-decoration: underline;
+    left: 0%;
+    width: 150px;
+    height: 70px;
+    position: absolute;
+    font-size: 18px;
+    font-weight: 552;
+    font-family: Raleway, Tahoma, sans-serif;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    background: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
     
-        .button:hover {
-            background-color: #663399;
-            transform: rotate(-5deg);
-        }
+.button:hover {
+    background-color: #663399;
+    transform: rotate(-5deg);
+}
     
-        .button:active {
-            background-color: #743089;
-            transform: rotate(5deg);
-        }
+.button:active {
+    background-color: #743089;
+    transform: rotate(5deg);
+}
     
-       .button-m:hover {
-            background-color: #663399;
-            transform: rotate(5deg);
-        }
+.button-m:hover {
+    background-color: #663399;
+    transform: rotate(5deg);
+}
     
-        .button-m:active {
-            background-color: #743089;
-            transform: rotate(-5deg);
-        }
+.button-m:active {
+    background-color: #743089;
+    transform: rotate(-5deg);
+}
 
-        .button-m2:hover {
-            background-color: #663399;
-            transform: rotate(-5deg);
-        }
+.button-m2:hover {
+    background-color: #663399;
+    transform: rotate(-5deg);
+}
     
-        .button-m2:active {
-            background-color: #743089;
-            transform: rotate(5deg);
-        }
+.button-m2:active {
+    background-color: #743089;
+    transform: rotate(5deg);
+}
     
-        .button-ab:hover {
-            background-color: #6f2da8;
-            color: #1a2023;
-            transform: rotate(5deg);
-        }
+.button-ab:hover {
+    background-color: #6f2da8;
+    color: #1a2023;
+    transform: rotate(5deg);
+}
     
-        .button-ab:active {
-            background-color: #743089;
-            transform: rotate(-5deg);
-        }
+.button-ab:active {
+    background-color: #743089;
+    transform: rotate(-5deg);
+}
     
-        #button-s:hover {
-            background-color: #00b48d;
-            color: #1a2023;
-        }
+#button-s:hover {
+    background-color: #00b48d;
+    color: #1a2023;
+}
     
-        #button-s:active {
-            background-color: #743089;
-        }
+#button-s:active {
+    background-color: #743089;
+}
 
-        .button-si:hover {
-            background-color: #00b48d;
-            color: #1a2023;
-        }
+.button-si:hover {
+    background-color: #00b48d;
+    color: #1a2023;
+}
     
-        .button-si:active {
-            background-color: #743089;
-        }
+.button-si:active {
+    background-color: #743089;
+}
 
-        .button-sug:hover {
-            background-color: #8d4585;
-            color: #1a2023; 
-        }
+.button-sug:hover {
+    background-color: #8d4585;
+    color: #1a2023; 
+}
     
-        .button-sug:active {
-            background-color: #743089;
-        }
+.button-sug:active {
+    background-color: #743089;
+}
 
-        .button-git:hover {
-            background-color: #4b0082;
-            color: #1a2023;
-        }
+.button-git:hover {
+    background-color: #4b0082;
+    color: #1a2023;
+}
     
-        .button-git:active {
-            background-color: #743089;
-        }
+.button-git:active {
+    background-color: #743089;
+}
     
-         #container-m {
-            position: absolute;
-	        left: 50%;
-	        top: 50%;
-	        transform: translate(-50%, -50%);
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
+#container-m {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
-        #container-s {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #111111;
-            height: 50%;
-            width: 50%;
-            border-radius: 10px;
-        }
+#container-s {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #111111;
+    height: 60%;
+    width: 70%;
+    border-radius: 10px;
+    padding: 20px;
+}
 
-        .hide{
-            display: none;
-        }
+.hide{
+    display: none;
+}
+
+#container-s .input-container {
+    margin-bottom: 10px;
+}
+
+#container-s input[type="text"] {
+    width: 80%;
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #4b0082;
+    border-radius: 6px;
+    font-family: Cabin, Tahoma, sans-serif;
+    font-size: 16px;
+}
     
-        #randomPhrase {
-            color: #fff;
-            margin-bottom: 43px;
-            font-family: Cabin;
-            text-align: center;
-            font-weight: bold;
-            font-size: 18px;
-        }
+#randomPhrase {
+    color: #fff;
+    margin-bottom: 43px;
+    font-family: Cabin;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
 
-        .official-caa {
-            color: #fff;
-            margin-right: -7.3px;
-            margin-left: 0px;
-            margin-bottom: 0px;
-            font-size: 17px;
-            background-color: #3c4043;
-            height: 29px;
-            width: 122px;
-            text-align: center;
-            border-radius: 500px;
-            cursor: text;
-            z-index: 2147483644;
-        }
+.official-caa {
+    color: #fff;
+    margin-right: -7.3px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    font-size: 17px;
+    background-color: #3c4043;
+    height: 29px;
+    width: 122px;
+    text-align: center;
+    border-radius: 500px;
+    cursor: text;
+    z-index: 2147483644;
+}
 
-        .officialaa {
-            color: #80ffbf;
-            margin-right: 1px;
-            margin-left: 0px;
-            margin-top: 8px;
-            cursor: text;
-            font-size: 14px;
-            z-index: 2147483644;
-        }
+.officialaa {
+    color: #80ffbf;
+    margin-right: 1px;
+    margin-left: 0px;
+    margin-top: 8px;
+    cursor: text;
+    font-size: 14px;
+    z-index: 2147483644;
+}
 
-        .dropdown-contentaa .status-messageaa {
-            color: #f1f1f1;
-            padding: 14px 14px;
-            background-color: #484d51;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-            font-size: 15px;
-        }
-        .sitechecker-container {
-            background: #3c4043;
-            padding: 12px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            text-align: left;
-            color: #fff;
-            border: 3px solid #4b0082;
-            font-family: Arial, sans-serif;
-            
-            position: fixed;
-            top: 10px;
-            left: 10px;
-            max-width: 300px;
-            width: 270px;
-            z-index: 9999;
-        }
+.dropdown-contentaa .status-messageaa {
+    color: #f1f1f1;
+    padding: 14px 14px;
+    background-color: #484d51;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 15px;
+}
+.sitechecker-container {
+    background: #3c4043;
+    padding: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: left;
+    color: #fff;
+    border: 3px solid #4b0082;
+    font-family: Arial, sans-serif;
+    
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    max-width: 300px;
+    width: 270px;
+    z-index: 9999;
+}
 
-        .sitechecker-container p {
-            color: #fff;
-            font-size: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            margin: 0;
-        }
+.sitechecker-container p {
+    color: #fff;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0;
+}
 
-        .sitechecker-container .sitechecker-icon {
-            font-size: 36px;
-            margin-left: 4px;
-            margin-right: 6px;
-        }
+.sitechecker-container .sitechecker-icon {
+    font-size: 36px;
+    margin-left: 4px;
+    margin-right: 6px;
+}
 
-        .sitechecker-container .sitechecker-secure {
-        color: #701ccf;
-        }
+.sitechecker-container .sitechecker-secure {
+color: #701ccf;
+}
 
-        .sitechecker-container .sitechecker-warning {
-        color: #ff4d4d;
-        
-        }
+.sitechecker-container .sitechecker-warning {
+color: #ff4d4d;
 
-        .sitechecker-container .sitechecker-link {
-        text-decoration: underline;
-        color: #007BFF;
-        }
-  </style>
-  <body>
-    <h2><span2>Update Log:</span2> Added back suggestions, please follow guidelines</h2>
-     <h6>Version 0.17</h6>
-     <button class="button-git" onclick="location.href='https://github.com/Chattyice234/Rubber'">GitHub</button>
-     <div id="container-m">
-     <h1><span2>Rubber</span2> Games</h1>
-     <div id="randomPhrase"></div>
-     <button id="games" class="button-m">Games</button>
-     <button id="apps" class="button-m2">Apps</button>
-     <!-- <button id="exploits" class="button-m">Exploits/Proxies</button> -->
-     </div>
-    <button class="button-sug" id="suggest">Suggestions</button>
-     <div id="cloakingSettings">
-     <button id="button-s" onclick="closeLeftMenu();">Cloak Settings</button>
-     <div id="menu" class="hide">
-     <div id="container-s">
-      <button id="aboutBlank" class="button-si">about:blank</button>
-     <button id="tabCloak" class="button-si">Tab Cloak</button>
-     </div>
-     </div>
-     </body>
+}
+
+.sitechecker-container .sitechecker-link {
+text-decoration: underline;
+color: #007BFF;
+}
+   </style>
+  <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Collection of fun browser games and useful apps for school, work, or just for fun, Rubber will help you demolish your boredom and play great games!">
+  <meta name="keywords" content="Unbocked Games and Apps">
+  <title>Rubber</title>
+  <link rel="icon" type="image/png" href="https://i.imgur.com/Pv9FqEX.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <h2><span2>Update Log:</span2> Added custom favicon and custom link settings in the Cloak Settings</h2>
+  <h6>Version 0.22</h6>
+  <button class="button-git" onclick="location.href='https://github.com/Chattyice234/Rubber'">GitHub</button>
+  <div id="container-m">
+    <h1><span2>Rubber</span2> Games</h1>
+    <div id="randomPhrase"></div>
+    <button id="games" class="button">Games
+        <span class="button__icon">
+            <ion-icon name="game-controller-outline"></ion-icon>
+        </span>
+    </button>
+    <button id="apps" class="button">Apps
+        <span class="button__icon">
+            <ion-icon name="apps-outline"></ion-icon>
+        </span>
+    </button>  
+    </div>
+  <button class="button-sug" id="suggest">Suggestions</button>
+  <h7>Test updates early here: rubber-testing-13799091.codehs.me</h7>
+  <div id="cloakingSettings">
+    <button id="button-s" onclick="closeLeftMenu();">Cloak Settings</button>
+    <div id="menu" class="hide">
+      <div id="container-s">
+        <button id="aboutBlank" class="button-si">about:blank</button>
+        <button id="tabCloak" class="button-si">Tab Cloak</button>
+        <div>
+            <br>
+          <label style="color: #fff; font-family: Cabin, Tahoma, sans-serif;">Custom Favicon:</label>
+          <input type="text" id="faviconInput" style="width: 80%; padding: 5px; margin-bottom: 10px;">
+        </div>
+        <div>
+          <label style="color: #fff; font-family: Cabin, Tahoma, sans-serif;">Site Title:</label>
+          <input type="text" id="titleInput" style="width: 80%; padding: 5px; margin-bottom: 10px;">
+        </div>
+        <button id="saveSettings" class="button-si">Save</button>
+        <br>
+        <h6>To exit, click the Settings button again.</h6>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
       <script>
         document.addEventListener("DOMContentLoaded", function() {
     console.log("DEBUG: Script is running...");
@@ -478,10 +540,17 @@
     const officialUrls = [
         "https://chattyice234.github.io",
         "https://rubber-13599452.codehs.me/index.html",
+        "https://rubber-13599452.codehs.me/",
+    ];
+
+    const testUrls = [
+        "https://rubber-testing-13799091.codehs.me/index.html",
+        "https://rubber-testing-13799091.codehs.me/",
     ];
 
     function normalizeUrl(url) {
-        return url.split("#")[0].split("?")[0]; // Remove hash and query params
+        return url.split("#")[0].split("?")[0]; 
+        // Remove hash and query params
     }
 
     function createSitechecker() {
@@ -525,9 +594,13 @@
 
             // Set the verification message
             if (officialUrls.includes(pageUrl)) {
-                console.log("DEBUG: Official Helios URL detected.");
+                console.log("DEBUG: Official Rubber URL detected.");
                 iconElement.classList.add("fa", "fa-circle-check", "sitechecker-secure");
                 messageElement.innerHTML = `This link <b>(${pageUrl})</b> is a secure, official Rubber link.`;
+            } else if (testUrls.includes(pageUrl)) {
+                console.log("DEBUG: Test Rubber URL detected.");
+                iconElement.classList.add("fa", "fa-circle-check", "sitechecker-secure");
+                messageElement.innerHTML = `This link <b>(${pageUrl})</b> is an official testing link for Rubber. Expect bugs and report them in the suggestions.`;
             } else {
                 console.log("DEBUG: UNOFFICIAL URL detected!");
                 iconElement.classList.add("fa", "fa-triangle-exclamation", "sitechecker-warning");
@@ -537,6 +610,7 @@
             console.log("DEBUG: Text updated inside Sitechecker box.");
         }, 200); 
     }
+
 
     function fadeOutSitechecker() {
         setTimeout(() => {
@@ -579,12 +653,11 @@
     document.getElementById("games").onclick = function() {
       document.body.innerHTML = "<h4>Loading...<h4>";
       setTimeout(function() {
-    document.body.innerHTML = "<h3 style='font-size: 80px; font-family: Cabin, Tahoma, sans-serif; color: white; margin: 0; margin-bottom: 5px;'>Games</h3> <input id='searchBar' onkeyup='search_button()' type='text' name='search' placeholder='Search Games'>";
+    document.body.innerHTML = "<h3 style='font-size: 80px; font-family: Cabin, Tahoma, sans-serif; color: white; margin: 0; margin-bottom: 5px;'>Games</h3> <input id='searchBar' onkeyup='search_button()' type='text' name='search' placeholder='Search Games' autocomplete='off'>";
         createBackButton();
         var games = [
             { name: "Skribbl.io", url: "https://skribbl.io" },
             { name: "SigmaFart Website", url: "https://html.cafe/x4922b615" },
-            { name: "Barney's Website", url: "https://html.cafe/x715d6947" },
             { name: "EaglyMC (Minecraft)", url: "https://eaglymc.com/" },
             { name: "Minecraft (1.5)", url: "https://eaglercraft.glitch.me/" },
             { name: "Minecraft (1.8)", url: "https://eaglercraft-archive.github.io/Koneclient-1.8-web/" },
@@ -840,6 +913,7 @@
             { name: "Papa's Sushiria", url: "https://obsidianig.com/games/papassushiria/" },
             { name: "Papa's Wingeria", url: "https://obsidianig.com/games/papaswingeria/" },
             { name: "There Is No Game", url: "https://obsidianig.com/games/thereisnogame/" },
+            { name: "test", url: "https://chatgpt.com/" },
       
          ];
         var container = document.createElement("div");
@@ -1082,6 +1156,9 @@ document.getElementById("apps").onclick = function() {
         "Ur computer has virus",
         "thanks reed :DDD 🔥",
         "Sponsored by.... Nobody :D",
+        "youre naaasty",
+        "youre nasty",
+        "youre naaaaaaasty",
         "Bro u gotta lock in - Josh",
         "(╯°□°)╯︵ ┻━┻",
         "ಠ_ಠ",
@@ -1203,8 +1280,6 @@ document.getElementById("apps").onclick = function() {
         "GLACIER OS",
         "fun fact: the mcdonalds logo's colors are meant to make you hungry. the hex code of the red color is FF000d. pretty cool",
         "roblox.uno",
-        "Credits for Rubber are on the github repo's readme",
-        "Credits for Rubber are on the github repo's readme",
         "getliner.com doesnt work D:",
         "Imagine opening a cabinet and an AI generated spider jumpscare comes out",
         "but Ms. Birch i never said i wanted to present my project nex- SHUT UP",
@@ -1265,6 +1340,22 @@ function openLeftMenu() {
             openLeftMenu();
           };
         }
+
+        document.getElementById("saveSettings").onclick = function() {
+    const faviconUrl = document.getElementById("faviconInput").value;
+    const newTitle = document.getElementById("titleInput").value;
+
+    if (faviconUrl) {
+      document.querySelector("link[rel='icon']").href = faviconUrl;
+    }
+
+    if (newTitle) {
+      document.title = newTitle;
+    }
+
+    alert("Settings saved!");
+  };
+
 
 // document.getElementById("chat").onclick = function() {
 //   document.body.innerHTML = '<object id="chatFrame" type="text/html" data="https://chattyice234.github.io/online-chatroom" style="width: 100%; height: 100vh;"></object>';
