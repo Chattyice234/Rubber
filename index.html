@@ -629,9 +629,9 @@ h7 {
      <div id="updatelog" class= "hide">
      <button class="button-c" onclick="closeUpdateLog();" title="Close Update log">Close</button>
      <div class="header">
-     <h3 style="font-size: 50px; font-family: Cabin, sans-serif; color: #4b0082; margin-bottom: 0px;">Update 0.25</h3>
+     <h3 style="font-size: 50px; font-family: Cabin, sans-serif; color: #4b0082; margin-bottom: 0px;">Update 0.27</h3>
      </div>
-     <h2>Added a bunch of stuff from Links123. Credit to RicardoMarioSonic123 on Github for the original updates, and helping me fix bugs!</h2>
+     <h2>Every tab cloak is now saved to local storage so the cloak stays if you reload or close the tab and reopen it. The Google tab cloak not saving to local storage has been fixed.</h2>
      </div>
      </div>  
 
@@ -673,6 +673,92 @@ h7 {
      openUpdateLog();
        };
      }
+
+       // Save tab name to localStorage
+     function changeTabName() {
+         var tabName = document.getElementById("tabName").value;
+         document.title = tabName;
+         localStorage.setItem("tabName", tabName);
+     }
+
+     // Save tab icon to localStorage
+     function changeTabIcon() {
+         var tabIcon = document.getElementById("tabIcon").value;
+         changeTabFavicon(tabIcon);
+         localStorage.setItem("tabIcon", tabIcon);
+     }
+
+     // Change tab favicon
+     function changeTabFavicon(iconUrl) {
+         var link = document.querySelector("link[rel~='icon']");
+         if (!link) {
+             link = document.createElement('link');
+             link.rel = 'icon';
+             document.getElementsByTagName('head')[0].appendChild(link);
+         }
+         link.href = iconUrl;
+         localStorage.setItem("tabIcon", iconUrl);
+     }
+
+     // Load tab name and icon from localStorage
+     window.onload = function() {
+         var savedTabName = localStorage.getItem("tabName");
+         var savedTabIcon = localStorage.getItem("tabIcon");
+
+         if (savedTabName) {
+             document.title = savedTabName;
+         }
+
+         if (savedTabIcon) {
+             changeTabFavicon(savedTabIcon);
+         }
+     }
+
+     // Sample tab changes with localStorage
+     document.getElementById("Google").onclick = function() {
+         var tabTitle = "Google";
+         var tabIcon = "https://www.google.com/favicon.ico";
+         document.title = tabTitle;
+         changeTabFavicon(tabIcon);
+         localStorage.setItem("tabName", tabTitle);
+         localStorage.setItem("tabIcon", tabIcon);
+     };
+
+     document.getElementById("Rubber").onclick = function() {
+         var tabTitle = "Rubber";
+         var tabIcon = "https://i.imgur.com/ZjOrqDc.png";
+         document.title = tabTitle;
+         changeTabFavicon(tabIcon);
+         localStorage.setItem("tabName", tabTitle);
+         localStorage.setItem("tabIcon", tabIcon);
+     };
+
+     document.getElementById("Google Classroom").onclick = function() {
+         var tabTitle = "Home";
+         var tabIcon = "https://ssl.gstatic.com/classroom/favicon.png";
+         document.title = tabTitle;
+         changeTabFavicon(tabIcon);
+         localStorage.setItem("tabName", tabTitle);
+         localStorage.setItem("tabIcon", tabIcon);
+     };
+
+     document.getElementById("Google Drive").onclick = function() {
+         var tabTitle = "My Drive - Google Drive";
+         var tabIcon = "https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png";
+         document.title = tabTitle;
+         changeTabFavicon(tabIcon);
+         localStorage.setItem("tabName", tabTitle);
+         localStorage.setItem("tabIcon", tabIcon);
+     };
+
+     document.getElementById("Gmail").onclick = function() {
+         var tabTitle = "Inbox (2103)";
+         var tabIcon = "https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico";
+         document.title = tabTitle;
+         changeTabFavicon(tabIcon);
+         localStorage.setItem("tabName", tabTitle);
+         localStorage.setItem("tabIcon", tabIcon);
+     };
 
      
         function createBackButton() {
@@ -1327,50 +1413,7 @@ function openLeftMenu() {
      openSettings();
        };
      }
-     
-     // Change Tab Name
-     function changeTabName() {
-     var newTitle = document.getElementById('tabName').value;
-     document.title = newTitle;
-     }
-     
-     // Google Cloak
-     document.getElementById("Google").onclick = function() {
-     document.title = "Google";
-     document.querySelector('link[rel="icon"]').href = "https://www.google.com/favicon.ico";
-     }; 
-                             
-     // Rubber Cloak
-     document.getElementById("Rubber").onclick = function() {
-     document.title = "Rubber";
-     document.querySelector('link[rel="icon"]').href = "https://i.imgur.com/ZjOrqDc.png";
-     };
-                             
-     // Google Classroom Cloak
-     document.getElementById("Google Classroom").onclick = function() {
-     document.title = "Home";
-     document.querySelector('link[rel="icon"]').href = "https://ssl.gstatic.com/classroom/favicon.png";
-     };
-                              
-     // Google Drive Cloak
-     document.getElementById("Google Drive").onclick = function() {
-     document.title = "My Drive - Google Drive";
-     document.querySelector('link[rel="icon"]').href = "https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png";
-     }; 
-                              
-     // Gmail Cloak
-     document.getElementById("Gmail").onclick = function() {
-     document.title = "Inbox (2103)";
-     document.querySelector('link[rel="icon"]').href = "https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico";
-     }; 
-                              
-     // Custom Favicon
-     function changeTabIcon() {
-     const faviconUrl = document.getElementById("tabIcon").value;
-     if (faviconUrl) {
-     document.querySelector("link[rel='icon']").href = faviconUrl;
-       }
-     };
+
                               
      // Open in about:blank
      document.getElementById("aboutBlank").onclick = function() {
