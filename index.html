@@ -6,7 +6,7 @@
   <meta name="description" content="Collection of fun browser games and useful apps for school, work, or just for fun, Rubber will help you demolish your boredom and play great games!">
   <meta name="keywords" content="Unbocked Games and Apps">
   <title>Rubber</title>
-  <link rel="icon" type="image/png" href="https://i.imgur.com/Pv9FqEX.png">
+  <link rel="icon" type="image/png" href="https://i.imgur.com/ZjOrqDc.png">
   <!-- <link rel="stylesheet" href="styles.css"> -->
 </head>
 <style>
@@ -200,6 +200,7 @@ h4 {
     font-size: 50px;
     font-family: Cabin, Tahoma, sans-serif;
     color: white;
+    cursor: wait;
 }
             
 h6 {
@@ -414,7 +415,7 @@ h7 {
      font-size: 18px;
      font-weight: 552;
      font-family: Cabin, sans-serif;
-     background-color: #651fe7;
+     background-color: #4b0082;
      color: #fff;
      border: none;
      border-radius: 10px;
@@ -468,7 +469,6 @@ h7 {
      
     .button-st:hover {
     background-color: #00b48d;
-    color: #1a2023;
     }
     
      .button-st:active {
@@ -478,11 +478,10 @@ h7 {
      
      .button-c:hover {
      background-color: #00b48d;
-     color: #1a2023;
      }
     
      .button-c:active {
-     background-color: #4b0082;
+     background-color: #651fe7;
      }
 
 .button:hover {
@@ -592,7 +591,7 @@ h7 {
     
 #randomPhrase {
     color: #fff;
-    margin-bottom: 43px;
+    margin-bottom: 35px;
     font-family: Cabin;
     text-align: center;
     font-weight: bold;
@@ -776,9 +775,9 @@ h7 {
 
 
     document.getElementById("games").onclick = function() {
-      document.body.innerHTML = "<h4>Loading...<h4>";
+      document.body.innerHTML = "<div class='loading'><h4>Loading...<h4></div>";
       setTimeout(function() {
-    document.body.innerHTML = "<h3 style='font-size: 80px; font-family: Cabin, Tahoma, sans-serif; color: white; margin: 0; margin-bottom: 5px;'>Games</h3> <input id='searchBar' onkeyup='search_button()' type='text' name='search' placeholder='Search Games' autocomplete='off'>";
+    document.body.innerHTML = "<h3 style=' cursor: default; font-size: 80px; font-family: Cabin, Tahoma, sans-serif; color: white; margin: 0; margin-bottom: 5px;'>Games</h3> <input id='searchBar' onkeyup='search_button()' type='text' name='search' placeholder='Search Games' autocomplete='off'>";
         createBackButton();
         var games = [
             { name: "Skribbl.io", url: "https://skribbl.io" },
@@ -1072,9 +1071,9 @@ function search_button() {
 }
 
 document.getElementById("apps").onclick = function() {
-    document.body.innerHTML = "<h4>Loading...<h4>";
+    document.body.innerHTML = "<div class='loading'><h4>Loading...<h4></div>";
     setTimeout(function() {
-    document.body.innerHTML = "<h3 style='font-size: 80px; font-family: Cabin, Tahoma, sans-serif; color: white; margin: 0; margin-bottom: 5px;'>Apps</h3> <input id='searchBar' onkeyup='search_button()' type='text' name='search' placeholder='Search Apps'>";
+    document.body.innerHTML = "<h3 style='cursor: default; font-size: 80px; font-family: Cabin, Tahoma, sans-serif; color: white; margin: 0; margin-bottom: 5px;'>Apps</h3> <input id='searchBar' onkeyup='search_button()' type='text' name='search' placeholder='Search Apps'>";
         createBackButton();
         var apps = [
             { name: "Online Chatroom", url: "https://chattyice234.github.io/online-chatroom" },
@@ -1255,6 +1254,9 @@ document.getElementById("apps").onclick = function() {
         "youre nasty",
         "youre naaaaaaasty",
         "Bro u gotta lock in - Josh",
+        "totally for educational use",
+        "Barney, you do realize that setting a new online alias does not change your life?",
+        "An arrow appeared.",
         "(╯°□°)╯︵ ┻━┻",
         "ಠ_ಠ",
         "(ﾉಥ益ಥ）ﾉ ┻━┻",
@@ -1305,6 +1307,7 @@ document.getElementById("apps").onclick = function() {
         "i hope i dont get codehs blocked",
         "What an interesting surprise!",
         // "W dinguschan",
+        "Mind: Alright, we quit ChattyWebsite so we need a new name for Chattyice's next site. Just don't make it some stupid object, that's really unorigi- Me: Maybe it should be like tinf0il, Rubber. Why not? And let's also copy a bunch of splashes from Links123. Mind: Kill yourself.",
         "W dinguschan",
         "Now with credits for Dinguschan!",
         "bomb instructions - Google Search",
@@ -1348,6 +1351,7 @@ document.getElementById("apps").onclick = function() {
         // No i'm not adding freaky stuff to this site stay mad
         "Me after seeing the 10th goofy ahh ripoff this week",
         "Pissing off your principal since 2023",
+        "My idea of a mod: Copy and pasting someone else's code, then calling it 'innovation'.",
         "Probably not coded by ChatGPT",
       ];
        var randomIndex = Math.floor(Math.random() * phrases.length);
