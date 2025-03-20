@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-<!-- Credits to @RicardoMarioSonic123 on GitHub for the Links123 code I used to create this website. Your site is amazing! -->
-<!-- Additional credits are on: https://github.com/Chattyice234/Rubber/blob/main/README.md -->
 <html>
 <head>
   <meta charset="UTF-8">
@@ -10,11 +8,13 @@
   <title>Rubber</title>
   <link rel="icon" type="image/png" href="https://i.imgur.com/Pv9FqEX.png">
   <!-- <link rel="stylesheet" href="styles.css"> -->
-  <style>
-	  @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Oxanium:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
 body {
     font-family: 'Varela Round', sans-serif;
@@ -26,11 +26,106 @@ body {
 body:hover {
     cursor: default;
 }
+
+#blur-settings {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(0, 0, 0, 0.1);
+     backdrop-filter: blur(2px);
+     z-index: 1000;
+     justify-content: center;
+     align-items: center;
+     }
+
+     .settings-i {
+     margin-right: 5px;
+     font-family: Cabin, sans-serif;
+     font-size: 15px;
+	 width: 60%;
+     height: 40px;
+	 border-radius: 6px;
+     border: 0;
+     font-weight: 552;
+     text-align: center;
+     background-color: #1a2023;
+     color: #fff;
+     }
+
+     #updatelog {
+     overflow: auto;
+     position: absolute;
+	 left: 50%;
+	 top: 50%;
+	 transform: translate(-50%, -50%);
+     background-color: #111111;
+     height: 70%;
+     width: 50%;
+     border-radius: 10px;
+     }
+
+     #blur-updatelog {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(0, 0, 0, 0.1);
+     backdrop-filter: blur(2px);
+     z-index: 1000;
+     justify-content: center;
+     align-items: center;
+     }
+
+     #blur-credits {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(0, 0, 0, 0.1);
+     backdrop-filter: blur(2px);
+     z-index: 1000;
+     justify-content: center;
+     align-items: center;
+     }
     
 ::-webkit-scrollbar {
     width: 0px;
     overflow: hidden;
 }
+
+.favicon {
+     padding: 0px 0px;
+     margin: 5px;
+     border: none;
+     cursor: pointer;
+     display: inline-flex;
+     align-items: center;
+     background-color: #000; 
+     border-radius: 10px;
+     outline: none;
+     }
+    
+     .favicon img {
+     width: 30px;
+     height: 30px;
+     outline: none;
+     background-color: #fff;
+     padding: 7px 8px;
+     border-radius: 10px;  
+     transition: background-color 0.3s, transform 0.2s;
+     }
+
+     .favicon img:hover {
+     background-color: #cccccc;
+     }
+    
+     .favicon img:active {
+     background-color: #999999;
+     }
 
 span {
     color: white;
@@ -59,6 +154,11 @@ span2:hover {
     animation: textShadowAnimation 2s forwards;
 }
 
+.header {
+     border-bottom: 5px solid #fff;
+     padding-bottom: 20px;
+     }
+
 @keyframes textShadowAnimation {
     0% {
         opacity: 0;
@@ -85,9 +185,6 @@ h1 {
 }
         
 h2 {
-    top: 0%; 
-    width: 100%;
-    position: absolute;
     font-size: 20px;
     font-family: Cabin, Tahoma, sans-serif;
     color: #fff;
@@ -117,6 +214,39 @@ h7 {
     color: #fff;
     bottom: 0;
 }
+
+.loading {
+     position: absolute;
+	 left: 50%;
+	 top: 50%;
+	 transform: translate(-50%, -50%);
+     background: transparent;
+     height: 100%;
+     width: 100%;
+     cursor: wait;
+     }
+
+     #randomPhrase:hover {
+     color: #651fe7;
+     cursor: pointer;
+     }
+    
+     #randomPhrase:active {
+     color: #4b0082;
+     }
+
+     #settings {
+     overflow: auto;
+     position: absolute;
+	 left: 50%;
+	 top: 50%;
+	 transform: translate(-50%, -50%);
+     background-color: #111111;
+     height: 70%;
+     width: 70%;
+     border-radius: 10px;
+     }
+
         
 #searchBar{
     font-family: Cabin, Tahoma, sans-serif;
@@ -145,7 +275,7 @@ h7 {
     border: 0 outset #444;
     border-radius: 6px;
     cursor: pointer;
-    transition: 0.3s all ease;
+    transition: background-color 0.3s, color 0.3s, transform 0.35s;
 }
         
 .button-m {
@@ -160,22 +290,7 @@ h7 {
     border: 0 outset #444;
     border-radius: 6px;
     cursor: pointer;
-    transition: 0.3s all ease;
-}
-
-.button-m2 {
-    margin-left: 5px;
-    margin-right: 5px;
-    padding: 9px 25px;
-    font-size: 18px;
-    font-weight: 552;
-    font-family: Raleway, Tahoma, sans-serif;
-    background-color: #4b0082;
-    color: #fff;
-    border: 0 outset #444;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: 0.3s all ease;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
 }
         
 .button-ab {
@@ -265,46 +380,136 @@ h7 {
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s, transform 0.2s;
 }
+
+#button-ul {
+     position: absolute;
+     top: 0%;
+     left: 50%;
+     transform: translate(-50%, 50%);
+     font-size: 20px;
+     font-weight: 552;
+     font-family: Cabin, sans-serif;
+     border: none;
+     border-radius: 10px;
+     color: #651fe7;
+     background: transparent; 
+     cursor: pointer;
+     transition: background-color 0.3s, color 0.3s, transform 0.2s;
+     }
+     
+     #button-ul:hover {
+     background-color: #00b48d;
+     color: #1a2023;
+     }
     
+     #button-ul:active {
+     background-color: #4b0082;
+     }
+
+     .button-c {
+     position: absolute;
+     top: 0%;
+     right: 0%;
+     padding: 9px 25px;
+     font-size: 18px;
+     font-weight: 552;
+     font-family: Cabin, sans-serif;
+     background-color: #651fe7;
+     color: #fff;
+     border: none;
+     border-radius: 10px;
+     cursor: pointer;
+     transition: background-color 0.3s, transform 0.2s;
+     }
+
+     .button-st {
+     margin-left: 5px;
+     margin-right: 5px;
+     font-size: 15px;
+     font-weight: 552;
+     font-family: Cabin, sans-serif;
+     background-color: #4b0082;
+     color: #fff;
+     border: none;
+     border-radius: 6px;
+     cursor: pointer;
+     width: 37.5%;
+     height: 40px;
+     margin-top: 20px;
+     transition: background-color 0.3s, transform 0.2s;
+     }
+
+     .button-cred {
+    top: 0%; 
+    text-decoration: underline;
+    left: 0%;
+    width: 130px;
+    height: 70px;
+    position: absolute;
+    font-size: 18px;
+    font-weight: 552;
+    font-family: Raleway, Tahoma, sans-serif;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    background: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    }
+
+     .button-cred:hover {
+    background-color: #00b48d;
+    color: #1a2023;
+    }
+    
+    .button-cred:active {
+        background-color: #743089;
+    }
+     
+    .button-st:hover {
+    background-color: #00b48d;
+    color: #1a2023;
+    }
+    
+     .button-st:active {
+    background-color: #743089;
+    }
+    
+     
+     .button-c:hover {
+     background-color: #00b48d;
+     color: #1a2023;
+     }
+    
+     .button-c:active {
+     background-color: #4b0082;
+     }
+
 .button:hover {
     background-color: #663399;
-    transform: rotate(-5deg);
+    transform: scale(1.1);
 }
     
 .button:active {
     background-color: #743089;
-    transform: rotate(5deg);
 }
-    
+
 .button-m:hover {
     background-color: #663399;
-    transform: rotate(5deg);
+    transform: scale(1.1);
 }
     
 .button-m:active {
     background-color: #743089;
-    transform: rotate(-5deg);
-}
-
-.button-m2:hover {
-    background-color: #663399;
-    transform: rotate(-5deg);
-}
-    
-.button-m2:active {
-    background-color: #743089;
-    transform: rotate(5deg);
 }
     
 .button-ab:hover {
     background-color: #6f2da8;
     color: #1a2023;
-    transform: rotate(5deg);
 }
     
 .button-ab:active {
     background-color: #743089;
-    transform: rotate(-5deg);
 }
     
 #button-s:hover {
@@ -392,106 +597,17 @@ h7 {
     text-align: center;
     font-weight: bold;
     font-size: 18px;
+    transition: 0.25s all ease;
 }
+</style>
 
-.official-caa {
-    color: #fff;
-    margin-right: -7.3px;
-    margin-left: 0px;
-    margin-bottom: 0px;
-    font-size: 17px;
-    background-color: #3c4043;
-    height: 29px;
-    width: 122px;
-    text-align: center;
-    border-radius: 500px;
-    cursor: text;
-    z-index: 2147483644;
-}
 
-.officialaa {
-    color: #80ffbf;
-    margin-right: 1px;
-    margin-left: 0px;
-    margin-top: 8px;
-    cursor: text;
-    font-size: 14px;
-    z-index: 2147483644;
-}
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-.dropdown-contentaa .status-messageaa {
-    color: #f1f1f1;
-    padding: 14px 14px;
-    background-color: #484d51;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    font-size: 15px;
-}
-.sitechecker-container {
-    background: #3c4043;
-    padding: 12px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    text-align: left;
-    color: #fff;
-    border: 3px solid #4b0082;
-    font-family: Arial, sans-serif;
-    
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    max-width: 300px;
-    width: 270px;
-    z-index: 9999;
-}
 
-.sitechecker-container p {
-    color: #fff;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin: 0;
-}
-
-.sitechecker-container .sitechecker-icon {
-    font-size: 36px;
-    margin-left: 4px;
-    margin-right: 6px;
-}
-
-.sitechecker-container .sitechecker-secure {
-color: #701ccf;
-}
-
-.sitechecker-container .sitechecker-warning {
-color: #ff4d4d;
-
-}
-
-.sitechecker-container .sitechecker-link {
-text-decoration: underline;
-color: #007BFF;
-}
-   </style>
-  <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Collection of fun browser games and useful apps for school, work, or just for fun, Rubber will help you demolish your boredom and play great games!">
-  <meta name="keywords" content="Unbocked Games and Apps">
-  <title>Rubber</title>
-  <link rel="icon" type="image/png" href="https://i.imgur.com/Pv9FqEX.png">
-  <link rel="stylesheet" href="styles.css">
-</head>
 <body>
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
-  <h2><span2>Update Log:</span2> Added custom favicon and custom link settings in the Cloak Settings</h2>
-  <h6>Version 0.22</h6>
+<button id="button-ul" onclick="openUpdateLog()" title="Click here to view the update log">Changelog</button>
   <button class="button-git" onclick="location.href='https://github.com/Chattyice234/Rubber'">GitHub</button>
   <div id="container-m">
     <h1><span2>Rubber</span2> Games</h1>
@@ -507,135 +623,58 @@ color: #007BFF;
         </span>
     </button>  
     </div>
+    <button id="button-s" onclick="openSettings()" title="Open Settings">Settings</button>
+     <!-- Changelogs --> 
+     <div id="blur-updatelog" class= "hide">
+     <div id="updatelog" class= "hide">
+     <button class="button-c" onclick="closeUpdateLog();" title="Close Update log">Close</button>
+     <div class="header">
+     <h3 style="font-size: 50px; font-family: Cabin, sans-serif; color: #4b0082; margin-bottom: 0px;">Update 0.25</h3>
+     </div>
+     <h2>Added a bunch of stuff from Links123. Credit to RicardoMarioSonic123 on Github for the original updates, and helping me fix bugs!</h2>
+     </div>
+     </div>  
+
+
   <button class="button-sug" id="suggest">Suggestions</button>
-  <h7>Test updates early here: rubber-testing-13799091.codehs.me</h7>
-  <div id="cloakingSettings">
-    <button id="button-s" onclick="closeLeftMenu();">Cloak Settings</button>
-    <div id="menu" class="hide">
-      <div id="container-s">
-        <button id="aboutBlank" class="button-si">about:blank</button>
-        <button id="tabCloak" class="button-si">Tab Cloak</button>
-        <div>
-            <br>
-          <label style="color: #fff; font-family: Cabin, Tahoma, sans-serif;">Custom Favicon:</label>
-          <input type="text" id="faviconInput" style="width: 80%; padding: 5px; margin-bottom: 10px;">
-        </div>
-        <div>
-          <label style="color: #fff; font-family: Cabin, Tahoma, sans-serif;">Site Title:</label>
-          <input type="text" id="titleInput" style="width: 80%; padding: 5px; margin-bottom: 10px;">
-        </div>
-        <button id="saveSettings" class="button-si">Save</button>
-        <br>
-        <h6>To exit, click the Settings button again.</h6>
-      </div>
-    </div>
-  </div>
-  <script src="script.js"></script>
-</body>
-</html>
-      <script>
-        document.addEventListener("DOMContentLoaded", function() {
-    console.log("DEBUG: Script is running...");
+<!-- Settings -->
+     <div id="blur-settings" class= "hide">
+     <div id="settings" class= "hide">
+     <h3 style="font-size: 50px; font-family: Cabin, sans-serif; margin: 0; margin-top: 10px; color: white;">Settings</h3>
+     <button class="button-c" onclick="closeSettings()" title="Close Settings">Close</button>
+     <button class="button-st" id="aboutBlank" title="Open in about:blank">about:blank</button>
+     <br><br>
+     <input type="text" id="tabName" style="transition: 0.25s all ease;" placeholder="Enter new tab name" class="settings-i">
+     <button class="button-si" onclick="changeTabName()" title="Save changes">Save</button>
+     <br><br>
+     <input type="text" id="tabIcon" style="transition: 0.25s all ease;" placeholder="Enter new tab icon" class="settings-i">     
+     <button class="button-si" onclick="changeTabIcon()" title="Save changes">Save</button>
+     <br>
+     <br>
+     <button id="Rubber" class="favicon"><img src="https://i.imgur.com/ZjOrqDc.png" alt="Rubber" title="Rubber"></button>
+     <button id="Google" class="favicon"><img src="https://www.google.com/favicon.ico" alt="Google" title="Google"></button>
+     <button id="Google Drive" class="favicon"><img src="https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png" alt="Google Drive" title="Google Drive"></button>
+     <button id="Google Classroom" class="favicon"><img src="https://ssl.gstatic.com/classroom/favicon.png" alt="Google Classroom" title="Google Classroom"></button>
+     <button id="Gmail" class="favicon"><img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico" alt="Gmail" title="Gmail"></button>
+     </div>
+     </div>
+  <script>
+    // Open Update Log
+     function openUpdateLog() {
+     document.getElementById("updatelog").style.display = "block";
+     document.getElementById("blur-updatelog").style.display = "block";
+     }
+      
+     // Close Update Log
+     function closeUpdateLog() {
+     document.getElementById("updatelog").style.display = "none";
+     document.getElementById("blur-updatelog").style.display = "none";
+     document.getElementById("button-ul").onclick = function() {
+     openUpdateLog();
+       };
+     }
 
-    const officialUrls = [
-        "https://chattyice234.github.io",
-        "https://rubber-13599452.codehs.me/index.html",
-        "https://rubber-13599452.codehs.me/",
-    ];
-
-    const testUrls = [
-        "https://rubber-testing-13799091.codehs.me/index.html",
-        "https://rubber-testing-13799091.codehs.me/",
-    ];
-
-    function normalizeUrl(url) {
-        return url.split("#")[0].split("?")[0]; 
-        // Remove hash and query params
-    }
-
-    function createSitechecker() {
-        // Check if Sitechecker already exists
-        let sitecheckerContainer = document.querySelector(".sitechecker-container");
-        if (!sitecheckerContainer) {
-            sitecheckerContainer = document.createElement("div");
-            sitecheckerContainer.classList.add("sitechecker-container");
-            sitecheckerContainer.style.opacity = "1"; // Ensure it's visible initially
-
-            sitecheckerContainer.innerHTML = `
-                <p id="sitechecker-message">
-                    <i id="sitechecker-icon" class="sitechecker-icon"></i>
-                    <span id="sitechecker-text" style="visibility: visible !important;"></span>
-                </p>
-            `;
-
-            document.body.appendChild(sitecheckerContainer);
-            console.log("DEBUG: Sitechecker added to the body.");
-        } else {
-            console.log("DEBUG: Sitechecker already exists. No duplicate added.");
-        }
-
-        updateSitecheckerMessage();
-        fadeOutSitechecker();
-    }
-
-    function updateSitecheckerMessage() {
-        setTimeout(() => {
-            const messageElement = document.getElementById("sitechecker-text");
-            const iconElement = document.getElementById("sitechecker-icon");
-
-            if (!messageElement || !iconElement) {
-                console.error("ERROR: Verification elements not found in the DOM.");
-                return;
-            }
-
-            // Get the current URL
-            const pageUrl = normalizeUrl(window.location.href);
-            console.log("DEBUG: Current Page URL:", pageUrl);
-
-            // Set the verification message
-            if (officialUrls.includes(pageUrl)) {
-                console.log("DEBUG: Official Rubber URL detected.");
-                iconElement.classList.add("fa", "fa-circle-check", "sitechecker-secure");
-                messageElement.innerHTML = `This link <b>(${pageUrl})</b> is a secure, official Rubber link.`;
-            } else if (testUrls.includes(pageUrl)) {
-                console.log("DEBUG: Test Rubber URL detected.");
-                iconElement.classList.add("fa", "fa-circle-check", "sitechecker-secure");
-                messageElement.innerHTML = `This link <b>(${pageUrl})</b> is an official testing link for Rubber. Expect bugs and report them in the suggestions.`;
-            } else {
-                console.log("DEBUG: UNOFFICIAL URL detected!");
-                iconElement.classList.add("fa", "fa-triangle-exclamation", "sitechecker-warning");
-                messageElement.innerHTML = `This link <b>(${pageUrl})</b> is not an official Rubber link. Use at your own risk, or find a list of official Rubber links <a href="https://github.com/Chattyice234/Rubber/blob/main/README.md" target="_blank" class="sitechecker-link">here</a>.`;
-            }
-
-            console.log("DEBUG: Text updated inside Sitechecker box.");
-        }, 200); 
-    }
-
-
-    function fadeOutSitechecker() {
-        setTimeout(() => {
-            let sitecheckerContainer = document.querySelector(".sitechecker-container");
-            if (sitecheckerContainer) {
-                sitecheckerContainer.style.transition = "opacity 1s ease-out";
-                sitecheckerContainer.style.opacity = "0";
-                console.log("DEBUG: Sitechecker is fading out.");
-            }
-        }, 5000); 
-    } 
-
-    // Create Sitechecker once on initial page load
-    createSitechecker();
-
-    // Ensure Sitechecker remains visible when switching tabs
-    document.addEventListener("click", function(event) {
-        if (event.target.closest(".tabaa")) {
-            setTimeout(() => {
-                createSitechecker(); 
-            }, 100);
-        }
-    });
-});
-
+     
         function createBackButton() {
         var backButton = document.createElement("button");
         backButton.textContent = "Back";
@@ -1085,71 +1124,41 @@ document.getElementById("apps").onclick = function() {
     win.document.close();
     window.parent.window.location.replace('https://classroom.google.com/')
     };
-    
-    document.getElementById("tabCloak").onclick = function() {
-    document.title = "Home";
-    document.querySelector('link[rel="icon"]').href = "https://ssl.gstatic.com/classroom/favicon.png";
-};
   
    document.addEventListener("DOMContentLoaded", function() {
     var phrases = [
         "Welcome to Rubber, the next ChattyWebsite with the dumbest name ever!",
         "ChatGPT? Where's ChattyGPT?",
-        "Thanks RicardoMario123 for motivation",
-        "Pressure",
+        "Thanks RicardoMario123 for motivation!",
         "helo",
         "whats up man",
-        "iready suck",
         "wops",
         "wawa",
         "huh wuh",
-        "group of sweats",
+        "THIS HOT SINGLE IN YOUR AREA PLAYS HYPIXEL. DOWNLOAD NOW: FOR FREE! 100% REAL NO SCAM",
         "meeeeee",
         "Back and even better than ever before!",
         "hluf",
         "Everyone's a rizzed up crank",
         "If you get this message, you are fat",
-        "If you get this message, you're black",
-        "bye schoolwide talking",
-        "bye chattywebsite",
-        "HELIOS BROWSER IS FIREEEEEEE 🔥",
-        "W UPDATES TO HELIOS DINGUSCHAN!",
         "dinguschan you dropped this → 👑",
         "sponsored by ducks",
-        "nahhh barney, I stole like 10 splashes from you and you stole all of mine (stay mad >:D)",
-        "2020 was 5 years ago",
-        "i havent showered since last year",
-        "boys bathroom is worse than you (the floors are sticky as hell)",
+        "'2020 was 5 years ago' gives the same vibe as 'When you realize the seahorse and robber emojis dont exist'",
         "skribbl.io >>>>> sketchful.io",
         "joe biden torpedo",
         "biden boat",
         "trump torpedo",
-        "Shut up, GoGuardian!",
         "Links123 >>>>>>>>>> Rubber >>> British ChattyWebsite > ChattyWebsite",
         "goodbyee",
         "This got blocked",
         "what",                                                                     
-        "Sponsored by me lol",
         "sponsored by youtube",
         "Forever credits to Links123",
         "Credits to RicardoMarioSonic123 for Links123",
         "We got in trouble for this lol",
         "Show me your meat or im gonna crash outtttttttt",
-        "if u dont want this to get blocked use about:blank cloak",
-        "who broke the chair",
-        "guys i think my house is from five nights at freddys 😰😰 AR AR AR AR",
-        "bomb instructions - Google Search",
-        "It's a party. A Search Party",
-        "when you scratch your hair, it snows. snows dandruffs and lice eggs",
-        "Rubber. More like Flubber",
-        "hlrugvuj8idfhu gjdfchudhfjifds",
-        "Look guys its a ifvje fdughv jeoisprdxokf",
-        "My name is skibidi toilet",
-        "NoGuardian!",
-        "bricked up bricks, bricked up bricks",
         "michael i will not make the background a wiener",
         "Fatso",
-        "updates frequently!",
         "Drive me to the skibidi club!",
         "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
         "school uses blocker *ineffective*",
@@ -1176,19 +1185,12 @@ document.getElementById("apps").onclick = function() {
         "111111111111111111111",
         "it's super sigma, greg",
         "chromebooks suck",
-        "Try Slingshot Website by NTCATGAMER! https://html-15-13682230.codehs.me/",
         "forgot my pencil",
         "nahh im not blocking the games during the day",
-        "oh the weather outside is rizzy (i love stealing from tortilla)",
         "school lunch is mid",
         "teacher caught me playing games again",
         "sorry mr b.... again",
         "woahh is this a splash text?",
-        "GlacierOS got done dirty by goguardian",
-        "https://bookingportal.mounthoodlodge.info",
-        "yeah, just go around shining a light in random peoples faces, i'm sure that'll go well",
-        "TURN. AROUND.",
-        "What's your obsession with shining a light in random thing's faces?",
         "https://www.youtube.com/watch?v=5KJK08bL1TM",
         "Thank you sebastian for this wall dweller's meat",
         "*Argh* I missed and hit some innocent bystander, unfortunately.",
@@ -1209,35 +1211,26 @@ document.getElementById("apps").onclick = function() {
         "does your room have a lock",
         "shfgd iuxjg",
         "o/;[lm9kipmknhu,lmkjnhiuyos ,zxpocfldwsda()Sojdois]dsfsdf",
-        "ugh... it's you. I'm joking! Welcome back!",
         "oh, for the love of god... Heyyy!!! Welcome!",
-        "game loading can take up to 20 seconds, please wait",
-        "removed suggestion form bc i realized how many stupid suggestions you would send",
+        "W RicardoMarioSonic123",
+        "guys Ws in the chat for RicardoMarioSonic123",
+        "RicardoMarioSonic123 the absolute GOAT",
         "first rubber suggestion asking me to add working roblox, try every server bruh",
         "i hope i dont get codehs blocked",
         "What an interesting surprise!",
         // "W dinguschan",
         "W dinguschan",
         "Now with credits for Dinguschan!",
-        "sigma representation",
         "bomb instructions - Google Search",
         "Minecraft tnt crafting recipe - Google Search *gets grenade shopping search queries on ebay*",
-        "if you search worst song on youtube thick of it comes up as the first result",
         "paint me green and call me a pickle",
-        "look it's a chrome://kill!",
-        "Look mom, I'm [ REDACTED ]",
-        "npm install teacher-destroying-tutorial.exe",
         "Hey siri, will AI take over the world?",
         "Gemini, will AI take over the world?",
         "Alexa, will AI take over the world?",
         "Look dad i found a pickle",
-        "game.Players.LocalPlayer:Kick('You have reached the freak limit.')",
-        "krunker.io?",
-        "teacher:destroy()",
-        "local Teacher = false",
         "i accidently muted the teacher",
         "yoyo",
-        "eaglercraft 1.21.70 real no scam download --->",
+        "minecraft bedrock & java 1.21.41 real no scam download --->",
         ":D",
         "im just spamming splashes",
         "fun fact: you are on a chromebook (maybe)",
@@ -1246,53 +1239,21 @@ document.getElementById("apps").onclick = function() {
         "wuh wuh wuh",
         "Yummers.",
         "How it feels to chew five gum AAAAAAAAAAAAA stimulate your senses",
-        "theyre just spamming notes",
-        "bro called them emoticons",
-        "UnexpectedPillow837 is your new child's name :)",
-        "Sir we never said yes to UnexpectedPillow837",
-        "Sorry the government needs random generated xbox names as new baby names to prevent repeating names plus they get money for it",
-        "69 wpm",
-        "teacher coming: *gulp",
-        "google maps leaked my address on my own chromebook while i was presenting",
-        "u suck at slope",
-        "are ya winning, son? no dad i just lost to a steve skin with all my hacks on",
         "Shell shockers please work please work please work please work please work",
         "Chat is this real?",
         "100% Legit Robux Vbucks Cracked Minecraft download 100% no scam real",
         "420/69% Legit Free Roblox Robux easy survey at brobux.win real",
-        "we're in heaven OH OH OH OHH OH O- OH OH OH OHOH OH OH. OHHHHHHHOHOHOH OH OH OH OHOH OH",
         "GTA 6 free download! ------>",
         "guys this is something funny",
-        "goguardian you need to leave",
         "i crafted a stone pick trust",
-        "My name is Edwin. I made the Mimic. It was difficult to put the pieces together But unfortunately, something went so wrong, and now I cant do anything but sing this stupid song!",
-        "My name is Edwin, I made the Mimic.",
-        "gamble /j",
-        "Lets go gambling! ch-ch aw dang it ch-ch aw dang it ch-ch aw dang it",
-        "90% of gamblers quit right before they win big! Keep gambling guys! /j",
-        "URLS are overrated >:l",
-        "not the best idea to use during an iready test",
+        "files are overrated >:l",
         "shut up you discombobulated doorknob",
-        "Tortilla?",
         "tortilla blanket",
         "Hello",
-        "not freaky site anymore :D",
-        "GLACIER OS",
-        "fun fact: the mcdonalds logo's colors are meant to make you hungry. the hex code of the red color is FF000d. pretty cool",
-        "roblox.uno",
-        "getliner.com doesnt work D:",
-        "Imagine opening a cabinet and an AI generated spider jumpscare comes out",
-        "but Ms. Birch i never said i wanted to present my project nex- SHUT UP",
-        "Like the last website, but Links123!",
-        "what the hell is Hollow Purple website",
+        "Like the last website, but a little purple",
         "bottom text",
-        "back button is broken",
-        "Fun fact: you're on a webpage right now",
-        "Don't charge fully to 100%. Charge to 80%, it lasts longer",
-        "If you found this site before australian man, you're newgen",
         "splash text",
         "Like and subscribe",
-        "Skibidihax?",
         "No i'm not adding freaky stuff to this site stay mad",
         "No i'm not adding freaky stuff to this site stay mad",
         "No i'm not adding freaky stuff to this site stay mad",
@@ -1303,12 +1264,23 @@ document.getElementById("apps").onclick = function() {
         "Pissing off your principal since 2023",
         "Probably not coded by ChatGPT",
       ];
-      var randomIndex = Math.floor(Math.random() * phrases.length);
-      var randomPhrase = phrases[randomIndex];
-      var phraseElement = document.getElementById("randomPhrase");
-      phraseElement.textContent = randomPhrase;
-    });
-
+       var randomIndex = Math.floor(Math.random() * phrases.length);
+     var randomPhrase = phrases[randomIndex];
+     var phraseElement = document.getElementById("randomPhrase");
+     phraseElement.textContent = randomPhrase;
+     if (randomPhrase.type === "image") {
+     phraseElement.innerHTML = `<img src="${randomPhrase.src}" alt="Splash Image" style="max-width: 100%;">`;
+     }
+     function changeText() {
+     const randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
+     if (typeof randomPhrase === "string") {
+     phraseElement.textContent = randomPhrase;
+     } else if (randomPhrase.type === "image") {
+     phraseElement.innerHTML = `<img src="${randomPhrase.src}" alt="Splash Image" style="max-width: 100%;">`;
+        }
+     }
+     phraseElement.addEventListener('click', changeText);
+     });
     
     function search_button() {
 	let input = document.getElementById('searchBar').value
@@ -1341,30 +1313,80 @@ function openLeftMenu() {
           };
         }
 
-        document.getElementById("saveSettings").onclick = function() {
-    const faviconUrl = document.getElementById("faviconInput").value;
-    const newTitle = document.getElementById("titleInput").value;
-
-    if (faviconUrl) {
-      document.querySelector("link[rel='icon']").href = faviconUrl;
-    }
-
-    if (newTitle) {
-      document.title = newTitle;
-    }
-
-    alert("Settings saved!");
-  };
-
-
-// document.getElementById("chat").onclick = function() {
-//   document.body.innerHTML = '<object id="chatFrame" type="text/html" data="https://chattyice234.github.io/online-chatroom" style="width: 100%; height: 100vh;"></object>';
-//     createBackButton();
-// };
-
+        // Open Settings
+     function openSettings() {
+     document.getElementById("settings").style.display = "block";
+     document.getElementById("blur-settings").style.display = "block";
+     }
+      
+     // Close Settings
+     function closeSettings() {
+     document.getElementById("settings").style.display = "none";
+     document.getElementById("blur-settings").style.display = "none";
+     document.getElementById("button-s").onclick = function() {
+     openSettings();
+       };
+     }
+     
+     // Change Tab Name
+     function changeTabName() {
+     var newTitle = document.getElementById('tabName').value;
+     document.title = newTitle;
+     }
+     
+     // Google Cloak
+     document.getElementById("Google").onclick = function() {
+     document.title = "Google";
+     document.querySelector('link[rel="icon"]').href = "https://www.google.com/favicon.ico";
+     }; 
+                             
+     // Rubber Cloak
+     document.getElementById("Rubber").onclick = function() {
+     document.title = "Rubber";
+     document.querySelector('link[rel="icon"]').href = "https://i.imgur.com/ZjOrqDc.png";
+     };
+                             
+     // Google Classroom Cloak
+     document.getElementById("Google Classroom").onclick = function() {
+     document.title = "Home";
+     document.querySelector('link[rel="icon"]').href = "https://ssl.gstatic.com/classroom/favicon.png";
+     };
+                              
+     // Google Drive Cloak
+     document.getElementById("Google Drive").onclick = function() {
+     document.title = "My Drive - Google Drive";
+     document.querySelector('link[rel="icon"]').href = "https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png";
+     }; 
+                              
+     // Gmail Cloak
+     document.getElementById("Gmail").onclick = function() {
+     document.title = "Inbox (2103)";
+     document.querySelector('link[rel="icon"]').href = "https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico";
+     }; 
+                              
+     // Custom Favicon
+     function changeTabIcon() {
+     const faviconUrl = document.getElementById("tabIcon").value;
+     if (faviconUrl) {
+     document.querySelector("link[rel='icon']").href = faviconUrl;
+       }
+     };
+                              
+     // Open in about:blank
+     document.getElementById("aboutBlank").onclick = function() {
+     alert("Attention: Once you enter about:blank, you won't be able to refresh the page to return to the main menu or choose another game/app.");
+     var win = window.open('');
+     win.document.open();
+     win.document.write(document.documentElement.outerHTML);
+     win.document.title = "about:blank";
+     win.document.close();
+     window.parent.window.location.replace('https://classroom.google.com/')
+     };
+     
 document.getElementById("suggest").onclick = function() {
   document.body.innerHTML = '<object id="suggestFrame" type="text/html" data="https://docs.google.com/forms/d/e/1FAIpQLSfOlgOWtpAkz7EHdr73D_Xw4fb2wTbYZeBK7Ok3-UG4oZKH0g/viewform?embedded=true" style="width: 100%; height: 100vh;"></object>';
     createBackButton();
 };
-      </script>
+  </script>
+</body>
 </html>
