@@ -3,7 +3,7 @@ A new game website using RicardoMarioSonic123's code with customizations and new
 **Official Links:**
 
 - https://chattyice234.github.io/Rubber
-- https://rubber-13599452.codehs.me/index.html
+- https://rubber-13599452.codehs.me/
 
 **Credits:**
 - Credits to all the creators of the games, apps, and exploits included in Rubber.
