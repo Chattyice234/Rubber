@@ -1,4 +1,4 @@
-# Rubber
+# Rubber Games
 A new game website using RicardoMarioSonic123's code with customizations and new updates. Huge thanks to Ricardo and dinguschan-owo for motivating me!
 
 # Official Links
