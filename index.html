@@ -7,14 +7,13 @@
   <meta name="keywords" content="Unbocked Games and Apps">
   <title>Rubber</title>
   <link rel="icon" type="image/png" href="https://i.imgur.com/ZjOrqDc.png">
-  <!-- <link rel="stylesheet" href="styles.css"> -->
 </head>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Oxanium:wght@200..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Oxanium:wght@200..800&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
 body {
     font-family: 'Varela Round', sans-serif;
@@ -52,6 +51,14 @@ body:hover {
      text-align: center;
      background-color: #1a2023;
      color: #fff;
+     }
+     
+     .settings-i:hover {
+     outline: solid 2.5px #00b48d;
+     }
+     
+     .settings-i:focus { 
+     outline: solid 2.5px #4b0082; 
      }
 
      #updatelog {
@@ -182,6 +189,7 @@ h1 {
     font-size: 50px;
     font-family: Cabin, Tahoma, sans-serif;
     color: white;
+    margin-bottom: 15px;
 }
         
 h2 {
@@ -230,10 +238,12 @@ h7 {
      #randomPhrase:hover {
      color: #651fe7;
      cursor: pointer;
+     transform: scale(1.1);
      }
     
      #randomPhrase:active {
      color: #4b0082;
+     transform: scale(0.95);
      }
 
      #settings {
@@ -277,6 +287,7 @@ h7 {
     border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s, transform 0.35s;
+    font-weight: bold;
 }
         
 .button-m {
@@ -292,6 +303,7 @@ h7 {
     border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    font-weight: bold;
 }
         
 .button-ab {
@@ -310,6 +322,7 @@ h7 {
     background: none;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    font-weight: bold;
 }
     
 #button-s {
@@ -328,23 +341,26 @@ h7 {
     background: none;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    font-weight: bold;
 }
 
 .button-si {
-    margin-left: 5px;
-    margin-right: 5px;
-    font-size: 18px;
-    font-weight: 552;
-    font-family: Cabin, Tahoma, sans-serif;
-    background-color: #4b0082;
-    color: #fff;
-    border: 0 outset #444;
-    border-radius: 6px;
-    cursor: pointer;
-    height: 50px;
-    width: 45%;
-    transition: background-color 0.3s, transform 0.2s;
-}
+     margin-left: 5px;
+     margin-right: 5px;
+     font-size: 15px;
+     font-weight: 552;
+     font-family: Cabin, Tahoma, sans-serif;
+     background-color: #4b0082;
+     color: #fff;
+     border: none;
+     border-radius: 6px;
+     cursor: pointer;
+     width: 15%;
+     height: 40px;
+     margin-top: 20px;
+     transition: background-color 0.3s, transform 0.2s;
+     font-weight: bold;
+     }
 
 .button-sug {
     top: 0%; 
@@ -362,6 +378,7 @@ h7 {
     background: none;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    font-weight: bold;
 }
     
 .button-git {
@@ -380,9 +397,10 @@ h7 {
     background: none;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    font-weight: bold;
 }
 
-#button-ul {
+    #button-ul {
      position: absolute;
      top: 0%;
      left: 50%;
@@ -396,31 +414,23 @@ h7 {
      background: transparent; 
      cursor: pointer;
      transition: background-color 0.3s, color 0.3s, transform 0.2s;
-     }
-     
-     #button-ul:hover {
-     background-color: #00b48d;
-     color: #1a2023;
-     }
-    
-     #button-ul:active {
-     background-color: #4b0082;
+     font-weight: bold;
      }
 
      .button-c {
      position: absolute;
      top: 0%;
      right: 0%;
-     padding: 9px 25px;
+     padding: 5px 10px;
      font-size: 18px;
      font-weight: 552;
-     font-family: Cabin, sans-serif;
+     font-family: Tahoma, sans-serif;
      background-color: #4b0082;
      color: #fff;
      border: none;
      border-radius: 10px;
      cursor: pointer;
-     transition: background-color 0.3s, transform 0.2s;
+     transition: background-color 0.3s;
      }
 
      .button-st {
@@ -428,16 +438,16 @@ h7 {
      margin-right: 5px;
      font-size: 15px;
      font-weight: 552;
-     font-family: Cabin, sans-serif;
+     font-family: Cabin, Tahoma, sans-serif;
      background-color: #4b0082;
      color: #fff;
      border: none;
      border-radius: 6px;
      cursor: pointer;
-     width: 37.5%;
+     width: 24.7%;
      height: 40px;
      margin-top: 20px;
-     transition: background-color 0.3s, transform 0.2s;
+     transition: background-color 0.3s, transform 0.3s;
      }
 
      .button-cred {
@@ -456,7 +466,17 @@ h7 {
     background: none;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    font-weight: bold;
     }
+    
+         #button-ul:hover {
+     background-color: #00b48d;
+     color: #1a2023;
+     }
+    
+     #button-ul:active {
+     background-color: #4b0082;
+     }
 
      .button-cred:hover {
     background-color: #00b48d;
@@ -468,7 +488,7 @@ h7 {
     }
      
     .button-st:hover {
-    background-color: #00b48d;
+    background-color: #663399;
     }
     
      .button-st:active {
@@ -477,7 +497,7 @@ h7 {
     
      
      .button-c:hover {
-     background-color: #00b48d;
+     background-color: #663399;
      }
     
      .button-c:active {
@@ -491,6 +511,7 @@ h7 {
     
 .button:active {
     background-color: #743089;
+    transform: scale(0.95);
 }
 
 .button-m:hover {
@@ -500,15 +521,18 @@ h7 {
     
 .button-m:active {
     background-color: #743089;
+    transform: scale(0.95);
 }
     
 .button-ab:hover {
     background-color: #6f2da8;
     color: #1a2023;
+    transform: scale(1.1);
 }
     
 .button-ab:active {
     background-color: #743089;
+    transform: scale(0.95):
 }
     
 #button-s:hover {
@@ -521,8 +545,7 @@ h7 {
 }
 
 .button-si:hover {
-    background-color: #00b48d;
-    color: #1a2023;
+    background-color: #663399;
 }
     
 .button-si:active {
@@ -591,7 +614,8 @@ h7 {
     
 #randomPhrase {
     color: #fff;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
+    margin-top: 35px;
     font-family: Cabin;
     text-align: center;
     font-weight: bold;
@@ -611,12 +635,12 @@ h7 {
   <div id="container-m">
     <h1><span2>Rubber</span2> Games</h1>
     <div id="randomPhrase"></div>
-    <button id="games" class="button">Games
+    <button id="games" class="button" title="Open games">Games
         <span class="button__icon">
             <ion-icon name="game-controller-outline"></ion-icon>
         </span>
     </button>
-    <button id="apps" class="button">Apps
+    <button id="apps" class="button" title="Open apps">Apps
         <span class="button__icon">
             <ion-icon name="apps-outline"></ion-icon>
         </span>
@@ -626,26 +650,28 @@ h7 {
      <!-- Changelogs --> 
      <div id="blur-updatelog" class= "hide">
      <div id="updatelog" class= "hide">
-     <button class="button-c" onclick="closeUpdateLog();" title="Close Update log">Close</button>
+     <button class="button-c" onclick="closeUpdateLog();" title="Close Update log">×</button>
      <div class="header">
-     <h3 style="font-size: 50px; font-family: Cabin, sans-serif; color: #4b0082; margin-bottom: 0px;">Update 0.27</h3>
+     <h3 style="font-size: 50px; font-family: Cabin, sans-serif; color: #4b0082; margin-bottom: 0px;">Update 0.3: 3/24/25</h3>
      </div>
-     <h2>Every tab cloak is now saved to local storage so the cloak stays if you reload or close the tab and reopen it. The Google tab cloak not saving to local storage has been fixed.</h2>
+     <h2>Added a bunch of stuff from Links123: Blob cloak (May be blocked for some people), redesigned close button, Google Slides tab cloak, better UI for the settings</h2>
      </div>
      </div>  
 
 
-  <button class="button-sug" id="suggest">Suggestions</button>
+  <button class="button-sug" id="suggest" title="Open suggestion form">Suggestions</button>
 <!-- Settings -->
      <div id="blur-settings" class= "hide">
      <div id="settings" class= "hide">
      <h3 style="font-size: 50px; font-family: Cabin, sans-serif; margin: 0; margin-top: 10px; color: white;">Settings</h3>
-     <button class="button-c" onclick="closeSettings()" title="Close Settings">Close</button>
+     <button class="button-c" onclick="closeSettings()" title="Close Settings">×</button>
      <button class="button-st" id="aboutBlank" title="Open in about:blank">about:blank</button>
-     <br><br>
+     <button class="button-st" onclick="createBlobUrl()" title="Open in blob:">blob:</button>
+     <button class="button-st" onclick="download()" title="Download Rubber Offline">Download Rubber Offline</button>
+     <br>
      <input type="text" id="tabName" style="transition: 0.25s all ease;" placeholder="Enter new tab name" class="settings-i">
      <button class="button-si" onclick="changeTabName()" title="Save changes">Save</button>
-     <br><br>
+     <br>
      <input type="text" id="tabIcon" style="transition: 0.25s all ease;" placeholder="Enter new tab icon" class="settings-i">     
      <button class="button-si" onclick="changeTabIcon()" title="Save changes">Save</button>
      <br>
@@ -653,6 +679,8 @@ h7 {
      <button id="Rubber" class="favicon"><img src="https://i.imgur.com/ZjOrqDc.png" alt="Rubber" title="Rubber"></button>
      <button id="Google" class="favicon"><img src="https://www.google.com/favicon.ico" alt="Google" title="Google"></button>
      <button id="Google Drive" class="favicon"><img src="https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png" alt="Google Drive" title="Google Drive"></button>
+     <button id="Google Docs" class="favicon"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/GDocs_Favicon_Recreation.png" alt="Google Docs" title="Google Docs"></button>
+     <button id="Google Slides" class="favicon"><img src="https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_presentation_x64.png" alt="" title=""></button>
      <button id="Google Classroom" class="favicon"><img src="https://ssl.gstatic.com/classroom/favicon.png" alt="Google Classroom" title="Google Classroom"></button>
      <button id="Gmail" class="favicon"><img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico" alt="Gmail" title="Gmail"></button>
      </div>
@@ -750,6 +778,24 @@ h7 {
          localStorage.setItem("tabIcon", tabIcon);
      };
 
+     document.getElementById("Google Docs").onclick = function() {
+         var tabTitle = "Untitled document - Google Docs";
+         var tabIcon = "https://upload.wikimedia.org/wikipedia/commons/e/ec/GDocs_Favicon_Recreation.png";
+         document.title = tabTitle;
+         changeTabFavicon(tabIcon);
+         localStorage.setItem("tabName", tabTitle);
+         localStorage.setItem("tabIcon", tabIcon);
+     };
+     
+     document.getElementById("Google Slides").onclick = function() {
+     var tabTitle = "Untitled presentation - Google Slides";
+     var tabIcon = "https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_presentation_x64.png";
+     document.title = tabTitle;
+     changeTabFavicon(tabIcon);
+     localStorage.setItem("tabName", tabTitle);
+     localStorage.setItem("tabIcon", tabIcon);
+     };
+
      document.getElementById("Gmail").onclick = function() {
          var tabTitle = "Inbox (2103)";
          var tabIcon = "https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico";
@@ -758,6 +804,21 @@ h7 {
          localStorage.setItem("tabName", tabTitle);
          localStorage.setItem("tabIcon", tabIcon);
      };
+
+     // Download Rubber Offline
+     function download() {
+     fetch('https://raw.githubusercontent.com/Chattyice234/Rubber/refs/heads/main/index.html')
+     .then(response => response.text())  // Fetch as text
+     .then(data => {
+     const blob = new Blob([data], { type: 'text/html' });
+     const link = document.createElement('a');
+     link.href = URL.createObjectURL(blob);
+     link.download = 'Rubber Offline';
+     document.body.appendChild(link);
+     link.click();
+     document.body.removeChild(link);
+       })
+     }
 
      
         function createBackButton() {
@@ -777,43 +838,54 @@ h7 {
     document.getElementById("games").onclick = function() {
       document.body.innerHTML = "<div class='loading'><h4>Loading...<h4></div>";
       setTimeout(function() {
-    document.body.innerHTML = "<h3 style=' cursor: default; font-size: 80px; font-family: Cabin, Tahoma, sans-serif; color: white; margin: 0; margin-bottom: 5px;'>Games</h3> <input id='searchBar' onkeyup='search_button()' type='text' name='search' placeholder='Search Games' autocomplete='off'>";
-        createBackButton();
+         document.body.innerHTML = '<h3 style="cursor: default; font-size: 80px; font-family: Tahoma, sans-serif; color: white; margin: 0; margin-bottom: 5px;">Games</h3> <input id="searchBar" onkeyup="search_button()" type="text" name="search" placeholder="Search Games">';
         var games = [
+            { name: "Cookie Clicker", url: "https://a6936-19424025.cluster7.canvas-user-content.com/courses/6936~1014013/files/6936~19424025/course%20files/cookie%20clicker/index.html?download=1&inline=1" },
+            { name: "Cookie Clicker (Server 2)", url: "https://cookieclickerfree.github.io/" },
+            { name: "Slope", url: "https://roblox-unblock.github.io/r/slope/" },
+            { name: "Slope 3", url: "https://roblox-unblock.github.io/r/slope-3/" },
+            { name: "Doctor Teeth 2", url: "https://www.yurk.com/games/doctorteeth2/" },
+            { name: "Escape Road 2", url: "https://escaperoad-2.github.io" },
+            { name: "Gameing", url: "https://windows96.net/system/apps/gameing/" },
+            { name: "Subway Surfers Monaco", url: "https://roblox-unblock.github.io/r8/subway-surfers-monaco/" },
+            { name: "Roblox (Easyfun.gg)", url: "https://www.easyfun.gg/games/roblox.html" },
+            { name: "Roblox (Now.gg)", url: "https://pathetic-roblox-main.vercel.app/" },
             { name: "Skribbl.io", url: "https://skribbl.io" },
             { name: "SigmaFart Website", url: "https://html.cafe/x4922b615" },
-            { name: "EaglyMC (Minecraft)", url: "https://eaglymc.com/" },
-            { name: "Minecraft (1.5)", url: "https://eaglercraft.glitch.me/" },
-            { name: "Minecraft (1.8)", url: "https://eaglercraft-archive.github.io/Koneclient-1.8-web/" },
+            { name: "EaglyMC (Eaglercraft Fake 1.20)", url: "https://eaglymc.com/" },
+            { name: "Eaglercraft (1.5.2)", url: "https://eaglercraft.glitch.me/" },
+            { name: "EaglercraftX (1.8.8)", url: "https://eaglercraft-archive.github.io/Koneclient-1.8-web/" },
             { name: "Eaglercraft Server List", url: "https://servers.eaglercraft.com/" },
-            { name: "Minecraft 1.8 (Web Assembly, FPS Boost)", url: "https://eaglercraft.com/mc/1.8.8-wasm/" },
-            { name: "Minecraft (1.9)", url: "https://html.cafe/x56360a59" },
-            { name: "Minecraft (1.9 Server 2)", url: "https://d272xss3wq00xu.cloudfront.net/1-9.html" },
-            { name: "Minecraft (1.11)", url: "https://d272xss3wq00xu.cloudfront.net/1-11.html" },
+            { name: "EaglercraftX 1.8.8 (Web Assembly, FPS Boost)", url: "https://eaglercraft.com/mc/1.8.8-wasm/" },
+            { name: "EaglercraftL (1.9)", url: "https://d272xss3wq00xu.cloudfront.net/1-9.html" },
+            { name: "Eaglercraft (1.11)", url: "https://d272xss3wq00xu.cloudfront.net/1-11.html" },
+            { name: "Eaglercraft 1.12.2", url: "https://gr4ys0n.github.io/public/assets/games/minecraft-1.12/" },
             { name: "Resent Client Eagler (1.8)", url: "https://reslauncher4.vercel.app" },
             { name: "Starlike Client Eagler (1.16- kinda)", url: "https://starlike.zumbiepig.dev/" },
             { name: "Eaglercraft (1.20)", url: "https://dfs3rzq44v6as.cloudfront.net/?frame=fullscreen/#/lessons/964c4358-60a7-4121-908e-63f6ae6e5ef0" },
             { name: "Eaglercraft Versions & Clients", url: "https://html.cafe/x7922b580" },
             { name: "Eaglercraft Versions & Clients 2", url: "https://html.cafe/xd8de3a20" },
-            { name: "Roblox (Easyfun.gg)", url: "https://www.easyfun.gg/games/roblox.html" },
-            { name: "Roblox (Now.gg) cq4z", url: "https://dashboard-cq4z.onrender.com/?ng_ifp_partner=skool" },
-            { name: "Roblox (Now.gg 2) Tortilla", url: "https://dfs3rzq44v6as.cloudfront.net/?frame=fullscreen/#/lessons/550673cd-2d7e-437e-ab86-baa249b52dd0" },
-            { name: "Roblox (Now.gg 4, best) Vercel", url: "https://pathetic-roblox-main.vercel.app/" },
-            { name: "Roblox (Now.gg 5) About:blank", url: "https://html.cafe/x8bcb5934" },
-            { name: "Roblox (Now.gg 6) s2g3", url: "https://s2g3.onrender.com" },
+            { name: "Temple Run 2", url: "https://roblox-unblock.github.io/r8/temple-run-2/" },
+            { name: "Brain Test", url: "https://roblox-unblock.github.io/r2/brain-test-tricky-puzzles/" },
+            { name: "Curve Ball 3D", url: "https://roblox-unblock.github.io/r/curve-ball-3d/" },
+            { name: "Minesweeper", url: "https://roblox-unblock.github.io/r7/minesweeper/" },
+            { name: "Stack", url: "https://roblox-unblock.github.io/r2/stack" },
             { name: "Tortilla Games", url: "https://dfs3rzq44v6as.cloudfront.net"},
             { name: "Ultraviolet", url: "https://dfs3rzq44v6as.cloudfront.net/#/prxy" },
+            { name: "Neon Pong", url: "https://stenunblocked.github.io/neon-pong/index.html" },
+            { name: "Happy Room", url: "https://roblox-unblock.github.io/r7/happy-room/" },
+            { name: "Doge Miner", url: "https://roblox-unblock.github.io/r7/doge-miner/" },
+            { name: "PacMan 3D", url: "https://mathgames66.github.io/games/html5/pacman3d/" },
+            { name: "PacMan FPS", url: "https://mathgames66.github.io/games/html5/pacmanfps/" },
             { name: "PolyTrack", url: "https://d3rtzzzsiu7gdr.cloudfront.net/files/polytrack/index.html" },
             { name: "GunSpin", url: "https://d3rtzzzsiu7gdr.cloudfront.net/files/gunspinupdate/index.html" },
+                 { name: "Gun Spin (Server 2)", url: "https://stenunblocked.github.io/gun-spin/index.html" },
             { name: "Five Nights At Winston's", url: "https://g.deev.is/fnaw" },
             { name: "1 (Reversed 2048)", url: "https://d272xss3wq00xu.cloudfront.net/2048/index.html" },
             { name: "Bottle Flip 3D", url: "https://d272xss3wq00xu.cloudfront.net/bottle-flip-3d/index.html" },
             { name: "Neal.fun", url: "https://neal.fun" },
             { name: "COD Zombies Portable", url: "https://nzp.gay" },
             { name: "Subway Surfers", url: "https://dddavit.github.io/subway/" },
-            { name: "Slope", url: "https://mathadventure1.github.io/slope/slope/index.html" },
-            { name: "Slope 2", url: "https://d3rtzzzsiu7gdr.cloudfront.net/gameplayer/index.html?Slope%202" },
-            { name: "Slope 3", url: "https://slope3.com/" },
             { name: "Cookie Clicker", url: "https://eli-schwartz.github.io/cookieclicker/" },
             { name: "Drive Mad", url: "https://ubg365.github.io/drive-mad/play.html" },
             { name: "Drive Mad (Server 2)", url: "https://d272xss3wq00xu.cloudfront.net/drivemad/index.html" },
@@ -823,7 +895,7 @@ h7 {
             { name: "3kh0.github.io (ad spammy)", url: "https://3kh0.github.io" },
             { name: "Hover Racer Drive", url: "https://ubg365.github.io/hover-racer-drive/" },
             { name: "Monkey Mart", url: "https://ubg365.github.io/monkey-mart/play.html" },
-            { name: "Drift Boss", url: "https://ubg365.github.io/drift-boss/" },
+                 { name: "Drift Boss", url: "https://roblox-unblock.github.io/r/drift-boss" }, 
             { name: "Madalin Stunt Cars 2", url: "https://ubg100.github.io/games/Madalin/index.html" },
             { name: "Breaking the bank", url: "https://mountain658.github.io/zbreakingthebank.html" },
             { name: "Escaping the prison", url: "https://mountain658.github.io/zescapetheprison.html" },
@@ -831,22 +903,31 @@ h7 {
             { name: "Infiltrating the airship", url: "https://sz-games.github.io/games/Flash.html?game=/games/henry-airship/infiltratingtheairshipgame.swf" },
             { name: "Fleeing the complex", url: "https://sz-games.github.io/games/Flash.html?game=https://sz-games.github.io/Games6/Henry%20Stickmin%20-%20Fleeing%20the%20Complex.swf?raw=true" },
             { name: "Free Rider", url: "https://freeriderhd.com" },
+            { name: "Run", url: "https://obsidianig.com/games/run/" },
+            { name: "Run 2", url: "https://obsidianig.com/games/run2/" },
             { name: "Run 3", url: "https://lekug.github.io/tn6pS9dCf37xAhkJv/" },
+            { name: "Run 3 Plus", url: "https://obsidianig.com/games/run3plus/" },
             { name: "Bloxorz", url: "https://ad-freegames.github.io/flash/game/bloxorz.html" },
             { name: "Drift Hunters", url: "https://htmlxm.github.io/h/drift-hunters/" },
+            { name: "Drift Hunters (Server 2)", url: "https://obsidianig.com/games/drifthunters/" },
             { name: "Venge.io", url: "https://venge.io/" },
             { name: "Highway Racer Pro", url: "https://unblocked-games.s3.amazonaws.com/highway-racer-pro.html" }, 
             { name: "Hole.io", url: "https://hole-io.com/" },
             { name: "Drift Hunters 2024", url: "https://unblocked-games.s3.amazonaws.com/drift-hunters-2024.html" },
             { name: "Webcraft", url: "https://jesgran.is-a.dev/webcraft/" }, 
+            { name: "Riddle School", url: "https://obsidianig.com/games/riddleschool/riddleschool" },
+            { name: "Riddle School 2", url: "https://obsidianig.com/games/riddleschool2/riddleschool2" },
+            { name: "Riddle School 3", url: "https://obsidianig.com/games/riddleschool3/riddleschool3" },
+            { name: "Riddle School 4", url: "https://obsidianig.com/games/riddleschool4/riddleschool4" },
+            { name: "Riddle School 5", url: "https://obsidianig.com/games/riddleschool5/riddleschool5" },
+            { name: "Riddle Transfer", url: "https://obsidianig.com/games/riddleschooltransfer/riddleschooltransfer" },
+            { name: "Riddle Transfer 2", url: "https://obsidianig.com/games/riddleschooltransfer2/riddleschooltransfer2" },
             { name: "Sandspiel Studio", url: "https://studio.sandspiel.club" },
             { name: "Gamble", url: "https://www.yurk.com/games/black/" },
-            { name: "FNAF", url: "https://ubg77.github.io/fix/fnaf1/" },
             { name: "Krunker.io", url: "https://krunker.io/" },
             { name: "Tomb of the mask", url: "https://mountain658.github.io/g/tombofthemask/index.html" },
             { name: "worldguessr", url: "https://www.worldguessr.com/" },
             { name: "MinecraftSkins.net", url: "https://minecraftskins.net" },
-            { name: "Now.gg", url: "https://now.gg/games.html" },
             { name: "Skindex", url: "https://skindex.pro" },
             { name: "RadioStations", url: "https://radio.garden/" },
             { name: "Windows93Emulator", url: "https://v1.windows93.net/" },
@@ -858,16 +939,27 @@ h7 {
             { name: "Backrooms", url: "https://adfree3kh0.github.io/projects/backrooms/index.html" },
             { name: "Impossible Quiz", url: "https://d3rtzzzsiu7gdr.cloudfront.net/gameplayer/index.html?Impossible%20Quiz" },
             { name: "Impossible Quiz (Server 2)", url: "https://d272xss3wq00xu.cloudfront.net/impossiblequiz/index.html" },
+            { name: "The Impossible Quiz (Server 3)", url: "https://roblox-unblock.github.io/r8/the-impossible-quiz/" },
             { name: "Among Us Singleplayer", url: "https://adfree3kh0.github.io/projects/among-us/index.html" }, 
             { name: "Windows XP Emulator", url: "https://winxp.vercel.app/" },
             { name: "Eggy Car", url: "https://www.yurk.com/games/eggycar/" },
             { name: "Eggy Car (Server 2)", url: "https://d272xss3wq00xu.cloudfront.net/eggy-car/index.html" },
+            { name: "Eggy  (Server 3)", url: "https://roblox-unblock.github.io/r/eggy-car/" },
+            { name: "Tiny Fishing", url: "https://roblox-unblock.github.io/r/tiny-fishing/" },
             { name: "Turbowarp Packager (Download Scratch Projects)", url: "https://packager.turbowarp.org" },
             { name: "Bad Piggies", url: "https://www.friv.cm/bad-piggies/fullscreen/" },
+            { name: "Bad Piggies (Server 2)", url: "https://obsidianig.com/games/badpiggies/" },
+            { name: "Theme Hotel", url: "https://obsidianig.com/games/themehotel/" },
+            { name: "FNF", url: "https://roblox-unblock.github.io/r88/friday-night-funkin/" },
+            { name: "Boxing Random", url: "https://roblox-unblock.github.io/r77/boxing-random/" },
+            { name: "Jetpack Joyride", url: "https://roblox-unblock.github.io/r7/jetpack-joyride/" },
+            { name: "Stickman Golf", url: "https://roblox-unblock.github.io/r8/stickman-golf/" },
             { name: "Cluster Rush",  url: "https://duckmath.org/g4m3s/cluster-rush.html" },
             { name: "Crossy Road", url: "https://selenite.cc/semag/crossyroad/index.html" },
             { name: "Crossy Road (Server 2)", url: "https://d272xss3wq00xu.cloudfront.net/crossyroad/index.html" },
+            { name: "Crossy Road (Server 3)", url: "https://roblox-unblock.github.io/r/crossy-road/" },
             { name: "1v1.lol", url: "https://selenite.cc/semag/1v1lol/index.html" },
+            { name: "1v1.LOL (Server 4)", url: "https://stenunblocked.github.io/1v1-lol/index.html" },
             { name: "Bloxd.io", url: "https://bloxd.io" },
             { name: "CubeRealm.io", url: "https://cuberealm.io/" },
             { name: "Aim Trainer", url: "https://aimtrainer.io/" },
@@ -881,10 +973,17 @@ h7 {
             { name: "Obby Robby Only Up", url: "https://html.cafe/x3d7ef5a3" },
             { name: "FreezeNova", url: "https://unblocked-games.s3.amazonaws.com/index.html"},
             { name: "Geometry Dash Lite", url: "https://selenite.cc/semag/gdlite/index.html" },
-            { name: "FNAF 2", url: "https://selenite.cc/semag/fnaf2/index.html" },
-            { name: "FNAF 3", url: "https://selenite.cc/semag/fnaf3/index.html" },
-            { name: "FNAF 4", url: "https://selenite.cc/semag/fnaf4/index.html" },
-            { name: "FNAF 4 (Server 2)", url: "https://d272xss3wq00xu.cloudfront.net/FNAF4/index.html" },
+                 { name: "Geometry Dash Lite (Server 2)", url: "https://gaming-escape.github.io/public/assets/games/geometry-dash/" },
+            { name: "FNAF", url: "https://ubg77.github.io/fix/fnaf1/" },
+            { name: "FNAF 2", url: "https://obsidianig.com/games/fnaf2/fnaf2" },
+            { name: "FNAF 3", url: "https://obsidianig.com/games/fnaf3/fnaf3" },
+            { name: "FNAF 4", url: "https://obsidianig.com/games/fnaf4/fnaf4" },
+            { name: "FNAF World", url: "https://irv77.github.io/hd_fnaf/w/" },
+            { name: "FNAF UCN", url: "https://irv77.github.io/hd_fnaf/ucn/" },
+            { name: "FNAF 2 (Server 2)", url: "https://selenite.cc/semag/fnaf2/index.html" },
+            { name: "FNAF 3 (Server 2)", url: "https://selenite.cc/semag/fnaf3/index.html" },
+            { name: "FNAF 4 (Server 2)", url: "https://selenite.cc/semag/fnaf4/index.html" },
+            { name: "FNAF 4 (Server 3)", url: "https://d272xss3wq00xu.cloudfront.net/FNAF4/index.html" },
             { name: "Selenite Minecraft", url: "https://selenite.cc/semag/eaglercraft/index.html" },
             { name: "MEGA Client", url: "https://megaclient.vercel.app" },
             { name: "LittleBigSnake", url: "https://littlebigsnake.com" },
@@ -910,6 +1009,7 @@ h7 {
             { name: "Cookie Clicker 2024 (Click link)", url: "https://d3rtzzzsiu7gdr.cloudfront.net/files/cookieclicker/game/index.html" },
             { name: "Interactive Buddy", url: "https://d3rtzzzsiu7gdr.cloudfront.net/gameplayer/index.html?Interactive%20Buddy" },
             { name: "Baldis Basics", url: "https://d3rtzzzsiu7gdr.cloudfront.net/files/baldisbasics/index.html" },
+            { name: "Baldi's Basics (Server 2)", url: "https://snesfx.github.io/baldi-html5/" },
             { name: "Minecraft Classic", url: "https://d3rtzzzsiu7gdr.cloudfront.net/files/minecraft-classic/index.html" },
             { name: "Angry Birds", url: "https://d3rtzzzsiu7gdr.cloudfront.net/files/AngryBirdsWebGL/index.html" },
             { name: "Minecraft 1.8", url: "https://d3rtzzzsiu7gdr.cloudfront.net/gameplayer/index.html?Eaglercraft%20(MC)#" },
@@ -938,20 +1038,23 @@ h7 {
             { name: "Australian Man Website", url: "https://html.cafe/xf91164ad" },
             { name: "SigmaFart", url: "https://html.cafe/x4922b615" },
             { name: "Bottle Flip 3D", url: "https://d3rtzzzsiu7gdr.cloudfront.net/play/index.html?Bottle%20Flip%203D" },
+            { name: "Bottle Flip 3D (Server 2)", url: "https://stenunblocked.github.io/bottle-flip-3d/bottleflip3d.html" },
             { name: "Friv.com", url: "https://friv.com" },
+            { name: "Bank Robbery", url: "https://gaming-escape.github.io/public/assets/games/bank-robbery/index.html" },
+            { name: "Bank Robbery 2", url: "https://gaming-escape.github.io/public/assets/games/bank-robbery-2/index.html" },
+            { name: "Bank Robbery 3", url: "https://gaming-escape.github.io/public/assets/games/bank-robbery-3/index.html" },
             { name: "Download British Man Website", url: "https://html.cafe/xf3b7d5cc" },
             { name: "British Man Website", url: "https://html.cafe/x8a3e2b9b" },
             { name: "Slither.io Ripoff", url: "https://gulper.io/" },
             { name: "Infinite Craft", url: "https://infinite-craft.com/infinite-craft/" },
             { name: "Baldis Basics Method 2", url: "https://igroutka.ru/loader/game/26471/" },
-            { name: "We Become what we Behold", url: "https://gnhustgames.github.io/wbwwb/" },
+                 { name: "We Become what we Behold", url: "https://gnhustgames.github.io/wbwwb/" },
             { name: "Time Shooter", url: "https://games.crazygames.com/en_US/time-shooter/index.html" },
             { name: "Time Shooter 2", url: "https://games.crazygames.com/en_US/time-shooter-2/index.html" },
             { name: "Time Shooter 3", url: "https://games.crazygames.com/en_US/time-shooter-3-swat/index.html" },
-            { name: "Chrome Dino", url: "https://htmlxm.github.io/h7/dinosaur-game/" },
+                 { name: "Chrome Dino", url: "https://htmlxm.github.io/h7/dinosaur-game/" },
             { name: "Getting over it ( Scratch )", url: "https://turbowarp.org/389464290/embed?autoplay&addons=remove-curved-stage-border,pause,gamepad" },
-            { name: "1v1.lol Method 3", url: "https://player.work/1v1lol/index.html" },
-            { name: "HTML.cafe Gallery", url: "https://html.cafe/gallery" },
+            { name: "1v1.lol (Server 3)", url: "https://player.work/1v1lol/index.html" },
             { name: "Eaglercraft Clients", url: "https://eaglercraftx1-8.github.io/" },
             { name: "Slither.io", url: "http://slither.com/io" },
             { name: "Easyfun.gg", url: "https://easyfun.gg" },
@@ -971,6 +1074,14 @@ h7 {
             { name: "Vex 6", url: "https://dfs3rzq44v6as.cloudfront.net/#/lessons/7ec8754e-65c7-45bf-90f3-b342c4e33cc4" },
             { name: "Vex 6 (Server 2)", url: "https://d272xss3wq00xu.cloudfront.net/vex6/index.html" },
             { name: "Vex 7", url: "https://dfs3rzq44v6as.cloudfront.net/#/lessons/a7abe0b4-e894-4799-89e8-b9806e7e33f6" },
+            { name: "Vex 3 (Server 3)", url: "https://gaming-escape.github.io/public/assets/games/vex-3/index.html" },
+            { name: "Vex 4 (Server 3)", url: "https://gaming-escape.github.io/public/assets/games/vex-4/index.html" },
+            { name: "Vex 5", url: "https://gaming-escape.github.io/public/assets/games/vex-5/index.html" },
+            { name: "Stickman Bike", url: "https://gaming-escape.github.io/public/assets/games/stickman-bike/index.html" },
+            { name: "Snow Rider 3D", url: "https://gaming-escape.github.io/public/assets/games/snow-rider-3d/index.html" },
+            { name: "Vex 6 (Server 3)", url: "https://gaming-escape.github.io/public/assets/games/vex-6/index.html" },
+            { name: "Vex 7", url: "https://gaming-escape.github.io/public/assets/games/vex-7/index.html" },
+            { name: "Vex 8", url: "https://gaming-escape.github.io/public/assets/games/vex-8/index.html" },
             { name: "Geometry dash ( Real )", url: "https://nowgg.lol/apps/robtop-games/1400/geometry-dash.html" },
             { name: "Stumble guys ( Server 1 )", url: "https://www.stumbleguys.com/play" },
             { name: "Stumble guys ( server 2 )", url: "https://nowgg.lol/apps/kitika-games/7999/stumble-guys.html" },
@@ -991,9 +1102,9 @@ h7 {
             { name: "Moto X3M Winter", url: "https://unblocked-games.s3.amazonaws.com/games/2024/gm/moto-x3m-winter/index.html" },
             { name: "Moto X3M Pool Party", url: "https://unblocked-games.s3.amazonaws.com/games/2024/gm/moto-x3m-pool-party/index.html" },
             { name: "Moto X3M Spooky Land", url: "https://unblocked-games.s3.amazonaws.com/games/2024/gm/moto-x3m-spooky-land/index.html" },
+            { name: "Idle Breakout", url: "https://roblox-unblock.github.io/r7/idle-breakout/" },
             { name: "Death Run 3D", url: "https://ubg365.github.io/death-run-3d/" },
             { name: "EggyCar", url: "https://ubg365.github.io/eggy-car/play.html" },
-            { name: "Stack", url: "https://ubg365.github.io/stack/" },
             { name: "Super Mario 64", url: "https://downloads.retrostic.com/play.php?console_slug=n64&rom_url=https://downloads.retrostic.com/roms/Super%20Mario%2064%20%28U%29%20%5B%21%5D.zip" },
             { name: "Asteroids ( 1986 )", url: "https://downloads.retrostic.com/play.php?console_slug=atari-7800&rom_url=https://downloads.retrostic.com/roms/Asteroids.zip" },
             { name: "Asteroids ( 1979 )", url: "https://online-emulators.com/arcade/Asteroids_(rev_2)/asteroid" },
@@ -1017,6 +1128,7 @@ h7 {
             { name: "Evoworld.io", url: "https://evoworld.io/" },
             { name: "Links123 (Best Game Website)", url: "https://ricardomariosonic123.github.io/Links123-V3" },
             { name: "Block Blast", url: "https://blockblastonline.com" },
+            { name: "Block Blast (Server 2)", url: "https://reunbozdo.github.io/" },
             { name: "Masked Forces Unlimited", url: "https://maskedforcesunlimited.github.io/" },
             { name: "Bad Time Simulator", url: "https://badtimesimulator.io" },    
             { name: "I Beat Kids", url: "https://ibeatkids.com" }, 
@@ -1037,8 +1149,6 @@ h7 {
             { name: "Papa's Sushiria", url: "https://obsidianig.com/games/papassushiria/" },
             { name: "Papa's Wingeria", url: "https://obsidianig.com/games/papaswingeria/" },
             { name: "There Is No Game", url: "https://obsidianig.com/games/thereisnogame/" },
-            { name: "test", url: "https://chatgpt.com/" },
-      
          ];
         var container = document.createElement("div");
         container.setAttribute("id", "gamesContainer");
@@ -1076,51 +1186,27 @@ document.getElementById("apps").onclick = function() {
     document.body.innerHTML = "<h3 style='cursor: default; font-size: 80px; font-family: Cabin, Tahoma, sans-serif; color: white; margin: 0; margin-bottom: 5px;'>Apps</h3> <input id='searchBar' onkeyup='search_button()' type='text' name='search' placeholder='Search Apps'>";
         createBackButton();
         var apps = [
-            { name: "Online Chatroom", url: "https://chattyice234.github.io/online-chatroom" },
-            { name: "SprintingSnail69's Soundboard", url: "https://coolsounds.netlify.app" },
-            { name: "HTML Editor", url: "https://spacenerd24.github.io/Online-HTML-Viewer/" },
-            { name: "HTML.cafe Editor & Gallery", url: "https://html.cafe/" },   
-            { name: "ht.ml (HTML editor)", url: "https://html.cafe/x3e7b1ae9" }, 
-            { name: "Search Blocked Github repositories (Credits to Dinguschan-owo on Github)", url: "https://github-repository-search-two.vercel.app/" },
-            { name: "DingusTerminal (Credits to Dinguschan-owo on Github)", url: "https://dingus-terminal.vercel.app/" },
-            { name: "Dinguschan's Blocking Extension Checker", url: "https://installed-blocking-extension-checker.vercel.app/" },
-            { name: "Youtube ( no restrictions :D )", url: "https://www.edu-apps.org/lti_public_resources#/youtube/search" },
-            { name: "YT Alt", url: "https://piped.video" },
-            { name: "ChatGPT", url: "https://dfs3rzq44v6as.cloudfront.net/apps/27ca35c4-2604-4054-b790-b9436b00d06b/?usr-img=../../assets/img/user.webp" },
-            { name: "DeepAI", url: "https://deepai.org/" },
-            { name: "Appetize.io Android Phone", url: "https://appetize.io/embed/xc1w6f1krd589zhp22a0mgftyw?autoplay=false&debug=true&device=pixel4&embed=true&launchUrl=exp%3A%2F%2Fexp.host%2F%40snack%2Fsdk.46.0.0-ghV0%21Qgb8N&scale=65&screenOnly=false&xDocMsg=true&xdocMsg=true&params=%7B&osVersion=11.0&deviceColor=black" },
-            { name: "Website Source Extractor", url: "https://codebeautify.org/source-code-viewer" },
-            { name: "Gaming Clock", url: "https://html.cafe/x6254d0db" },
-            { name: "Virtual Machine 3 mins", url: "https://www.browserling.com/virtual-browser" },
-            { name: "Virtual Machine 2", url: "https://copy.sh/v86/" },
+            { name: "HTML.Cafe HTML Editor", url: "https://html.cafe/" },
+            { name: "Ruffle Player", url: "https://ruffle.rs/demo/" },
+            { name: "WebRetro", url: "https://binbashbanana.github.io/webretro/" },
+            { name: "Barney's Website", url: "https://html.cafe/x715d6947" },
             { name: "Gauth Math Helper", url: "https://gauthmath.com" },
-            { name: "ChatGPT With Sources (signup needed)", url: "https://popai.pro/" },
-            { name: "Calculator", url: "https://desmos.com/scientific" },
-            { name: "Windows 10 Emulator", url: "https://dustinbrett.com/" },
-            { name: "AaronOS", url: "https://aaronos.dev/" },
-            { name: "Windows 96", url: "https://windows96.net/" },
-            { name: "Real Windows 11 in browser", url: "https://app.apponfly.com/trial" },
-            { name: "AI Image Generator", url: "https://nuelink.com/tools/ai-image-generator" },
-            { name: "Global Image URL Generator", url: "https://html.cafe/x2a36ad24"},
-            { name: "ChatGPT Alt", url: "https://talkai.info/" },
-            { name: "YT to mp3", url: "https://ezmp3.cc" },
-            { name: "PlayCode.io", url: "https://playcode.io" },
-            { name: "YT to MP3 2 (Cobalt.tools)", url: "https://cobalt.tools" },
-            { name: "HTML Editor and Downloader", url: "https://html.cafe/x978c906e" },
-            { name: "Screen Recorder", url: "https://html.cafe/xf7a71dd8" },
-            { name: "Image URL Generator 2", url: "https://www.imghippo.com/" },
-            { name: "JMW AI Chat", url: "https://infinitetutoring.com.au/history/src/AI" },
-            { name: "Convert URL to blob: URL (Credits to dinguschan-owo on GitHub)", url: "https://html.cafe/xdd7e491d" },
-            { name: "Notepad in JS", url: "https://notepad.js.org/index.html" },
-            { name: "Bypass Ad Links (Lootdest)", url: "https://bypass.city" },
-            { name: "Ionicons", url: "https://ionicons.com" },
-            { name: "Message Encoder/Decoder (Credits to Dinguschan-owo on Github)", url: "https://encoder-decoder-nine.vercel.app/" },
-            { name: "EmulatorJS", url: "https://demo.emulatorjs.org/" },
-            { name: "Syntaxmeets", url: "https://syntaxmeets.vercel.app/" },
-            { name: "Totally works :333", url: "https://artclass.site/" },
-            { name: "Ruffle ( flash games emulator )", action: function() {
-                document.body.innerHTML = '<object id="ruffleFrame" type="text/html" data="https://ruffle.rs/demo/" style="width: 100%; height: 100vh;"></object>';
-            }}
+            { name: "SmoresXO Tools", url: "https://smoresxo.shop/" },
+            { name: "SmoresXO Pr0xies", url: "https://smoresxo.shop/proxies/" },
+            { name: "Appetize.io Android Phone", url: "https://appetize.io/embed/xc1w6f1krd589zhp22a0mgftyw?autoplay=false&debug=true&device=pixel4&embed=true&launchUrl=exp%3A%2F%2Fexp.host%2F%40snack%2Fsdk.46.0.0-ghV0%21Qgb8N&scale=65&screenOnly=false&xDocMsg=true&xdocMsg=true&params=%7B&osVersion=11.0&deviceColor=black" },
+            { name: "Chatroom", url: "https://chattyice234.github.io/online-chatroom" },
+            { name: "Blocking Extension Deleter", url: "https://chattyice234.github.io/ExtHang3r-Fork/" },
+            { name: "Mocha Proxy", url: "https://blog.tedfullwood.com" },
+            { name: "Helios Browser", url: "https://helios-browser.vercel.app/" },
+            { name: "Dingus Proxy", url: "https://dinguschan-owo.github.io/dingusproxy" },
+            { name: "Blobwifi", url: "https://blobby-boi.github.io/Blobwifi/" },
+            { name: "ByeBlocker", url: "https://html.cafe/xfc1df5f4" },
+            { name: "Interstellar", url: "https://menu.earlyriserscoffeeshop.com/" },
+            { name: "List of Exploits", url: "https://cocalc.com/github/3kh0/ext-remover/blob/main/README.md" },
+            { name: "History Flooder", url: "https://spritzerland.github.io/chbook/" },
+            { name: "Links123", url: "https://ricardomariosonic123.github.io/Links123-V3" },
+            { name: "ExtPrint3r", url: "https://extprint3r.github.io/" },
+            { name: "EmulatorJS", url: "https://obsidianig.com/EmulatorJS-main/" },
         ];
         var container = document.createElement("div");
         container.setAttribute("id", "appsContainer");
@@ -1209,6 +1295,18 @@ document.getElementById("apps").onclick = function() {
     win.document.close();
     window.parent.window.location.replace('https://classroom.google.com/')
     };
+    
+    function createBlobUrl() {
+     var outerHTML = document.documentElement.outerHTML;
+     var blob = new Blob([outerHTML], {
+     type: 'text/html'
+     });
+     var blobUrl = URL.createObjectURL(blob);
+     var newTab = window.open();
+     newTab.document.write('<!DOCTYPE html><html><head><title>Page Content</title></head><body></body></html>');
+     newTab.document.close();
+     newTab.location.href = blobUrl;
+     }
   
    document.addEventListener("DOMContentLoaded", function() {
     var phrases = [
@@ -1239,6 +1337,20 @@ document.getElementById("apps").onclick = function() {
         "what",                                                                     
         "sponsored by youtube",
         "Forever credits to Links123",
+        "Alright ramblers, let's get rambling.",
+        "dis mah grandpa",
+        "Give Em Hell!",
+        "D- Dodgeball!!?",
+        "hey guys is me chattyice",
+        "Something Wicked This Way Comes.",
+        "Yeahhh, that was just unfair. Uhh, here. Free revive. On the house.",
+        "'EXR-P did not manage to find a proper hiding spot in time as Z-283 was passing through.'",
+        "Light up the night.",
+        "Out of the frying pan.",
+        "ruh roh",
+        "The Strong Don't Cry.",
+        "A good captain goes down with his ship.",
+        "YOU'RE THE STAR OF THE SHOW NOW, BABY!",
         "Credits to RicardoMarioSonic123 for Links123",
         "We got in trouble for this lol",
         "Show me your meat or im gonna crash outtttttttt",
@@ -1250,12 +1362,13 @@ document.getElementById("apps").onclick = function() {
         "Ur computer has virus",
         "thanks reed :DDD 🔥",
         "Sponsored by.... Nobody :D",
+        "Chromebooks DOWN!",
+        "Computers DOWN!",
         "youre naaasty",
         "youre nasty",
         "youre naaaaaaasty",
-        "Bro u gotta lock in - Josh",
+        "Bro u gotta lock in - Mr. B",
         "totally for educational use",
-        "Barney, you do realize that setting a new online alias does not change your life?",
         "An arrow appeared.",
         "(╯°□°)╯︵ ┻━┻",
         "ಠ_ಠ",
@@ -1263,12 +1376,30 @@ document.getElementById("apps").onclick = function() {
         "ლ(ಠ益ಠ)ლ",
         ":D",
         "( ͡° ͜ʖ ͡° )", 
+        "Also try Links123!",
+        "secret message 0_0",
+        "in the smoresxo proxies, it gives u a new link every time you press open so keep gambling till one isnt blocked!",
+        "Restricted",
+        "Train go choochoo",
+        "Guys secret code -- L123",
+        "(≧▽≦)",
+        "Key without a lock: 🔑",
+        "Me after seeing the 100th goofy ahh ripoff this month",
+        "roblox is probably swimming in its GLAAAAAAZE rn",
+        "Apologies for the inconviences of this webpage that have unfortunately discontinued the others because they were too british.",
+        "Sorry. This webpage has been blocked by your administrator! 🔒",
+        "shut up duolingo, i unsubscribed from your emails",
+        "Hear me out. Links123 is goated",
         "☉_☉",
         "・_・",
         "ヽ༼ ಠ益ಠ ༽ﾉ",
         "ᕙ(•̀‸•́‶)ᕗ",
         "-_-",
         ":0",
+        "I can tell you CRAVE pickles!",
+        "ERROR - RESTRICTED WEBPAGE",
+        "Before you start playing games, this site was made possible by Links123.",
+        "1274. 1275. 1276.",
         "ERROR - SRC=TROJAN_VIRUS.EXE_RUNFILE NOT FOUND",
         "111111111111111111111",
         "it's super sigma, greg",
@@ -1283,16 +1414,19 @@ document.getElementById("apps").onclick = function() {
         "Thank you sebastian for this wall dweller's meat",
         "*Argh* I missed and hit some innocent bystander, unfortunately.",
         "my homework ate my dog",
+        "this time, without viruses",
+        "Sorry i was too busy updating rubber i didnt finish my homework",
         "snow day seems fun",
         "brainrot is bad",
         "ok but could you make this load faster than the average coke addict",
         "C H A I R",
-        "Chattyice, what is your inspiration for Rubber and ChattyWebsite? Me: Nothing. I just steal from other sites.",
         "Don't think that carrot big because carrot leaf big size.",
         "Expendable at door 30",
+        "Now.gg does not work on school/district managed wifi networks",
         "fortnite is cringe",
         "help me",
         "new game website unblocked!",
+        "Pressure Searchlights Grand Encounter Theme",
         "Hmm, let me think about that.",
         "There are 2 r's in strawberry",
         "chatgpt is dumb bro wdym theres 2 r's in strawberry",
@@ -1302,14 +1436,26 @@ document.getElementById("apps").onclick = function() {
         "oh, for the love of god... Heyyy!!! Welcome!",
         "W RicardoMarioSonic123",
         "guys Ws in the chat for RicardoMarioSonic123",
+        "Hear me out, Gameing on windows96.net is one of the best games ive played in my life",
         "RicardoMarioSonic123 the absolute GOAT",
         "first rubber suggestion asking me to add working roblox, try every server bruh",
         "i hope i dont get codehs blocked",
         "What an interesting surprise!",
-        // "W dinguschan",
-        "Mind: Alright, we quit ChattyWebsite so we need a new name for Chattyice's next site. Just don't make it some stupid object, that's really unorigi- Me: Maybe it should be like tinf0il, Rubber. Why not? And let's also copy a bunch of splashes from Links123. Mind: Kill yourself.",
+        "Your diving gear begins to beep.",
+        "The weird music is causing your diving gear to beep.",
+        "You left the death zone.",
+        "TAKE US BACK TO THE LIGHT, PLEASE!",
+        "the shotgun shell dancing on the back of my neck",
+        "Sorry laddie, you're violating the dress code. Shed the skin and, uh, come back.",
+        // W dinguschan
+        "Oh cool, ctrl + shift + w closes the entire window. newgens: iM oN IpAD hEEeLP",
+        "my brainrot friend: 'whats a creepypasta?' *i start laughing* 'bro shut up chatty, you dont know what it is either' 💀",
+        "Mind: Alright braincells, we quit ChattyWebsite so we need a new name for Chattyice's next site. Just don't make it some stupid object, that's really unorigi- Me: Maybe it should be like tinf0il, Rubber. Why not? Mind: Kill yourself.",
         "W dinguschan",
         "Now with credits for Dinguschan!",
+        "Credits to Dinguschan & RicardoMarioSonic123",
+        "RicardoMarioSonic123 might be a great therapist",
+        "When you turn your wifi off and start playing the dino game so goguardian cant see your screen",
         "bomb instructions - Google Search",
         "Minecraft tnt crafting recipe - Google Search *gets grenade shopping search queries on ebay*",
         "paint me green and call me a pickle",
@@ -1319,14 +1465,23 @@ document.getElementById("apps").onclick = function() {
         "Look dad i found a pickle",
         "i accidently muted the teacher",
         "yoyo",
-        "minecraft bedrock & java 1.21.41 real no scam download --->",
+        "minecraft bedrock & java 1.21.41 real no scam download free --->",
         ":D",
         "im just spamming splashes",
         "fun fact: you are on a chromebook (maybe)",
         "wah hah hah",
+        "Spicy? Salty? Sweet? It's a gamble.",
+        "Do not waste our time. Get spending.",
+        "Enjoy this reward.",
+        "PC gamers >>>>> Console gamers >>>>> mobile gamers",
         "is this thing recording?",
         "wuh wuh wuh",
         "Yummers.",
+        "when bros parents come in the class to give him his mcdonalds for lunch",
+        "Just saying sorry in advance, the games sadly won't load at the speed of thought.",
+        "Me just drinking five pebsi",
+        "Skid's idea of a mod: copy and pasting code, changing theme, then calling it collaboration and innovation.",
+        "Steve vs Superman. Minecraft steve can carry thousands, maybe millions of pounds of gold ingots, all while keeping the ability to sprint at great speeds. Carrying stacks of gold ingots and even blocks, even gold armor, dual wielding a stack of gold blocks in each hand. And who the flick is Superman? Weakkkk",
         "How it feels to chew five gum AAAAAAAAAAAAA stimulate your senses",
         "Shell shockers please work please work please work please work please work",
         "Chat is this real?",
@@ -1351,8 +1506,9 @@ document.getElementById("apps").onclick = function() {
         // No i'm not adding freaky stuff to this site stay mad
         "Me after seeing the 10th goofy ahh ripoff this week",
         "Pissing off your principal since 2023",
-        "My idea of a mod: Copy and pasting someone else's code, then calling it 'innovation'.",
         "Probably not coded by ChatGPT",
+        { type: "image", src: 'https://i.redd.it/oqlj5w5nyfmd1.gif' },
+        { type: "image", src: 'https://preview.redd.it/can-someone-help-me-with-harbinger-v0-2mhm1ynmwyce1.jpeg?auto=webp&s=137d69cf30279a831d0f0851a181b0deee14a502' },
       ];
        var randomIndex = Math.floor(Math.random() * phrases.length);
      var randomPhrase = phrases[randomIndex];
