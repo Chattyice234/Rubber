@@ -72,8 +72,33 @@ body:hover {
      width: 50%;
      border-radius: 10px;
      }
+     
+     #links {
+     overflow: auto;
+     position: absolute;
+  	 left: 50%;
+  	 top: 50%;
+  	 transform: translate(-50%, -50%);
+     background-color: #111111;
+     height: 70%;
+     width: 50%;
+     border-radius: 10px;
+     }
 
      #blur-updatelog {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(0, 0, 0, 0.1);
+     backdrop-filter: blur(2px);
+     z-index: 1000;
+     justify-content: center;
+     align-items: center;
+     }
+     
+     #blur-links {
      position: absolute;
      top: 0;
      left: 0;
@@ -402,6 +427,25 @@ h7 {
     font-weight: bold;
 }
 
+.button-links {
+    top: 0%; 
+    text-decoration: underline;
+    left: 0%;
+    width: 150px;
+    height: 70px;
+    position: absolute;
+    font-size: 18px;
+    font-weight: 552;
+    font-family: Raleway, Tahoma, sans-serif;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    background: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    font-weight: bold;
+}
+
     #button-ul {
      position: absolute;
      top: 0%;
@@ -571,6 +615,15 @@ h7 {
 .button-git:active {
     background-color: #743089;
 }
+
+.button-links:hover {
+    background-color: #4b0082;
+    color: #1a2023;
+}
+    
+.button-links:active {
+    background-color: #743089;
+}
     
 #container-m {
     position: absolute;
@@ -633,6 +686,7 @@ h7 {
 
 <button id="button-ul" onclick="openUpdateLog()" title="Click here to view the update log">Changelog</button>
   <button class="button-git" onclick="location.href='https://github.com/Chattyice234/Rubber'">GitHub</button>
+  <button class="button-links" onclick="openLinks()" title="Click here to view official links for Rubber">Official Links</button>
   <div id="container-m">
     <h1><span2>Rubber</span2> Games</h1>
     <div id="randomPhrase"></div>
@@ -648,9 +702,26 @@ h7 {
      <div id="updatelog" class= "hide">
      <button class="button-c" onclick="closeUpdateLog();" title="Close Update log">×</button>
      <div class="header">
-     <h3 style="font-size: 50px; font-family: Cabin, sans-serif; color: #4b0082; margin-bottom: 0px;">Update 0.3.5: 3/24/25</h3>
+     <h3 style="font-size: 50px; font-family: Cabin, sans-serif; color: #4b0082; margin-bottom: 0px;">Update 0.4: 3/24/25</h3>
      </div>
-     <h2>Blob cloak (May be blocked for some people), redesigned close button, Google Slides tab cloak, better UI for the settings, added more alternative servers to games, new games and apps</h2>
+     <h2>Added a new Railway deployment for Rubber, added an Official Links button to check which links are official and find another unblocked link</h2>
+     </div>
+     </div>  
+     
+     <!-- Links --> 
+     <div id="blur-links" class= "hide">
+     <div id="links" class= "hide">
+     <button class="button-c" onclick="closeLinks();" title="Close Official Links">×</button>
+     <div class="header">
+     <h3 style="font-size: 50px; font-family: Cabin, sans-serif; color: #4b0082; margin-bottom: 0px;">Official Rubber Links</h3>
+     </div>
+     <h2>
+       <li><a href="https://rubber-13599452.codehs.me/" target="_blank"style="color: blue;">https://rubber-13599452.codehs.me/</a></li>
+       <br>
+       <li><a href="https://chattyice234.github.io/Rubber/" target="_blank" style="color: blue;">https://chattyice234.github.io/Rubber/</a></li>
+       <br>
+       <li><a href="https://rubber-production.up.railway.app/" target="_blank" style="color: blue;">https://rubber-production.up.railway.app/</a></li>
+     </h2>
      </div>
      </div>  
 
@@ -695,6 +766,21 @@ h7 {
      document.getElementById("blur-updatelog").style.display = "none";
      document.getElementById("button-ul").onclick = function() {
      openUpdateLog();
+       };
+     }
+     
+     // Open Links
+     function openLinks() {
+     document.getElementById("links").style.display = "block";
+     document.getElementById("blur-links").style.display = "block";
+     }
+      
+     // Close Links
+     function closeLinks() {
+     document.getElementById("links").style.display = "none";
+     document.getElementById("blur-links").style.display = "none";
+     document.getElementById("button-links").onclick = function() {
+     openLinks();
        };
      }
 
