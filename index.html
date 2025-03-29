@@ -123,15 +123,17 @@ body:hover {
      background-color: #fff;
      padding: 7px 8px;
      border-radius: 10px;  
-     transition: background-color 0.3s, transform 0.2s;
+     transition: background-color 0.3s, transform 0.35s;
      }
 
      .favicon img:hover {
      background-color: #cccccc;
+     transform: scale(1.05);
      }
     
      .favicon img:active {
      background-color: #999999;
+     transform: scale(0.95);
      }
 
 span {
@@ -470,7 +472,7 @@ h7 {
     }
     
          #button-ul:hover {
-     background-color: #00b48d;
+    background-color: #663399;
      color: #1a2023;
      }
     
@@ -536,7 +538,7 @@ h7 {
 }
     
 #button-s:hover {
-    background-color: #00b48d;
+    background-color: #663399;
     color: #1a2023;
 }
     
@@ -622,39 +624,33 @@ h7 {
     font-size: 18px;
     transition: 0.25s all ease;
 }
+
 </style>
 
-
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
-
 <body>
+
+    <!-- Main Menu -->
+
 <button id="button-ul" onclick="openUpdateLog()" title="Click here to view the update log">Changelog</button>
   <button class="button-git" onclick="location.href='https://github.com/Chattyice234/Rubber'">GitHub</button>
   <div id="container-m">
     <h1><span2>Rubber</span2> Games</h1>
     <div id="randomPhrase"></div>
-    <button id="games" class="button" title="Open games">Games
-        <span class="button__icon">
-            <ion-icon name="game-controller-outline"></ion-icon>
-        </span>
-    </button>
-    <button id="apps" class="button" title="Open apps">Apps
-        <span class="button__icon">
-            <ion-icon name="apps-outline"></ion-icon>
-        </span>
-    </button>  
+    <button id="games" class="button" title="Open games">Games</button>
+    <button id="apps" class="button" title="Open apps">Apps</button>  
     </div>
     <button id="button-s" onclick="openSettings()" title="Open Settings">Settings</button>
+    
+    
+    
      <!-- Changelogs --> 
      <div id="blur-updatelog" class= "hide">
      <div id="updatelog" class= "hide">
      <button class="button-c" onclick="closeUpdateLog();" title="Close Update log">×</button>
      <div class="header">
-     <h3 style="font-size: 50px; font-family: Cabin, sans-serif; color: #4b0082; margin-bottom: 0px;">Update 0.3: 3/24/25</h3>
+     <h3 style="font-size: 50px; font-family: Cabin, sans-serif; color: #4b0082; margin-bottom: 0px;">Update 0.3.5: 3/24/25</h3>
      </div>
-     <h2>Added a bunch of stuff from Links123: Blob cloak (May be blocked for some people), redesigned close button, Google Slides tab cloak, better UI for the settings</h2>
+     <h2>Blob cloak (May be blocked for some people), redesigned close button, Google Slides tab cloak, better UI for the settings, added more alternative servers to games, new games and apps</h2>
      </div>
      </div>  
 
@@ -683,6 +679,7 @@ h7 {
      <button id="Google Slides" class="favicon"><img src="https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_presentation_x64.png" alt="" title=""></button>
      <button id="Google Classroom" class="favicon"><img src="https://ssl.gstatic.com/classroom/favicon.png" alt="Google Classroom" title="Google Classroom"></button>
      <button id="Gmail" class="favicon"><img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico" alt="Gmail" title="Gmail"></button>
+     <button id="Clever" class="favicon"><img src="https://support.highlandschools.org/wp-content/uploads/2020/11/clever1.png" alt="Clever" title="Clever"/></button>
      </div>
      </div>
   <script>
@@ -804,6 +801,15 @@ h7 {
          localStorage.setItem("tabName", tabTitle);
          localStorage.setItem("tabIcon", tabIcon);
      };
+     
+     document.getElementById("Clever").onclick = function() {
+         var tabTitle = "Clever | Portal";
+         var tabIcon = "https://support.highlandschools.org/wp-content/uploads/2020/11/clever1.png";
+         document.title = tabTitle;
+         changeTabFavicon(tabIcon);
+         localStorage.setItem("tabName", tabTitle);
+         localStorage.setItem("tabIcon", tabIcon);
+     };
 
      // Download Rubber Offline
      function download() {
@@ -838,10 +844,13 @@ h7 {
     document.getElementById("games").onclick = function() {
       document.body.innerHTML = "<div class='loading'><h4>Loading...<h4></div>";
       setTimeout(function() {
-         document.body.innerHTML = '<h3 style="cursor: default; font-size: 80px; font-family: Tahoma, sans-serif; color: white; margin: 0; margin-bottom: 5px;">Games</h3> <input id="searchBar" onkeyup="search_button()" type="text" name="search" placeholder="Search Games">';
+         document.body.innerHTML = '<h3 style="cursor: default; font-size: 80px; font-family: Cabin, Tahoma, sans-serif; color: white; margin: 0; margin-bottom: 5px;">Games</h3> <input id="searchBar" onkeyup="search_button()" type="text" name="search" placeholder="Search Games">';
+         createBackButton();
         var games = [
             { name: "Cookie Clicker", url: "https://a6936-19424025.cluster7.canvas-user-content.com/courses/6936~1014013/files/6936~19424025/course%20files/cookie%20clicker/index.html?download=1&inline=1" },
             { name: "Cookie Clicker (Server 2)", url: "https://cookieclickerfree.github.io/" },
+            { name: "Roblox Bike Obby", url: "https://mathmasterz.com/g/bikeobby/" },
+            { name: "The Pizza Edition", url: "https://mathmasterz.com" },
             { name: "Slope", url: "https://roblox-unblock.github.io/r/slope/" },
             { name: "Slope 3", url: "https://roblox-unblock.github.io/r/slope-3/" },
             { name: "Doctor Teeth 2", url: "https://www.yurk.com/games/doctorteeth2/" },
@@ -1160,7 +1169,6 @@ h7 {
             button.onclick = function() {
                 if (game.url) {
                     document.body.innerHTML = '<object id="gameFrame" type="text/html" data="' + game.url + '" style="width: 100%; height: 100vh;"></object>';
-                    createBackButton();
                 }
             };
             container.appendChild(button);
@@ -1186,13 +1194,16 @@ document.getElementById("apps").onclick = function() {
     document.body.innerHTML = "<h3 style='cursor: default; font-size: 80px; font-family: Cabin, Tahoma, sans-serif; color: white; margin: 0; margin-bottom: 5px;'>Apps</h3> <input id='searchBar' onkeyup='search_button()' type='text' name='search' placeholder='Search Apps'>";
         createBackButton();
         var apps = [
+            { name: "ChatGPT", url: "https://chatgptfree.ai/chat/" },
+            { name: "AI To Human Converter", url: "https://aitohuman.org/" },
+            { name: "Links123", url: "https://ricardomariosonic123.github.io/Links123-V3" },
+            { name: "Barney's Website", url: "https://html.cafe/x715d6947" },
             { name: "HTML.Cafe HTML Editor", url: "https://html.cafe/" },
             { name: "Ruffle Player", url: "https://ruffle.rs/demo/" },
             { name: "WebRetro", url: "https://binbashbanana.github.io/webretro/" },
-            { name: "Barney's Website", url: "https://html.cafe/x715d6947" },
             { name: "Gauth Math Helper", url: "https://gauthmath.com" },
             { name: "SmoresXO Tools", url: "https://smoresxo.shop/" },
-            { name: "SmoresXO Pr0xies", url: "https://smoresxo.shop/proxies/" },
+            { name: "SmoresXO Proxies", url: "https://smoresxo.shop/proxies/" },
             { name: "Appetize.io Android Phone", url: "https://appetize.io/embed/xc1w6f1krd589zhp22a0mgftyw?autoplay=false&debug=true&device=pixel4&embed=true&launchUrl=exp%3A%2F%2Fexp.host%2F%40snack%2Fsdk.46.0.0-ghV0%21Qgb8N&scale=65&screenOnly=false&xDocMsg=true&xdocMsg=true&params=%7B&osVersion=11.0&deviceColor=black" },
             { name: "Chatroom", url: "https://chattyice234.github.io/online-chatroom" },
             { name: "Blocking Extension Deleter", url: "https://chattyice234.github.io/ExtHang3r-Fork/" },
@@ -1200,13 +1211,18 @@ document.getElementById("apps").onclick = function() {
             { name: "Helios Browser", url: "https://helios-browser.vercel.app/" },
             { name: "Dingus Proxy", url: "https://dinguschan-owo.github.io/dingusproxy" },
             { name: "Blobwifi", url: "https://blobby-boi.github.io/Blobwifi/" },
-            { name: "ByeBlocker", url: "https://html.cafe/xfc1df5f4" },
-            { name: "Interstellar", url: "https://menu.earlyriserscoffeeshop.com/" },
-            { name: "List of Exploits", url: "https://cocalc.com/github/3kh0/ext-remover/blob/main/README.md" },
-            { name: "History Flooder", url: "https://spritzerland.github.io/chbook/" },
-            { name: "Links123", url: "https://ricardomariosonic123.github.io/Links123-V3" },
+            { name: "ByeBlocker", url: "https://chic-kashata-e4cec3.netlify.app/" },
             { name: "ExtPrint3r", url: "https://extprint3r.github.io/" },
             { name: "EmulatorJS", url: "https://obsidianig.com/EmulatorJS-main/" },
+             { name: "List of Exploits", url: "https://cocalc.com/github/3kh0/ext-remover/blob/main/README.md" },
+             { name: "ExtHang3r Old", url: "https://html.cafe/x707b2db0" },
+             { name: "History Flooder", url: "https://spritzerland.github.io/chbook/" },
+             { name: "Kahoot Flooder", url: "https://kahoot.rocks/" },
+             { name: "Disable School Blockers (ExtHang3r)", url: "https://chattyice234.github.io/ExtHang3r-Fork/" },
+             { name: "Search History Bypass", url: "https://html.cafe/x88b1c570" },
+             { name: "Ultraviolet", url: "https://dfs3rzq44v6as.cloudfront.net/#/prxy" },
+             { name: "Interstellar", url: "https://menu.earlyriserscoffeeshop.com/" },
+            
         ];
         var container = document.createElement("div");
         container.setAttribute("id", "appsContainer");
@@ -1218,7 +1234,6 @@ document.getElementById("apps").onclick = function() {
             button.onclick = function() {
                 if (app.url) {
                     document.body.innerHTML = '<object id="appsFrame" type="text/html" data="' + app.url + '" style="width: 100%; height: 100vh;"></object>';
-                    createBackButton();
                     window.addEventListener("beforeunload", (event) => {
         });  
                 } 
@@ -1236,23 +1251,7 @@ document.getElementById("apps").onclick = function() {
 //         document.body.innerHTML = "<h3 style='font-size: 80px; font-family: Cabin, Tahoma, sans-serif; color: white; margin: 0; margin-bottom: 5px;'>Exploits/Proxies</h3> <input id='searchBar' onkeyup='search_button()' type='text' name='search' placeholder='Search Exploits and Proxies'>";
 //         createBackButton();
 //         var proxy = [
-//             { name: "List of Exploits", url: "https://cocalc.com/github/3kh0/ext-remover/blob/main/README.md" },
-//             { name: "ExtHang3r Old", url: "https://html.cafe/x707b2db0" },
-//             { name: "History Flooder", url: "https://spritzerland.github.io/chbook/" },
-//             { name: "Kahoot Flooder", url: "https://kahoot.rocks/" },
-//             { name: "Disable School Blockers (ExtHang3r)", url: "https://chattyice234.github.io/ExtHang3r-Fork/" },
-//             { name: "Search History Byp@ss", url: "https://html.cafe/x88b1c570" },
-//             { name: "ExtPrint3r (NEW)", url: "https://extprint3r.github.io/" },
-//             { name: "ByeBlocker Proxy Browser", url: "https://html.cafe/xfe3a414c" },
-//             { name: "Helios Proxy Browser (Credits to dinguschan-owo on Github)", url: "https://helios-browser.vercel.app" },
-//             { name: "Dingus Proxy Browser (Credits to dinguschan-owo on Github)", url: "https://dinguschan-owo.github.io/dingusproxy/" },
-//             { name: "Ultraviolet", url: "https://dfs3rzq44v6as.cloudfront.net/#/prxy" },
-//             { name: "BlockAway", url: "https://cdn.blockaway.net/" },
-//             { name: "JMW Proxy", url: "https://infinitetutoring.com.au/history/textbook?historicalfigure=browser&type=local" },
-//             { name: "Interstellar", url: "https://bookingportal.mounthoodlodge.info" },
-//             { name: "Interstellar 2", url: "https://https://jobs.saer-emploi.com/" },
-//             { name: "Interstellar 3", url: "https://menu.earlyriserscoffeeshop.com/" },
-//             { name: "Interstellar 4", url: "https://services.nexus-computing.com/" },
+//             
 //         ];
 
 //         var container = document.createElement("div");
@@ -1319,6 +1318,7 @@ document.getElementById("apps").onclick = function() {
         "wawa",
         "huh wuh",
         "THIS HOT SINGLE IN YOUR AREA PLAYS HYPIXEL. DOWNLOAD NOW: FOR FREE! 100% REAL NO SCAM",
+        "THIS HOT PANDEMONIUM AT DOOR 30 PLAYS MINIGAMES. JOIN HIM AT THE HADAL BLACKSITE NOW!",
         "meeeeee",
         "Back and even better than ever before!",
         "hluf",
@@ -1326,8 +1326,6 @@ document.getElementById("apps").onclick = function() {
         "If you get this message, you are fat",
         "dinguschan you dropped this → 👑",
         "sponsored by ducks",
-        "'2020 was 5 years ago' gives the same vibe as 'When you realize the seahorse and robber emojis dont exist'",
-        "skribbl.io >>>>> sketchful.io",
         "joe biden torpedo",
         "biden boat",
         "trump torpedo",
@@ -1350,7 +1348,8 @@ document.getElementById("apps").onclick = function() {
         "ruh roh",
         "The Strong Don't Cry.",
         "A good captain goes down with his ship.",
-        "YOU'RE THE STAR OF THE SHOW NOW, BABY!",
+        "YOU'RE THE STAR OF THE SHOW NOW, DARLING!",
+        "These ratings are through the roof! How about we.. UP the tension?",
         "Credits to RicardoMarioSonic123 for Links123",
         "We got in trouble for this lol",
         "Show me your meat or im gonna crash outtttttttt",
@@ -1448,13 +1447,15 @@ document.getElementById("apps").onclick = function() {
         "the shotgun shell dancing on the back of my neck",
         "Sorry laddie, you're violating the dress code. Shed the skin and, uh, come back.",
         // W dinguschan
-        "Oh cool, ctrl + shift + w closes the entire window. newgens: iM oN IpAD hEEeLP",
+        "Oh cool, ctrl + shift + w (totally) gives you minecraft java 1.21 and 10k robux. newgens: iM oN IpAD hEEeLP",
         "my brainrot friend: 'whats a creepypasta?' *i start laughing* 'bro shut up chatty, you dont know what it is either' 💀",
         "Mind: Alright braincells, we quit ChattyWebsite so we need a new name for Chattyice's next site. Just don't make it some stupid object, that's really unorigi- Me: Maybe it should be like tinf0il, Rubber. Why not? Mind: Kill yourself.",
         "W dinguschan",
+        "Ricardo let's keep stealing splash messages from each other",
         "Now with credits for Dinguschan!",
         "Credits to Dinguschan & RicardoMarioSonic123",
-        "RicardoMarioSonic123 might be a great therapist",
+        "RicardoMarioSonic123 is a great therapist",
+        "do any of you use firefox",
         "When you turn your wifi off and start playing the dino game so goguardian cant see your screen",
         "bomb instructions - Google Search",
         "Minecraft tnt crafting recipe - Google Search *gets grenade shopping search queries on ebay*",
@@ -1464,22 +1465,35 @@ document.getElementById("apps").onclick = function() {
         "Alexa, will AI take over the world?",
         "Look dad i found a pickle",
         "i accidently muted the teacher",
+        "https://www.youtube.com/watch?v=JaRSMcTKltU",
+        "Do not waste our time. Get spending.",
+        "A winner.",
+        "Keep going.",
+        "Nothing?",
+        "Unfortunate.",
+        "The house always wins.",
+        "The Party Special fills you with vitality.",
         "yoyo",
         "minecraft bedrock & java 1.21.41 real no scam download free --->",
         ":D",
+        "",
         "im just spamming splashes",
         "fun fact: you are on a chromebook (maybe)",
         "wah hah hah",
         "Spicy? Salty? Sweet? It's a gamble.",
         "Do not waste our time. Get spending.",
         "Enjoy this reward.",
-        "PC gamers >>>>> Console gamers >>>>> mobile gamers",
+        "PC gamers & console gamers >>>>>>>>> mobile gamers",
+        "Barney stole all my splash messages",
+        "I had a really cool/funny one but i forgot. Sorry :(",
+        "Spill your innards. Share the world of your gore.",
         "is this thing recording?",
         "wuh wuh wuh",
         "Yummers.",
         "when bros parents come in the class to give him his mcdonalds for lunch",
         "Just saying sorry in advance, the games sadly won't load at the speed of thought.",
         "Me just drinking five pebsi",
+        "Get well soon, Barney",
         "Skid's idea of a mod: copy and pasting code, changing theme, then calling it collaboration and innovation.",
         "Steve vs Superman. Minecraft steve can carry thousands, maybe millions of pounds of gold ingots, all while keeping the ability to sprint at great speeds. Carrying stacks of gold ingots and even blocks, even gold armor, dual wielding a stack of gold blocks in each hand. And who the flick is Superman? Weakkkk",
         "How it feels to chew five gum AAAAAAAAAAAAA stimulate your senses",
@@ -1590,6 +1604,7 @@ document.getElementById("suggest").onclick = function() {
   document.body.innerHTML = '<object id="suggestFrame" type="text/html" data="https://docs.google.com/forms/d/e/1FAIpQLSfOlgOWtpAkz7EHdr73D_Xw4fb2wTbYZeBK7Ok3-UG4oZKH0g/viewform?embedded=true" style="width: 100%; height: 100vh;"></object>';
     createBackButton();
 };
+
   </script>
 </body>
 </html>
